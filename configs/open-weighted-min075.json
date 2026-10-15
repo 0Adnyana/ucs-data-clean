@@ -1,0 +1,18 @@
+{
+  "name": "open-weighted-min075",
+  "note": "Same weights as open-weighted, scored on train, val, and test. The cutoff is 0.75, so a three-word overlap such as door wood creaks is kept. One unaided word stays blank. Ties stay blank.",
+  "taxonomy": "open",
+  "min_score": 0.75,
+  "on_tie": "blank",
+  "splits": ["train", "val", "test"],
+  "weights": {
+    "exact_sub": 8,
+    "exact_syn": 2,
+    "word": 0.25,
+    "depth_step": 0.5,
+    "pp_bonus": 2,
+    "uploader_tag": 0,
+    "title_match": 0.5,
+    "description_match": 0
+  }
+}

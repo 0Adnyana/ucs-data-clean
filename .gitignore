@@ -1,0 +1,10 @@
+# Local wav copies. Keep the directory note.
+audio/*
+!audio/README.md
+
+# Experiment outputs
+experiments/
+
+# Python bytecode
+__pycache__/
+*.pyc

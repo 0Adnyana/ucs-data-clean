@@ -1,0 +1,41 @@
+{
+  "name": "default-auto",
+  "note": "Scorer used when no other config is given. Closed slice, test split only.",
+  "taxonomy": "closed",
+  "closed": [
+    "ALARMS/BELL",
+    "ALARMS/SIREN",
+    "ALARMS/BUZZER",
+    "ANIMALS/DOG",
+    "ANIMALS/CAT DOMESTIC",
+    "CLOCKS/TICK",
+    "DOORS/KNOCK",
+    "DOORS/DOORBELL",
+    "DOORS/SLIDING",
+    "FIRE/CRACKLE",
+    "FIRE/SIZZLE",
+    "HUMAN/BREATH",
+    "HUMAN/COUGH",
+    "HUMAN/SNEEZE",
+    "HUMAN/BURP",
+    "HUMAN/SNORE",
+    "WATER/POUR",
+    "WATER/DRIP",
+    "WATER/SURF",
+    "WEATHER/STORM",
+    "WEATHER/THUNDER"
+  ],
+  "min_score": 2.0,
+  "on_tie": "blank",
+  "splits": ["test", "val", "train"],
+  "weights": {
+    "exact_sub": 5,
+    "exact_syn": 3,
+    "word": 1,
+    "depth_step": 0.25,
+    "pp_bonus": 2,
+    "uploader_tag": 2,
+    "title_match": 1,
+    "description_match": 0.5
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "name": "open-recall",
+  "note": " Closed slice but make taxonomy open, scored on train, val, and test. A unique match of 1 point is kept, so labels such as sneezing and burping are assigned. Ties stay blank. Uploader tags are ignored because short tags such as home and door exact-match broad alarm synonyms.",
+  "taxonomy": "open",
+  "min_score": 1,
+  "on_tie": "blank",
+  "splits": ["train", "val", "test"],
+  "weights": {
+    "exact_sub": 5,
+    "exact_syn": 3,
+    "word": 1,
+    "depth_step": 0.25,
+    "pp_bonus": 2,
+    "uploader_tag": 0,
+    "title_match": 1,
+    "description_match": 0.5
+  }
+}

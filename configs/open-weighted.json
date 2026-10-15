@@ -1,0 +1,18 @@
+{
+  "name": "open-weighted",
+  "note": "Full UCS list, scored on train, val, and test. Exact subcategory names count more than synonyms, ontology depth counts more, and a shared word counts less, because the same synonym and the same word now hit many categories. Description matches are off and uploader tags stay off. The cutoff is 2, so one unaided word stays blank. Ties stay blank.",
+  "taxonomy": "open",
+  "min_score": 2,
+  "on_tie": "blank",
+  "splits": ["train", "val", "test"],
+  "weights": {
+    "exact_sub": 8,
+    "exact_syn": 2,
+    "word": 0.25,
+    "depth_step": 0.5,
+    "pp_bonus": 2,
+    "uploader_tag": 0,
+    "title_match": 0.5,
+    "description_match": 0
+  }
+}

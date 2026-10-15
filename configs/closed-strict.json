@@ -1,0 +1,18 @@
+{
+  "name": "closed-strict",
+  "note": "Closed slice. Exact names count more, word overlap counts less, and a higher cutoff leaves more rows blank.",
+  "taxonomy": "closed",
+  "min_score": 4.0,
+  "on_tie": "blank",
+  "splits": ["test"],
+  "weights": {
+    "exact_sub": 8,
+    "exact_syn": 4,
+    "word": 0.5,
+    "depth_step": 0.25,
+    "pp_bonus": 2,
+    "uploader_tag": 2,
+    "title_match": 1,
+    "description_match": 0.5
+  }
+}
