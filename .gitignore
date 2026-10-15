@@ -11,3 +11,6 @@ test-audio/
 # Python bytecode
 __pycache__/
 *.pyc
+
+# Local API settings. Copy .env.example.
+.env

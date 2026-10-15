@@ -25,7 +25,7 @@ These recordings are the thing being labeled. `Keywords` is the non-UCS text fro
 What you need depends on the method:
 
 - **Manual.** Listen to val and test only (280 files) while you tag them. Train is not hand-labeled.
-- **LLM inferred.** Read the keywords, and open the wav when the prompt uses the recording.
+- **LLM inferred.** `scripts/llm_convert.py` reads `Keywords` and the row's `Category`. Wav files stay out of the prompt.
 - **Rule-based scoring.** The script reads each source’s labels from the files in this folder, and for FSD50K also the clip title, description, uploader tags, and predominant labels. Use a wav when you want to check a rule against the sound.
 
 The wavs are not part of the slice export. Which file belongs in train, val, or test is `filename`, `source`, and `path` in `manifests/slice/`.

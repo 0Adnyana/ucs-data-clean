@@ -67,3 +67,13 @@ Other files under `configs/` inherit anything they omit from `default.json`. Tax
 Each keyword is compared with every eligible subcategory. An exact subcategory name scores 5, an exact synonym scores 3, and each shared word scores 1. AudioSet ontology depth multiplies those points (`depth_step` 0.25, so depth 2 is x1.5). The row stays blank under `min_score` (default 2). When the best subcategories are in different categories, the row stays blank. When they share a category, that category is kept and `SubCategory` stays empty.
 
 The full weights, tie cases, and report lines are in [docs/scoring.md](docs/scoring.md).
+
+## LLM converter
+
+Exact subcategory names and synonyms stay with the scorer. The other rows are grouped by the `Category` already on the row. Each group is one request: that category's subcategories as short codes, then the keyword lines, and the model answers `#1 01` or `#1 -`. Identical keyword lines are sent once. The full UCS list is not pasted in. A category with more subcategories than fit in that prefix gets the scorer's shortlist on each line instead.
+
+```bash
+python scripts/llm_convert.py manifests/slice/envsound_val.csv --dry-run
+```
+
+`--dry-run` counts calls and tokens and does not call an API. A real run reads `OPENAI_API_KEY` and `OPENAI_MODEL` from `.env` at the repo root. Details are in [docs/usage.md](docs/usage.md).
