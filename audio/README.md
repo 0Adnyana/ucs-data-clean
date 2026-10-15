@@ -1,6 +1,6 @@
 # audio
 
-Local copies of the wav files named in `manifests/manual/`. A row’s file is `audio/` plus its `path` column.
+Local copies of the wav files named in `manifests/slice/`. A row’s file is `audio/` plus its `path` column.
 
 ```text
 audio/AudioSet/audios/balanced_train_segments/*.wav
@@ -28,4 +28,4 @@ What you need depends on the method:
 - **LLM inferred.** Read the keywords, and open the wav when the prompt uses the recording.
 - **Rule-based scoring.** The script reads each source’s labels from the files in this folder, and for FSD50K also the clip title, description, uploader tags, and predominant labels. Use a wav when you want to check a rule against the sound.
 
-The wavs are not part of the slice export. Which file belongs in train, val, or test is the CSVs in `splits/`.
+The wavs are not part of the slice export. Which file belongs in train, val, or test is `filename`, `source`, and `path` in `manifests/slice/`.

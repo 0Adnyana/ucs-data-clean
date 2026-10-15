@@ -5,6 +5,9 @@ audio/*
 # Experiment outputs
 experiments/
 
+# Local copies of a split for listening tests
+test-audio/
+
 # Python bytecode
 __pycache__/
 *.pyc

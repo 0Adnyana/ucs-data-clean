@@ -2,7 +2,7 @@
 
 This repo converts non-UCS environmental-sound labels into [Universal Category System](https://universalcategorysystem.com) (UCS) `Category` and `SubCategory`.
 
-Source labels live in `Keywords`. They come from AudioSet, ESC-50, and FSD50K. `scripts/score_ucs.py` scores those labels against `UCS v8.2.1 Full List.xlsx` and writes a category and subcategory. Ontology depth comes from `scripts/audioset_ontology.json`. The checked-in CSVs are a small slice of that problem, so a cleaner can be written and scored without the full manifests.
+Source labels live in `Keywords`. They come from AudioSet, ESC-50, and FSD50K. `scripts/score_ucs.py` scores those labels against `references/ucs-v8.2.1.xlsx` and writes a category and subcategory. Ontology depth comes from `references/audioset_ontology.json`. The checked-in CSVs under `manifests/slice/` are a small slice of that problem, so a cleaner can be written and scored without the full manifests in `manifests/original-envsound/`.
 
 The scorer needs `openpyxl` to read the workbook.
 
@@ -22,7 +22,7 @@ Use any of these. The rule scorer and an LLM prompt are the methods to develop. 
 
 FSD50K also uses `audio/FSD50K/FSD50K.metadata`. `pp_pnp_ratings_FSD50K.json` supplies predominant labels (a rating of 1.0), including classes the ground truth later merged into a parent. `dev_clips_info_FSD50K.json` and `eval_clips_info_FSD50K.json` supply uploader tags, the title, and the description. A predominant label that is not already a keyword is scored as its own tag.
 
-Read `manifests/manual/envsound_train.csv` while you invent the rules. Change the script against `manifests/manual/envsound_val.csv`. Run `manifests/manual/envsound_test.csv` once, after you stop changing it.
+Read `manifests/slice/envsound_train.csv` while you invent the rules. Change the script against `manifests/slice/envsound_val.csv`. Run `manifests/slice/envsound_test.csv` once, after you stop changing it.
 
 A row is left blank when the best score is under `min_score`, or when the best subcategories sit in different categories and `on_tie` is `blank`. A tie inside one category keeps that category and leaves `SubCategory` blank. A tag that is a category name (`Fire`, `Alarm`, `Door`, `Water`, including the plural) does the same when no single subcategory outranks it. If the row already has a `Category` and exactly one tied subcategory is in that category, that one is kept. Some sounds in this slice are outside the listed subcategories on purpose (a pig filed under `ANIMALS` is not `DOG` or `CAT DOMESTIC`); the category is still filled.
 
@@ -40,11 +40,13 @@ Manual labels on val and test are the reference. Score the rule script and the L
 
 | File | Rows | Use |
 | --- | ---: | --- |
-| `manifests/manual/envsound_train.csv` | 2019 | Examples for inventing rules and prompts. The filled subcategories came with the slice. Leave the empty ones unlabeled. |
-| `manifests/manual/envsound_val.csv` | 140 | Score while the converter is still changing. Hand-label this. |
-| `manifests/manual/envsound_test.csv` | 140 | Score once, after you stop changing the converter. Hand-label this. |
+| `manifests/slice/envsound_train.csv` | 2019 | Examples for inventing rules and prompts. The filled subcategories came with the slice. Leave the empty ones unlabeled. |
+| `manifests/slice/envsound_val.csv` | 140 | Score while the converter is still changing. Hand-label this. |
+| `manifests/slice/envsound_test.csv` | 140 | Score once, after you stop changing the converter. Hand-label this. |
 
-`splits/train.csv`, `splits/val.csv`, and `splits/test.csv` are the fixed membership lists. Each row is `filename`, `source`, and `path`. The counts are 2019, 140, and 140.
+Membership is `filename`, `source`, and `path` on those same files. The counts are 2019, 140, and 140.
+
+`manifests/original-envsound/` holds the full envsound lists those rows were drawn from: `envsound_train.csv` (40642 rows), `envsound_val.csv` (8707), and `envsound_test.csv` (8708). A rebuild copies `Category` and `SubCategory` from there.
 
 Each manifest has the same columns:
 
@@ -140,8 +142,8 @@ A predominant label adds `pp_bonus` after the depth factor, and only for subcate
 Paths are resolved from the repo root, so the working directory does not matter.
 
 ```bash
-python scripts/score_ucs.py manifests/manual/envsound_val.csv
-python scripts/score_ucs.py manifests/manual/envsound_val.csv -o predictions.csv --config configs/closed-strict.json
+python scripts/score_ucs.py manifests/slice/envsound_val.csv
+python scripts/score_ucs.py manifests/slice/envsound_val.csv -o predictions.csv --config configs/closed-strict.json
 python scripts/score_ucs.py --keywords "Meow,Cat,Animal"
 python scripts/score_ucs.py --keywords "Siren" --pp "Siren" --title "police siren" --category ALARMS
 python scripts/score_ucs.py --self-test
@@ -161,20 +163,20 @@ A manifest run prints a report: how many rows were `assigned`, `tie`, or `below`
 python scripts/score_ucs.py --make-manifests
 ```
 
-That writes `manifests/manual/envsound_test.csv` only. Train and val are left as they are, so hand tags in those files are not replaced. Add them back with a flag or with `"splits"` in a config:
+That writes `manifests/slice/envsound_test.csv` only. Train and val are left as they are, so hand tags in those files are not replaced. Add them back with a flag or with `"splits"` in a config:
 
 ```bash
 python scripts/score_ucs.py --make-manifests --write-splits train,val,test
 python scripts/score_ucs.py --make-manifests --config configs/default-open.json
 ```
 
-The config's `splits` list is used when `--write-splits` is omitted. `Keywords` and the FSD50K metadata columns come from the label files under `audio/`. `exists` is whether `audio/<path>` is a file. `Category` and `SubCategory` stay as they are in the manifest being rewritten.
+The config's `splits` list is used when `--write-splits` is omitted. Membership is the `filename`, `source`, and `path` already on the slice file. `Keywords` and the FSD50K metadata columns come from the label files under `audio/`. `exists` is whether `audio/<path>` is a file.
 
-`--source-dir` defaults to the parent of this repo. When `envsound_<split>.csv` exists there, `Category` and `SubCategory` are copied from that full list instead. Keywords still come from `audio/`.
+`--source-dir` defaults to `manifests/original-envsound/`. When `envsound_<split>.csv` exists there, `Category` and `SubCategory` are copied from that full list. Otherwise they stay as they are on the slice. Keywords still come from `audio/`.
 
 ## Experiments
 
-Each config under `configs/` is one tagging setup. It chooses the weights, the minimum score, what happens on a tie, which splits to score, and how much of the UCS list is eligible. Running it writes a fresh manifest set a separate linear-probing project can train on. Those files go under `experiments/<name>/` and never replace `manifests/manual/`.
+Each config under `configs/` is one tagging setup. It chooses the weights, the minimum score, what happens on a tie, which splits to score, and how much of the UCS list is eligible. Running it writes a fresh manifest set a separate linear-probing project can train on. Those files go under `experiments/<name>/` and never replace `manifests/slice/`.
 
 ```bash
 python scripts/score_ucs.py --experiment configs/default-open.json
@@ -184,12 +186,12 @@ python scripts/score_ucs.py --experiment-name open-min4 --taxonomy open --min-sc
 
 Repeat `--experiment` to run several configs. `--output-dir` changes the destination. A batch writes one subfolder per `name`. A config may set `"output_dir"` itself.
 
-`Category` and `SubCategory` in the experiment CSV are the scorer's assignment. A blank prediction (under the minimum, or a tie when `on_tie` is `blank`) writes both fields empty. The copy used as input is unchanged, so the hand-tagged files in `manifests/manual/` remain the reference. `config.json` in the experiment folder is the resolved setup, including any closed pair the workbook does not contain. `report.txt` is the same agreement report as a one-file score, one section per split.
+`Category` and `SubCategory` in the experiment CSV are the scorer's assignment. A blank prediction (under the minimum, or a tie when `on_tie` is `blank`) writes both fields empty. The copy used as input is unchanged, so the files in `manifests/slice/` remain the reference. `config.json` in the experiment folder is the resolved setup, including any closed pair the workbook does not contain. `report.txt` is the same agreement report as a one-file score, one section per split.
 
-By default an experiment scores test only. Train and val in `experiments/<name>/` are copies of the files in `manifests/manual/`. A probe that should train on that setup's own tags lists those splits:
+By default an experiment scores test only. Train and val in `experiments/<name>/` are copies of the files in `manifests/slice/`. A probe that should train on that setup's own tags lists those splits:
 
 ```json
 "splits": ["train", "val", "test"]
 ```
 
-`--write-splits train,val,test` does the same thing for one run. `configs/default-auto.json` is that list on the closed scorer. Listed splits are scored into `experiments/<name>/`. A split left off that list is copied from `manifests/manual/` into the same folder.
+`--write-splits train,val,test` does the same thing for one run. `configs/default-auto.json` is that list on the closed scorer. Listed splits are scored into `experiments/<name>/`. A split left off that list is copied from `manifests/slice/` into the same folder.

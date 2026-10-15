@@ -1,7 +1,7 @@
 """Score non-UCS keywords against the Universal Category System.
 
 Each source tag is compared with every UCS subcategory in
-``UCS v8.2.1 Full List.xlsx``. The highest score wins. A row is left
+``references/ucs-v8.2.1.xlsx``. The highest score wins. A row is left
 blank when the best score is under the config's ``min_score``, or when
 two subcategories in different categories still tie. A tie inside one
 category keeps that category and leaves SubCategory blank. A tag that
@@ -56,23 +56,22 @@ in ``configs/default.json``.
 Those fields are also read from the manifest when the audio folder is
 not used (``--no-audio``).
 
-``--make-manifests`` reads ``splits/train.csv``, ``splits/val.csv``, and
-``splits/test.csv``. Each row is only ``filename``, ``source``, and ``path``.
-Keywords and the FSD50K metadata columns come from the dataset files
+``--make-manifests`` rewrites ``manifests/slice/envsound_<split>.csv``.
+Membership is the ``filename``, ``source``, and ``path`` already on that
+file. Keywords and the FSD50K metadata columns come from the dataset files
 above. ``exists`` is whether ``audio/<path>`` is on disk. Category and
-SubCategory are kept from the manifest already in ``manifests/manual/``
-when that file is there. ``--source-dir`` can point at full
-``envsound_*.csv`` lists instead. By default only
-``manifests/manual/envsound_test.csv`` is written. Train and val stay
-untouched so hand tags are not replaced. ``--write-splits`` or a config
-``splits`` list adds them back.
+SubCategory are copied from ``manifests/original-envsound/`` when that
+split's file is there, and otherwise stay as they are on the slice. By
+default only ``manifests/slice/envsound_test.csv`` is written. Train and
+val stay untouched so hand tags are not replaced. ``--write-splits`` or a
+config ``splits`` list adds them back.
 
 An experiment config (see ``configs/``) changes the weights, the minimum
 score, tie handling, and how much of the UCS list is eligible. Each
 experiment writes its own manifests under ``experiments/<name>/`` and does
-not modify ``manifests/manual/``. Those copies are what a separate
+not modify ``manifests/slice/``. Those copies are what a separate
 linear-probing project trains and compares. A split the config does not
-list is copied from ``manifests/manual/`` into that same output folder, so
+list is copied from ``manifests/slice/`` into that same output folder, so
 train and val are present even when only test is scored.
 
 Usage:
@@ -81,7 +80,7 @@ Usage:
   python scripts/score_ucs.py --experiment configs/default-open.json
   python scripts/score_ucs.py --experiment-dir configs
   python scripts/score_ucs.py --experiment-name open-min4 --taxonomy open --min-score 4
-  python scripts/score_ucs.py manifests/manual/envsound_test.csv --config configs/default-open.json
+  python scripts/score_ucs.py manifests/slice/envsound_test.csv --config configs/default-open.json
   python scripts/score_ucs.py --keywords "Meow,Cat,Animal"
   python scripts/score_ucs.py --self-test
 """
@@ -104,14 +103,13 @@ from pathlib import Path
 import openpyxl
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_UCS = ROOT / "UCS v8.2.1 Full List.xlsx"
-DEFAULT_ONTOLOGY = Path(__file__).resolve().parent / "audioset_ontology.json"
-DEFAULT_SPLITS = ROOT / "splits"
-DEFAULT_MANIFESTS = ROOT / "manifests" / "manual"
+DEFAULT_UCS = ROOT / "references" / "ucs-v8.2.1.xlsx"
+DEFAULT_ONTOLOGY = ROOT / "references" / "audioset_ontology.json"
+DEFAULT_MANIFESTS = ROOT / "manifests" / "slice"
 DEFAULT_AUDIO = ROOT / "audio"
-# Optional full envsound_*.csv lists, looked up beside this repo.
-# They are not part of the audio tree.
-DEFAULT_SOURCE = ROOT.parent
+# Full envsound_*.csv lists. Category and SubCategory are copied from here
+# when a slice manifest is rebuilt.
+DEFAULT_SOURCE = ROOT / "manifests" / "original-envsound"
 DEFAULT_CONFIG = ROOT / "configs" / "default.json"
 SPLIT_NAMES = ("train", "val", "test")
 # Train and val are hand-tagged. Nothing writes them unless asked.
@@ -1249,14 +1247,14 @@ def rows_from_audio(
 
 
 def make_manifests(
-    splits_dir: Path,
     source_dir: Path | None,
     manifest_dir: Path,
     audio_dir: Path,
     splits: tuple[str, ...] = DEFAULT_WRITE_SPLITS,
 ) -> list[Path]:
-    """Write manifests/manual/envsound_<split>.csv from splits/ and audio/.
+    """Rewrite manifests/slice/envsound_<split>.csv from that file and audio/.
 
+    Membership is the filename, source, and path already on the slice file.
     ``splits`` defaults to test. Train and val are not rewritten unless they
     are named here, so hand tags in those files stay put.
     """
@@ -1268,24 +1266,20 @@ def make_manifests(
         print(f"leaving {', '.join(skipped)} untouched")
     written: list[Path] = []
     for name in splits:
-        split_path = splits_dir / f"{name}.csv"
-        if not split_path.is_file():
-            raise SystemExit(f"split not found: {split_path}")
-        split_fields, split_rows = load_manifest(split_path)
+        existing = manifest_dir / f"envsound_{name}.csv"
+        if not existing.is_file():
+            raise SystemExit(f"slice manifest not found: {existing}")
+        split_fields, split_rows = load_manifest(existing)
         missing_split = [column for column in ("filename", "source", "path") if column not in split_fields]
         if missing_split:
-            raise SystemExit(f"{split_path} is missing columns: {', '.join(missing_split)}")
+            raise SystemExit(f"{existing} is missing columns: {', '.join(missing_split)}")
         source_path = (source_dir / f"envsound_{name}.csv") if source_dir is not None else None
-        existing = manifest_dir / f"envsound_{name}.csv"
         if source_path is not None and source_path.is_file():
             _fields, prior_rows = load_manifest(source_path)
             prior_from = source_path
-        elif existing.is_file():
-            _fields, prior_rows = load_manifest(existing)
-            prior_from = existing
         else:
-            prior_rows = []
-            prior_from = None
+            prior_rows = split_rows
+            prior_from = existing
         try:
             fields, rows = rows_from_audio(split_rows, prior_rows, index, audio_dir)
         except ValueError as exc:
@@ -1293,8 +1287,7 @@ def make_manifests(
         out = manifest_dir / f"envsound_{name}.csv"
         write_manifest(out, fields, rows)
         written.append(out)
-        kept = "no prior category list" if prior_from is None else f"categories from {prior_from}"
-        print(f"wrote {out} ({len(rows)} rows, {kept})")
+        print(f"wrote {out} ({len(rows)} rows, categories from {prior_from})")
     return written
 
 
@@ -1720,7 +1713,7 @@ def assert_outside_manifests(out_dir: Path, manifest_dir: Path) -> None:
     manual = manifest_dir.resolve()
     if out == manual or manual in out.parents:
         raise SystemExit(
-            f"refusing to write {out} inside {manual}; train and val tags there are manual"
+            f"refusing to write {out} inside {manual}; slice tags there stay as labeled"
         )
 
 
@@ -1744,7 +1737,7 @@ def copy_manual_manifests(
         if not source.is_file():
             raise SystemExit(
                 f"missing {source}; this config does not score {name}, "
-                "so that file is copied from the manual manifests"
+                "so that file is copied from the slice manifests"
             )
         destination = out_dir / source.name
         shutil.copy2(source, destination)
@@ -1840,29 +1833,13 @@ def load_split_rows(
     name: str,
     *,
     manifest_dir: Path,
-    splits_dir: Path,
-    audio_dir: Path,
-    index: AudioIndex | None,
 ) -> tuple[list[str], list[dict[str, str]], str]:
-    """Rows to score. Prefer the manifest on disk; otherwise build from the split list."""
+    """Rows to score, from the slice manifest for this split."""
     manifest_path = manifest_dir / f"envsound_{name}.csv"
-    if manifest_path.is_file():
-        fieldnames, rows = load_manifest(manifest_path)
-        return fieldnames, rows, str(manifest_path)
-    if index is None:
-        raise SystemExit(f"missing {manifest_path}; leave audio lookup on, or build the manifest first")
-    split_path = splits_dir / f"{name}.csv"
-    if not split_path.is_file():
-        raise SystemExit(f"split not found: {split_path}")
-    split_fields, split_rows = load_manifest(split_path)
-    missing_split = [column for column in ("filename", "source", "path") if column not in split_fields]
-    if missing_split:
-        raise SystemExit(f"{split_path} is missing columns: {', '.join(missing_split)}")
-    try:
-        fieldnames, rows = rows_from_audio(split_rows, [], index, audio_dir)
-    except ValueError as exc:
-        raise SystemExit(f"{name}: {exc}") from exc
-    return fieldnames, rows, f"{split_path} (no manifest yet)"
+    if not manifest_path.is_file():
+        raise SystemExit(f"slice manifest not found: {manifest_path}")
+    fieldnames, rows = load_manifest(manifest_path)
+    return fieldnames, rows, str(manifest_path)
 
 
 def borrow_missing_pairs(
@@ -1931,7 +1908,6 @@ def run_experiments(
     ucs_path: Path,
     ontology_path: Path,
     manifest_dir: Path,
-    splits_dir: Path,
     audio_dir: Path,
     no_audio: bool,
     output_dir: Path | None,
@@ -1979,13 +1955,7 @@ def run_experiments(
         background = None if config.taxonomy == "open" else full_catalog
         allowed_pairs = {(entry.category, entry.subcategory) for entry in catalog.entries}
         for name in config.splits:
-            fieldnames, rows, source = load_split_rows(
-                name,
-                manifest_dir=manifest_dir,
-                splits_dir=splits_dir,
-                audio_dir=audio_dir,
-                index=index,
-            )
+            fieldnames, rows, source = load_split_rows(name, manifest_dir=manifest_dir)
             if index is not None:
                 counts = apply_audio(rows, index)
                 print(f"  {name}: audio folder {matched_phrase(counts)}")
@@ -2008,7 +1978,7 @@ def run_experiments(
         copied = manual_splits_to_copy(config.splits)
         written.extend(copy_manual_manifests(out_dir, manifest_dir, copied))
         if copied:
-            sections.append("copied from manual: " + ", ".join(f"envsound_{name}.csv" for name in copied))
+            sections.append("copied from slice: " + ", ".join(f"envsound_{name}.csv" for name in copied))
         snapshot = config_snapshot(
             config,
             subcategory_count=len(catalog.entries),
@@ -2359,10 +2329,10 @@ def check_experiments() -> None:
     assert (labeled["Category"], labeled["SubCategory"]) == ("ALARMS", "BELL")
     assert row["SubCategory"] == "DOG"
 
-    manual = ROOT / "manifests" / "manual"
-    _fails(lambda: assert_outside_manifests(manual, manual), "manual")
-    _fails(lambda: assert_outside_manifests(manual / "nested", manual), "manual")
-    assert_outside_manifests(ROOT / "experiments" / "demo", manual)
+    slice_dir = ROOT / "manifests" / "slice"
+    _fails(lambda: assert_outside_manifests(slice_dir, slice_dir), "slice")
+    _fails(lambda: assert_outside_manifests(slice_dir / "nested", slice_dir), "slice")
+    assert_outside_manifests(ROOT / "experiments" / "demo", slice_dir)
     assert manual_splits_to_copy(("test",)) == ("train", "val")
     assert manual_splits_to_copy(("val", "test")) == ("train",)
     assert manual_splits_to_copy(SPLIT_NAMES) == ()
@@ -2569,14 +2539,13 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument(
         "--make-manifests",
         action="store_true",
-        help="write manifest CSVs from splits/ and the audio-folder label files. Test only, unless --write-splits or a config says otherwise",
+        help="rewrite slice manifests from their own membership and the audio-folder label files. Test only, unless --write-splits or a config says otherwise",
     )
-    parser.add_argument("--splits", type=Path, default=DEFAULT_SPLITS, help="directory of train.csv, val.csv, test.csv")
     parser.add_argument(
         "--source-dir",
         type=Path,
         default=DEFAULT_SOURCE,
-        help="optional directory of full envsound_*.csv lists; Category and SubCategory are copied from these when the file exists, otherwise kept from the manifest being rewritten",
+        help="directory of full envsound_*.csv lists (manifests/original-envsound). Category and SubCategory are copied from these when the file exists, otherwise kept from the slice manifest",
     )
     parser.add_argument(
         "--audio",
@@ -2593,7 +2562,7 @@ def main(argv: list[str] | None = None) -> int:
         "--manifest-dir",
         type=Path,
         default=DEFAULT_MANIFESTS,
-        help="hand-tagged manifests (manifests/manual). Experiments never write here; splits they do not score are copied from here",
+        help="slice manifests (manifests/slice). Experiments never write here; splits they do not score are copied from here",
     )
     parser.add_argument("--ucs", type=Path, default=DEFAULT_UCS)
     parser.add_argument("--ontology", type=Path, default=DEFAULT_ONTOLOGY)
@@ -2629,7 +2598,7 @@ def main(argv: list[str] | None = None) -> int:
         action="append",
         type=Path,
         default=None,
-        help="JSON config for one tagging experiment. Repeat to run several. Writes experiments/<name>/ and does not touch manifests/manual/",
+        help="JSON config for one tagging experiment. Repeat to run several. Writes experiments/<name>/ and does not touch manifests/slice/",
     )
     parser.add_argument(
         "--experiment-dir",
@@ -2640,7 +2609,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--output-dir", type=Path, help="folder for experiment manifests. A batch writes one subfolder per name")
     parser.add_argument(
         "--write-splits",
-        help="splits to score or rebuild, comma-separated. Default is test. Train and val left off the list stay as the manual files, and an experiment copies them into its output folder. Example: train,val,test",
+        help="splits to score or rebuild, comma-separated. Default is test. Train and val left off the list stay as the slice files, and an experiment copies them into its output folder. Example: train,val,test",
     )
     parser.add_argument("--keywords", help="score one keyword list and print the top candidates")
     parser.add_argument("--category", default="", help="existing Category, used only to break a tie")
@@ -2671,7 +2640,7 @@ def main(argv: list[str] | None = None) -> int:
             split_choice = configs[0].splits
         else:
             split_choice = _scoring_config(args).splits
-        make_manifests(args.splits, args.source_dir, args.manifest_dir, args.audio, split_choice)
+        make_manifests(args.source_dir, args.manifest_dir, args.audio, split_choice)
         if not experiment_mode and args.manifest is None and args.keywords is None and not args.self_test:
             return 0
 
@@ -2694,7 +2663,6 @@ def main(argv: list[str] | None = None) -> int:
             ucs_path=args.ucs,
             ontology_path=args.ontology,
             manifest_dir=args.manifest_dir,
-            splits_dir=args.splits,
             audio_dir=args.audio,
             no_audio=args.no_audio,
             output_dir=args.output_dir,
@@ -2760,8 +2728,8 @@ def main(argv: list[str] | None = None) -> int:
     is_split = "Keywords" not in fieldnames and {"filename", "source", "path"} <= set(fieldnames)
     if is_split and args.no_audio:
         raise SystemExit(
-            f"{args.manifest} is a split list, not a manifest. "
-            "Run with --make-manifests to build manifests/manual/ from splits/."
+            f"{args.manifest} has no Keywords column. "
+            "Drop --no-audio so labels are read from the audio folder."
         )
     if not args.no_audio:
         if not args.audio.is_dir():
