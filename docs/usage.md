@@ -45,44 +45,10 @@ By default an experiment scores test only. Train and val are copied from `manife
 ## Check the scorer
 
 ```bash
-python scripts/score_ucs.py --self-test
+python -m unittest discover -s scripts/tests
 ```
 
-Checks the scorer against the full UCS list and prints the subcategory count.
-
-## Convert with an LLM
-
-```bash
-python scripts/llm_convert.py manifests/slice/envsound_val.csv --dry-run
-```
-
-`--dry-run` prints one line per category and a token estimate. It does not call an API and it does not write a CSV.
-
-An exact subcategory name or synonym stays with the scorer. The other rows are grouped by the `Category` on the row. Each group is one request. The system message is that category's subcategories as codes, and the user message is the keyword lines. The reply is `#1 01` or `#1 -`. The same keyword line is sent once. Wav files are not read. The system message is the same for every batch of a category, which is the prefix a provider can cache.
-
-The UCS workbook has 753 subcategories. A category with more than `--codebook-limit` (48) of them, or a row with no category against that full list, does not get the whole list. Those lines carry the scorer's top `--top` candidates, and the model picks one of them.
-
-A real run reads `OPENAI_API_KEY` and `OPENAI_MODEL` from the environment. A `.env` file at the repo root is loaded on startup. A variable already set in the shell stays as it is. `--model` overrides `OPENAI_MODEL`. `OPENAI_BASE_URL` sets the API root, and the default is `https://api.openai.com/v1`. Copy `.env.example` to `.env` and fill in the key and model. `-o` writes the same `pred_*` columns as the scorer. `Category` and `SubCategory` on that copy stay as they were.
-
-```bash
-python scripts/llm_convert.py manifests/slice/envsound_val.csv -o predictions.csv
-python scripts/llm_convert.py --keywords "sheep" --category ANIMALS --dry-run
-python scripts/llm_convert.py --self-test
-```
-
-| Flag | Use |
-| --- | --- |
-| `-o`, `--output` | CSV with `pred_*` columns. |
-| `--config` | Taxonomy and weights. Default is `configs/default.json`. |
-| `--dry-run` | Batches and a token estimate. No API call. |
-| `--no-cascade` | Also send rows the scorer already matched exactly. |
-| `--model`, `--base-url` | Model id and API root. |
-| `--batch-size` | Keyword lines per request. Default 40. |
-| `--codebook-limit` | Most subcategories in one system message. Default 48. |
-| `--top` | Candidates on a line when the codebook does not fit. Default 8. |
-| `--keywords`, `--category` | One keyword list. |
-| `--ucs`, `--ontology` | UCS workbook and AudioSet ontology. |
-| `--self-test` | Check batching against val without an API call. |
+Runs the tests in `scripts/tests/`. The scoring tests load the full UCS list and the AudioSet ontology from `references/`.
 
 ## Flags
 
@@ -100,4 +66,3 @@ python scripts/llm_convert.py --self-test
 | `--keywords` and `--category`, `--pp`, `--uploader-tags`, `--title`, `--description`, `--top` | One-off probe. |
 | `--make-manifests`, `--write-splits`, `--source-dir`, `--manifest-dir` | Rebuild slice CSVs. |
 | `--experiment`, `--experiment-dir`, `--experiment-name`, `--output-dir` | Write `experiments/<name>/`. |
-| `--self-test` | Check the scorer and print the subcategory count. |
