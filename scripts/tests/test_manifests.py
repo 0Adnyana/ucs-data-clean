@@ -9,6 +9,8 @@ from score_ucs import (  # noqa: E402
     ROOT,
     AudioIndex,
     audioset_keywords,
+    foley_clip,
+    foley_keywords,
     join_tags,
     predominant_labels,
     rows_from_audio,
@@ -84,6 +86,23 @@ class AudioHelperTests(unittest.TestCase):
             ["Microwave_oven", "Bell", "Alarm"],
         )
         assert labels == "Bell,Alarm", labels
+
+    def test_foley_keywords(self) -> None:
+        assert foley_keywords("Human", "Cough") == "Human,Cough"
+        assert foley_keywords("Break/Drop", "PaperTear") == "Break/Drop,Paper Tear"
+        assert foley_keywords("Footstep", "Walk") == "Footstep,Walk"
+        clip = foley_clip(
+            {
+                "category": "Liquid",
+                "sub-category": "Pour",
+                "original-tags": "glass, pour, rinse",
+                "description": "Pouring liquid into the sink",
+            }
+        )
+        assert clip["Keywords"] == "Liquid,Pour"
+        assert clip["uploader_tags"] == "glass,pour,rinse"
+        assert clip["pp_labels"] == "" and clip["title"] == ""
+        assert clip["description"] == "Pouring liquid into the sink"
 
     def test_index_apply(self) -> None:
         index = AudioIndex({("a.wav", "FSD50K"): {"Keywords": "Bell", "pp_labels": "Bell", "uploader_tags": "bell"}})

@@ -22,7 +22,7 @@ Rows that already have `SubCategory` are finished mappings. Use them as positive
 | `Category` | UCS category. |
 | `SubCategory` | UCS subcategory. Empty on the rows a converter is supposed to fill. |
 | `Keywords` | Original dataset labels. This is the non-UCS input. |
-| `source` | `AudioSet`, `ESC-50`, or `FSD50K`. |
+| `source` | `AudioSet`, `ESC-50`, `FSD50K`, or `FoleySet`. |
 | `path` | Path of the audio file relative to `audio/`. |
 | `exists` | Whether that audio file was present when the manifest was built. |
 
@@ -37,8 +37,23 @@ A rebuild also writes `pp_labels`, `uploader_tags`, `title`, and `description`. 
 | AudioSet | `audio/AudioSet/audios/balanced_train_segments.csv` and `eval_segments.csv` | `human_labels` |
 | ESC-50 | `audio/ESC-50/meta/esc50.csv` | `category` |
 | FSD50K | `audio/FSD50K/FSD50K.ground_truth/dev.csv` and `eval.csv` | `labels` |
+| FoleySet | `audio/FoleySet/metadata/foleyset_metadata.csv` | `category` and `sub-category` |
 
 FSD50K also uses `audio/FSD50K/FSD50K.metadata`. `pp_pnp_ratings_FSD50K.json` supplies predominant labels (a rating of 1.0), including classes the ground truth later merged into a parent. `dev_clips_info_FSD50K.json` and `eval_clips_info_FSD50K.json` supply uploader tags, the title, and the description. A predominant label that is not already a keyword is scored as its own tag.
+
+FoleySet free tags go in `uploader_tags`. The description goes in `description`. `Category` and `SubCategory` stay empty. A CamelCase subcategory is written with spaces (`PaperTear` becomes `Paper Tear`) so each word can match.
+
+## envsound-foleyset
+
+`manifests/envsound-foleyset/` is `manifests/blank-envsound/` plus FoleySet clips that do not reuse a Freesound id already in FSD50K or ESC-50. Shared uploads are dropped, including when the FoleySet segment and the existing clip are in different splits. AudioSet ids are YouTube ids and are not part of that check.
+
+| File | Rows | blank-envsound | FoleySet |
+| --- | ---: | ---: | ---: |
+| `manifests/envsound-foleyset/envsound_train.csv` | 47450 | 40642 | 6808 |
+| `manifests/envsound-foleyset/envsound_val.csv` | 9548 | 8707 | 841 |
+| `manifests/envsound-foleyset/envsound_test.csv` | 9551 | 8708 | 843 |
+
+Of 10000 FoleySet clips, 1508 were left out: 1426 shared with FSD50K only, 40 with ESC-50 only, and 42 with both. Rebuild with `python scripts/make_envsound_foleyset.py`.
 
 Wav layout and file counts are in [audio/README.md](../audio/README.md).
 

@@ -44,6 +44,7 @@ the layout the UCS paper converts:
   AudioSet   ``audio/AudioSet/audios/*_segments.csv`` ``human_labels``
   ESC-50     ``audio/ESC-50/meta/esc50.csv`` ``category``
   FSD50K     ``audio/FSD50K/FSD50K.ground_truth/{dev,eval}.csv`` ``labels``
+  FoleySet   ``audio/FoleySet/metadata/foleyset_metadata.csv`` category and sub-category
 
 FSD50K also contributes the metadata shipped beside those wavs.
 ``pp_pnp_ratings_FSD50K.json`` supplies predominant labels (a rating of
@@ -96,6 +97,7 @@ import re
 import shutil
 import sys
 from collections import defaultdict
+from collections.abc import Callable
 from dataclasses import dataclass, field, replace
 from pathlib import Path
 
@@ -879,6 +881,36 @@ def join_tags(tags: list) -> str:
     return ",".join(parts)
 
 
+def _split_camel(text: str) -> str:
+    """Turn ``PaperTear`` into ``Paper Tear`` so each word can match."""
+    return re.sub(r"(?<=[a-z])(?=[A-Z])", " ", (text or "").strip())
+
+
+def foley_keywords(category: str, subcategory: str) -> str:
+    """FoleySet class labels, in the same comma style as the other sources."""
+    parts: list[str] = []
+    seen: set[str] = set()
+    for raw in ((category or "").strip(), _split_camel(subcategory)):
+        key = norm_phrase(raw)
+        if not key or key in seen:
+            continue
+        seen.add(key)
+        parts.append(raw)
+    return join_tags(parts)
+
+
+def foley_clip(row: dict[str, str]) -> dict[str, str]:
+    """Keywords and metadata for one FoleySet metadata row."""
+    tags = [part.strip() for part in (row.get("original-tags") or "").split(",") if part.strip()]
+    return {
+        "Keywords": foley_keywords(row.get("category") or "", row.get("sub-category") or ""),
+        "pp_labels": "",
+        "uploader_tags": join_tags(tags),
+        "title": "",
+        "description": row.get("description") or "",
+    }
+
+
 def predominant_labels(ratings: dict, names: dict[str, str], label_order: list[str]) -> str:
     """Labels an annotator marked PP (rating 1.0), in ground-truth order."""
     wanted: list[str] = []
@@ -1000,6 +1032,13 @@ def load_audio_index(audio_dir: Path) -> AudioIndex:
             "title": str(clip_info.get("title") or ""),
             "description": str(clip_info.get("description") or ""),
         }
+
+    foley_meta = audio_dir / "FoleySet" / "metadata" / "foleyset_metadata.csv"
+    if foley_meta.is_file():
+        for row in _read_csv(foley_meta):
+            filename = (row.get("name") or "").strip()
+            if filename:
+                clips[(filename, "FoleySet")] = foley_clip(row)
 
     return AudioIndex(clips)
 
@@ -1901,6 +1940,11 @@ def catalog_for(
     return catalog, resolved, missing, borrowed
 
 
+SplitWriter = Callable[
+    [Path, list[str], list[dict[str, str]], list[Prediction], Catalog, ExperimentConfig], str
+]
+
+
 def run_experiments(
     configs: list[ExperimentConfig],
     *,
@@ -1910,11 +1954,13 @@ def run_experiments(
     audio_dir: Path,
     no_audio: bool,
     output_dir: Path | None,
+    write_split: SplitWriter | None = None,
 ) -> list[Path]:
     """Write scored manifests for each config. Never writes into ``manifest_dir``.
 
     Splits the config does not score are copied from ``manifest_dir`` into
-    the experiment folder.
+    the experiment folder. ``write_split`` replaces the default CSV writer
+    for scored splits. The text it returns is added to that split's report.
     """
     if not ucs_path.is_file():
         raise SystemExit(f"UCS list not found: {ucs_path}")
@@ -1968,10 +2014,16 @@ def run_experiments(
                 allowed_pairs=None if background is None else allowed_pairs,
             )
             summary = report(rows, predictions)
+            destination = out_dir / f"envsound_{name}.csv"
+            fields = extend_fields(fieldnames, rows)
+            if write_split is None:
+                write_manifest(destination, fields, labeled_rows(rows, predictions))
+            else:
+                extra = write_split(destination, fields, rows, predictions, catalog, config)
+                if extra:
+                    summary += "\n" + extra
             print(summary)
             sections.append(f"[{name}] source {source}\n{summary}")
-            destination = out_dir / f"envsound_{name}.csv"
-            write_manifest(destination, extend_fields(fieldnames, rows), labeled_rows(rows, predictions))
             written.append(destination)
             print(f"wrote {destination} ({len(rows)} rows)")
         copied = manual_splits_to_copy(config.splits)

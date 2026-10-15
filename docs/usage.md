@@ -20,6 +20,20 @@ python scripts/score_ucs.py --keywords "Meow,Cat,Animal"
 
 Prints the decision and the top candidates (`--top`, default 8). `--category` breaks a tie. `--pp`, `--uploader-tags`, `--title`, and `--description` are the FSD50K fields for that probe.
 
+## List candidates for hand tagging
+
+```bash
+python scripts/candidates_ucs.py manifests/slice/envsound_train.csv -o candidates_train.csv --taxonomy open
+```
+
+Writes the same CSV as `-o` above, plus `cand_count` and, for each of the `--top` best subcategories (default 10), `cand_<n>_category`, `cand_<n>_subcategory`, `cand_<n>_score`, and `cand_<n>_conf`. `conf` is that score's share of the total over every subcategory the row matched. `--evidence` adds `cand_<n>_evidence`. The taxonomy limits which pairs can be listed, so leave off `--taxonomy open` to rank only the closed list. `--keywords` prints the list for one probe. The run also reports how often the existing SubCategory is among the candidates.
+
+```bash
+python scripts/candidates_ucs.py --experiment configs/open-weighted-min075.json --manifest-dir manifests/original-envsound
+```
+
+`--experiment`, `--experiment-dir`, `--experiment-name`, `--write-splits`, `--manifest-dir`, and `--output-dir` work as in [Run an experiment](#run-an-experiment). The CSVs are the `score_ucs.py` experiment files with the `pred_*` and `cand_*` columns added, and `report.txt` includes the candidate coverage. The default folder is `experiments/<name>-candidates/`, so the `score_ucs.py` output for the same config is not replaced.
+
 ## Rebuild manifests
 
 ```bash
