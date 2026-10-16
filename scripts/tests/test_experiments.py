@@ -27,17 +27,7 @@ from score_ucs import (  # noqa: E402
 
 
 def _cli(**overrides: object) -> argparse.Namespace:
-    base: dict[str, object] = {
-        "set": None,
-        "min_score": None,
-        "taxonomy": None,
-        "closed_slice": False,
-        "categories": None,
-        "pair_list": None,
-        "experiment_name": None,
-        "write_splits": None,
-        "on_tie": None,
-    }
+    base: dict[str, object] = {"write_splits": None}
     base.update(overrides)
     return argparse.Namespace(**base)
 
@@ -88,9 +78,9 @@ class ExperimentTests(unittest.TestCase):
 
     def test_apply_cli(self) -> None:
         plain = parse_experiment({"name": "plain"})
-        overridden = apply_cli(plain, _cli(write_splits="train,val,test", set=["exact_sub=8", "min_score=1"]))
+        overridden = apply_cli(plain, _cli(write_splits="train,val,test"))
         assert overridden.splits == SPLIT_NAMES
-        assert overridden.weights.exact_sub == 8 and overridden.min_score == 1
+        assert overridden.weights == plain.weights and overridden.min_score == plain.min_score
 
     def test_taxonomy_restriction(self) -> None:
         records = [

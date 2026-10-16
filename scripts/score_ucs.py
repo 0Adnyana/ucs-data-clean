@@ -57,16 +57,6 @@ in ``configs/default.json``.
 Those fields are also read from the manifest when the audio folder is
 not used (``--no-audio``).
 
-``--make-manifests`` rewrites ``manifests/slice/envsound_<split>.csv``.
-Membership is the ``filename``, ``source``, and ``path`` already on that
-file. Keywords and the FSD50K metadata columns come from the dataset files
-above. ``exists`` is whether ``audio/<path>`` is on disk. Category and
-SubCategory are copied from ``manifests/original-envsound/`` when that
-split's file is there, and otherwise stay as they are on the slice. By
-default only ``manifests/slice/envsound_test.csv`` is written. Train and
-val stay untouched so hand tags are not replaced. ``--write-splits`` or a
-config ``splits`` list adds them back.
-
 An experiment config (see ``configs/``) changes the weights, the minimum
 score, tie handling, and how much of the UCS list is eligible. Each
 experiment writes its own manifests under ``experiments/<name>/`` and does
@@ -74,15 +64,21 @@ not modify ``manifests/slice/``. Those copies are what a separate
 linear-probing project trains and compares. A split the config does not
 list is copied from ``manifests/slice/`` into that same output folder, so
 train and val are present even when only test is scored.
+``--write-splits`` replaces that list for one run.
+
+``--candidates`` writes that same decision, plus the top subcategories for
+each row (``cand_*``). ``--evidence`` adds the tags that produced each
+candidate's points. An experiment run with ``--candidates`` writes
+``experiments/<name>-candidates/``. A config's own ``output_dir`` gets
+the same suffix. ``--output-dir`` is used as given.
 
 Usage:
-  python scripts/score_ucs.py --make-manifests
-  python scripts/score_ucs.py --make-manifests --write-splits train,val,test
   python scripts/score_ucs.py --experiment configs/default-open.json
-  python scripts/score_ucs.py --experiment-dir configs
-  python scripts/score_ucs.py --experiment-name open-min4 --taxonomy open --min-score 4
+  python scripts/score_ucs.py --experiment configs/default-open.json --write-splits train,val,test
   python scripts/score_ucs.py manifests/slice/envsound_test.csv --config configs/default-open.json
   python scripts/score_ucs.py --keywords "Meow,Cat,Animal"
+  python scripts/score_ucs.py manifests/slice/envsound_train.csv -o candidates.csv --candidates --evidence
+  python scripts/score_ucs.py --experiment configs/open-weighted-min075.json --candidates
 
 Tests live in ``scripts/tests/``:
   python -m unittest discover -s scripts/tests
@@ -108,13 +104,13 @@ DEFAULT_UCS = ROOT / "references" / "ucs-v8.2.1.xlsx"
 DEFAULT_ONTOLOGY = ROOT / "references" / "audioset_ontology.json"
 DEFAULT_MANIFESTS = ROOT / "manifests" / "slice"
 DEFAULT_AUDIO = ROOT / "audio"
-# Full envsound_*.csv lists. Category and SubCategory are copied from here
-# when a slice manifest is rebuilt.
-DEFAULT_SOURCE = ROOT / "manifests" / "original-envsound"
 DEFAULT_CONFIG = ROOT / "configs" / "default.json"
 SPLIT_NAMES = ("train", "val", "test")
 # Train and val are hand-tagged. Nothing writes them unless asked.
 DEFAULT_WRITE_SPLITS = ("test",)
+# Printed for ``--keywords``. Written per row when ``--candidates`` is set.
+DEFAULT_PROBE_TOP = 8
+DEFAULT_CANDIDATE_TOP = 10
 TAXONOMY_MODES = ("open", "closed", "categories", "pairs")
 WEIGHT_NAMES = (
     "exact_sub",
@@ -139,6 +135,7 @@ MANIFEST_COLUMNS = [
     "exists",
 ]
 META_COLUMNS = ["pp_labels", "uploader_tags", "title", "description"]
+PRED_COLUMNS = ["pred_category", "pred_subcategory", "pred_score", "pred_status", "pred_evidence"]
 
 
 def as_finite(name: str, value: object) -> float:
@@ -1165,168 +1162,12 @@ def load_manifest(path: Path) -> tuple[list[str], list[dict[str, str]]]:
         return list(reader.fieldnames or []), list(reader)
 
 
-def _identity(row: dict[str, str]) -> tuple[str, str, str]:
-    key = (row.get("filename") or "", row.get("source") or "", row.get("path") or "")
-    if not all(key):
-        raise ValueError(f"row is missing filename, source, or path: {key}")
-    return key
-
-
-def manifest_fields(source_fields: list[str]) -> list[str]:
-    missing = [name for name in MANIFEST_COLUMNS if name not in source_fields]
-    if missing:
-        raise ValueError(f"missing columns: {', '.join(missing)}")
-    extra = [name for name in source_fields if name not in MANIFEST_COLUMNS]
-    return list(MANIFEST_COLUMNS) + extra
-
-
-def select_manifest_rows(
-    split_rows: list[dict[str, str]],
-    source_rows: list[dict[str, str]],
-    source_fields: list[str],
-) -> tuple[list[str], list[dict[str, str]]]:
-    """Keep source rows named by a split, in split order.
-
-    A split file only says which audio file belongs. Category, subcategory,
-    keywords, and the rest come from the full manifest.
-    """
-    fields = manifest_fields(source_fields)
-    index: dict[tuple[str, str, str], dict[str, str]] = {}
-    for row in source_rows:
-        key = _identity(row)
-        if key in index:
-            filename, source, _path = key
-            raise ValueError(f"duplicate row for {filename} ({source})")
-        index[key] = row
-
-    chosen: list[dict[str, str]] = []
-    missing: list[tuple[str, str, str]] = []
-    for row in split_rows:
-        key = _identity(row)
-        found = index.get(key)
-        if found is None:
-            missing.append(key)
-            continue
-        chosen.append({name: found.get(name, "") for name in fields})
-    if missing:
-        preview = ", ".join(f"{filename} ({source})" for filename, source, _path in missing[:8])
-        extra = "" if len(missing) <= 8 else f" (+{len(missing) - 8})"
-        raise ValueError(f"{len(missing)} split rows not in the full manifest: {preview}{extra}")
-    return fields, chosen
-
-
 def write_manifest(path: Path, fieldnames: list[str], rows: list[dict[str, str]]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(handle, fieldnames=fieldnames, lineterminator="\n", extrasaction="ignore")
         writer.writeheader()
         writer.writerows(rows)
-
-
-def _prior_index(rows: list[dict[str, str]]) -> tuple[dict[tuple[str, str], dict[str, str]], list[str]]:
-    """Index rows by filename and source. Extra columns are kept in order."""
-    index: dict[tuple[str, str], dict[str, str]] = {}
-    extra: list[str] = []
-    for row in rows:
-        key = ((row.get("filename") or ""), (row.get("source") or ""))
-        if not all(key):
-            continue
-        if key in index:
-            filename, source = key
-            raise ValueError(f"duplicate row for {filename} ({source})")
-        index[key] = row
-        for name in row:
-            if name not in MANIFEST_COLUMNS and name not in META_COLUMNS and name not in extra:
-                extra.append(name)
-    return index, extra
-
-
-def rows_from_audio(
-    split_rows: list[dict[str, str]],
-    prior_rows: list[dict[str, str]],
-    index: AudioIndex,
-    audio_dir: Path,
-) -> tuple[list[str], list[dict[str, str]]]:
-    """One manifest row per split file, labeled from the audio-folder datasets.
-
-    Category and SubCategory come from ``prior_rows`` when that clip is
-    there. Keywords, predominant labels, and clip text come from ``index``.
-    """
-    prior, extra = _prior_index(prior_rows)
-    fields = list(MANIFEST_COLUMNS) + list(META_COLUMNS) + extra
-    chosen: list[dict[str, str]] = []
-    missing: list[tuple[str, str]] = []
-    for row in split_rows:
-        key = ((row.get("filename") or ""), (row.get("source") or ""))
-        path = row.get("path") or ""
-        if not all(key) or not path:
-            raise ValueError(f"split row is missing filename, source, or path: {key}")
-        clip = index.clips.get(key)
-        if clip is None:
-            missing.append(key)
-            continue
-        found = prior.get(key, {})
-        chosen_row = {name: found.get(name, "") for name in fields}
-        chosen_row["filename"] = key[0]
-        chosen_row["source"] = key[1]
-        chosen_row["path"] = path
-        chosen_row["Category"] = found.get("Category", "")
-        chosen_row["SubCategory"] = found.get("SubCategory", "")
-        chosen_row["Keywords"] = clip.get("Keywords", "")
-        chosen_row["exists"] = "True" if (audio_dir / path).is_file() else "False"
-        for name in META_COLUMNS:
-            chosen_row[name] = clip.get(name, "")
-        chosen.append(chosen_row)
-    if missing:
-        preview = ", ".join(f"{filename} ({source})" for filename, source in missing[:8])
-        extra_note = "" if len(missing) <= 8 else f" (+{len(missing) - 8})"
-        raise ValueError(f"{len(missing)} split rows have no label file: {preview}{extra_note}")
-    return fields, chosen
-
-
-def make_manifests(
-    source_dir: Path | None,
-    manifest_dir: Path,
-    audio_dir: Path,
-    splits: tuple[str, ...] = DEFAULT_WRITE_SPLITS,
-) -> list[Path]:
-    """Rewrite manifests/slice/envsound_<split>.csv from that file and audio/.
-
-    Membership is the filename, source, and path already on the slice file.
-    ``splits`` defaults to test. Train and val are not rewritten unless they
-    are named here, so hand tags in those files stay put.
-    """
-    splits = parse_split_list(splits)
-    index = load_audio_index(audio_dir)
-    skipped = [name for name in SPLIT_NAMES if name not in splits]
-    print(f"writing {', '.join(splits)}")
-    if skipped:
-        print(f"leaving {', '.join(skipped)} untouched")
-    written: list[Path] = []
-    for name in splits:
-        existing = manifest_dir / f"envsound_{name}.csv"
-        if not existing.is_file():
-            raise SystemExit(f"slice manifest not found: {existing}")
-        split_fields, split_rows = load_manifest(existing)
-        missing_split = [column for column in ("filename", "source", "path") if column not in split_fields]
-        if missing_split:
-            raise SystemExit(f"{existing} is missing columns: {', '.join(missing_split)}")
-        source_path = (source_dir / f"envsound_{name}.csv") if source_dir is not None else None
-        if source_path is not None and source_path.is_file():
-            _fields, prior_rows = load_manifest(source_path)
-            prior_from = source_path
-        else:
-            prior_rows = split_rows
-            prior_from = existing
-        try:
-            fields, rows = rows_from_audio(split_rows, prior_rows, index, audio_dir)
-        except ValueError as exc:
-            raise SystemExit(f"{name}: {exc}") from exc
-        out = manifest_dir / f"envsound_{name}.csv"
-        write_manifest(out, fields, rows)
-        written.append(out)
-        print(f"wrote {out} ({len(rows)} rows, categories from {prior_from})")
-    return written
 
 
 def check_experiment_name(name: str) -> str:
@@ -1599,86 +1440,11 @@ def default_config() -> ExperimentConfig:
     return _DEFAULT_CONFIG
 
 
-def parse_sets(items: list[str]) -> tuple[dict[str, float], float | None]:
-    changes: dict[str, float] = {}
-    min_score: float | None = None
-    for item in items:
-        if "=" not in item:
-            raise SystemExit(f"--set must be NAME=VALUE, got {item!r}")
-        key, raw = item.split("=", 1)
-        key = key.strip()
-        try:
-            number = float(raw.strip())
-        except ValueError:
-            raise SystemExit(f"{key} must be a number") from None
-        if key == "min_score":
-            min_score = as_finite("min_score", number)
-            continue
-        if key not in WEIGHT_NAMES:
-            known = ", ".join((*WEIGHT_NAMES, "min_score"))
-            raise SystemExit(f"unknown weight {key!r}; expected {known}")
-        changes[key] = as_finite(key, number)
-    return changes, min_score
-
-
 def apply_cli(config: ExperimentConfig, args: argparse.Namespace) -> ExperimentConfig:
-    """CLI flags override the same fields in a config. Unset flags leave the config alone."""
-    weights = config.weights
-    min_score = config.min_score
-    if args.set:
-        changes, set_min = parse_sets(args.set)
-        if changes:
-            weights = weights.with_values(**changes)
-        if set_min is not None:
-            min_score = set_min
-    if args.min_score is not None:
-        min_score = as_finite("min_score", args.min_score)
-
-    if args.taxonomy and args.closed_slice and args.taxonomy != "closed":
-        raise SystemExit("use either --taxonomy or --closed-slice")
-    taxonomy = args.taxonomy or ("closed" if args.closed_slice else config.taxonomy)
-    categories = config.categories
-    pairs = set(config.pairs)
-    if args.categories and args.pair_list:
-        raise SystemExit("use either --categories or --pairs")
-    if args.categories:
-        if args.taxonomy not in (None, "categories"):
-            raise SystemExit("--categories is only for --taxonomy categories")
-        taxonomy = "categories"
-        categories = tuple(dict.fromkeys(part.strip() for part in args.categories.split(",") if part.strip()))
-        if not categories:
-            raise SystemExit("--categories is empty")
-    if args.pair_list:
-        if args.taxonomy not in (None, "pairs"):
-            raise SystemExit("--pairs is only for --taxonomy pairs")
-        taxonomy = "pairs"
-        listed = [part.strip() for part in args.pair_list.split(",") if part.strip()]
-        if not listed:
-            raise SystemExit("--pairs is empty")
-        pairs = {parse_pair(part) for part in listed}
-    if taxonomy == "categories" and not categories:
-        raise SystemExit("taxonomy categories needs --categories or a category list in the config")
-    if taxonomy == "pairs" and not pairs:
-        raise SystemExit("taxonomy pairs needs --pairs or a pair list in the config")
-    if taxonomy != "categories":
-        categories = ()
-    if taxonomy != "pairs":
-        pairs = set()
-
-    name = check_experiment_name(args.experiment_name) if args.experiment_name else config.name
-    splits = parse_split_list(args.write_splits, origin="--write-splits") if args.write_splits is not None else config.splits
-    on_tie = args.on_tie or config.on_tie
-    return replace(
-        config,
-        name=name,
-        taxonomy=taxonomy,
-        categories=categories,
-        pairs=frozenset(pairs),
-        weights=weights,
-        min_score=min_score,
-        on_tie=on_tie,
-        splits=splits,
-    )
+    """``--write-splits`` replaces the config's split list."""
+    if args.write_splits is None:
+        return config
+    return replace(config, splits=parse_split_list(args.write_splits, origin="--write-splits"))
 
 
 def allowlist_for(
@@ -2048,43 +1814,31 @@ def run_experiments(
 
 
 def collect_experiments(args: argparse.Namespace) -> list[ExperimentConfig]:
-    if args.config and (args.experiment or args.experiment_dir):
+    if args.config and args.experiment:
         raise SystemExit("use --config or --experiment, not both")
-    files: list[Path] = []
-    if args.experiment_dir is not None:
-        if args.experiment:
-            raise SystemExit("use either --experiment or --experiment-dir")
-        folder = args.experiment_dir
-        if not folder.is_dir():
-            raise SystemExit(f"experiment directory not found: {folder}")
-        files = sorted(
-            path
-            for path in folder.glob("*.json")
-            if path.is_file() and path.resolve() != DEFAULT_CONFIG.resolve()
-        )
-        if not files:
-            raise SystemExit(f"no JSON configs in {folder}")
-    elif args.experiment:
-        files = list(args.experiment)
-    if files:
-        if args.experiment_name and len(files) != 1:
-            raise SystemExit("--experiment-name applies to one experiment")
-        loaded: list[ExperimentConfig] = []
-        for path in files:
-            if not path.is_file():
-                raise SystemExit(f"experiment config not found: {path}")
-            loaded.append(apply_cli(load_config_file(path), args))
-        return loaded
-    if args.experiment_name:
-        base = load_config_file(args.config) if args.config else default_config()
-        return [apply_cli(base, args)]
-    raise SystemExit("no experiment config")
+    if not args.experiment:
+        raise SystemExit("no experiment config")
+    loaded: list[ExperimentConfig] = []
+    for path in args.experiment:
+        if not path.is_file():
+            raise SystemExit(f"experiment config not found: {path}")
+        loaded.append(apply_cli(load_config_file(path), args))
+    return loaded
+
+
+def prediction_fields(prediction: Prediction) -> dict[str, str]:
+    return {
+        "pred_category": prediction.category,
+        "pred_subcategory": prediction.subcategory,
+        "pred_score": f"{prediction.score:.2f}",
+        "pred_status": prediction.status,
+        "pred_evidence": prediction.evidence,
+    }
 
 
 def write_scored(path: Path, fieldnames: list[str], rows: list[dict[str, str]], predictions: list[Prediction]) -> None:
-    extra = ["pred_category", "pred_subcategory", "pred_score", "pred_status", "pred_evidence"]
     columns = list(fieldnames)
-    for name in extra:
+    for name in PRED_COLUMNS:
         if name not in columns:
             columns.append(name)
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -2093,11 +1847,7 @@ def write_scored(path: Path, fieldnames: list[str], rows: list[dict[str, str]], 
         writer.writeheader()
         for row, prediction in zip(rows, predictions):
             out = dict(row)
-            out["pred_category"] = prediction.category
-            out["pred_subcategory"] = prediction.subcategory
-            out["pred_score"] = f"{prediction.score:.2f}"
-            out["pred_status"] = prediction.status
-            out["pred_evidence"] = prediction.evidence
+            out.update(prediction_fields(prediction))
             writer.writerow(out)
 
 
@@ -2182,47 +1932,204 @@ def explain(prediction: Prediction, top: int) -> str:
     return "\n".join(lines)
 
 
+@dataclass(frozen=True)
+class Candidate:
+    category: str
+    subcategory: str
+    score: float
+    conf: float
+    evidence: str
+
+
+def candidates_for(
+    catalog: Catalog,
+    keywords: str,
+    *,
+    config: ExperimentConfig,
+    top: int,
+    category: str = "",
+    pp_labels: str = "",
+    uploader_tags: str = "",
+    title: str = "",
+    description: str = "",
+) -> list[Candidate]:
+    """The ``top`` best subcategories for one tag list.
+
+    ``conf`` is that score divided by the sum of every matched subcategory
+    on the row, so the cutoff does not change the list.
+    """
+    prediction = score_text(
+        catalog,
+        keywords,
+        category=category,
+        pp_labels=pp_labels,
+        uploader_tags=uploader_tags,
+        title=title,
+        description=description,
+        min_score=config.min_score,
+        weights=config.weights,
+        on_tie=config.on_tie,
+        keep_ranked=len(catalog.entries),
+    )
+    ranked = [item for item in prediction.ranked if item[2] > 0]
+    total = sum(score for _category, _subcategory, score, _evidence in ranked)
+    return [
+        Candidate(category_name, subcategory, score, score / total if total else 0.0, evidence)
+        for category_name, subcategory, score, evidence in ranked[:top]
+    ]
+
+
+def row_candidates(
+    catalog: Catalog, rows: list[dict[str, str]], *, config: ExperimentConfig, top: int
+) -> list[list[Candidate]]:
+    return [
+        candidates_for(
+            catalog,
+            row.get("Keywords") or "",
+            config=config,
+            top=top,
+            category=row.get("Category") or "",
+            pp_labels=_optional(row, "pp_labels", "pp"),
+            uploader_tags=_optional(row, "uploader_tags", "tags"),
+            title=_optional(row, "title"),
+            description=_optional(row, "description"),
+        )
+        for row in rows
+    ]
+
+
+def candidate_config(config: ExperimentConfig) -> ExperimentConfig:
+    """Rename an experiment so its folder sits beside one scored without ``--candidates``."""
+    name = check_experiment_name(f"{config.name}-candidates")
+    output_dir = config.output_dir
+    if output_dir is not None:
+        output_dir = output_dir.with_name(f"{output_dir.name}-candidates")
+    return replace(config, name=name, output_dir=output_dir)
+
+
+def candidate_columns(top: int, evidence: bool) -> list[str]:
+    columns: list[str] = []
+    for n in range(1, top + 1):
+        columns += [f"cand_{n}_category", f"cand_{n}_subcategory", f"cand_{n}_score", f"cand_{n}_conf"]
+        if evidence:
+            columns.append(f"cand_{n}_evidence")
+    return columns
+
+
+def write_candidates(
+    path: Path,
+    fieldnames: list[str],
+    rows: list[dict[str, str]],
+    results: list[tuple[Prediction, list[Candidate]]],
+    *,
+    top: int,
+    evidence: bool,
+) -> None:
+    columns = list(fieldnames)
+    for name in PRED_COLUMNS + ["cand_count"] + candidate_columns(top, evidence):
+        if name not in columns:
+            columns.append(name)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(handle, fieldnames=columns, lineterminator="\n", extrasaction="ignore")
+        writer.writeheader()
+        for row, (prediction, candidates) in zip(rows, results):
+            out = dict(row)
+            out.update(prediction_fields(prediction))
+            out["cand_count"] = str(len(candidates))
+            for n, candidate in enumerate(candidates, start=1):
+                out[f"cand_{n}_category"] = candidate.category
+                out[f"cand_{n}_subcategory"] = candidate.subcategory
+                out[f"cand_{n}_score"] = f"{candidate.score:.2f}"
+                out[f"cand_{n}_conf"] = f"{candidate.conf:.3f}"
+                if evidence:
+                    out[f"cand_{n}_evidence"] = candidate.evidence
+            writer.writerow(out)
+
+
+def coverage(rows: list[dict[str, str]], results: list[tuple[Prediction, list[Candidate]]], top: int) -> str:
+    """How often the row's existing Category/SubCategory is among the candidates."""
+    total = 0
+    found = 0
+    first = 0
+    category_total = 0
+    category_found = 0
+    empty = 0
+    for row, (_prediction, candidates) in zip(rows, results):
+        if not candidates:
+            empty += 1
+        gold_cat = (row.get("Category") or "").strip()
+        gold_sub = (row.get("SubCategory") or "").strip()
+        if gold_cat:
+            category_total += 1
+            if any(candidate.category == gold_cat for candidate in candidates):
+                category_found += 1
+        if not gold_cat or not gold_sub:
+            continue
+        total += 1
+        pairs = [(candidate.category, candidate.subcategory) for candidate in candidates]
+        if (gold_cat, gold_sub) in pairs:
+            found += 1
+            if pairs[0] == (gold_cat, gold_sub):
+                first += 1
+
+    def share(part: int, whole: int) -> str:
+        return f"{part}/{whole} ({100 * part / whole:.1f}%)" if whole else "0"
+
+    return "\n".join(
+        [
+            f"rows with no candidate {empty}/{len(rows)}",
+            f"gold category among top {top} {share(category_found, category_total)}",
+            f"gold category/subcategory among top {top} {share(found, total)}",
+            f"gold category/subcategory ranked first {share(first, total)}",
+        ]
+    )
+
+
+def split_writer(top: int, evidence: bool) -> SplitWriter:
+    """Write one experiment split with ``pred_*`` and ``cand_*`` columns."""
+
+    def write(
+        destination: Path,
+        fieldnames: list[str],
+        rows: list[dict[str, str]],
+        predictions: list[Prediction],
+        catalog: Catalog,
+        config: ExperimentConfig,
+    ) -> str:
+        results = list(zip(predictions, row_candidates(catalog, rows, config=config, top=top)))
+        write_candidates(
+            destination, fieldnames, labeled_rows(rows, predictions), results, top=top, evidence=evidence
+        )
+        return coverage(rows, results, top)
+
+    return write
+
+
+def format_candidates(prediction: Prediction, candidates: list[Candidate]) -> str:
+    lines = [
+        f"{prediction.status}  {prediction.category} / {prediction.subcategory}  {prediction.score:.2f}".rstrip(),
+        prediction.evidence,
+        "",
+    ]
+    for n, candidate in enumerate(candidates, start=1):
+        lines.append(
+            f"{n:3d}  {candidate.score:7.2f}  {candidate.conf:6.3f}  {candidate.category} / {candidate.subcategory}"
+        )
+        if candidate.evidence:
+            lines.append(f"                        {candidate.evidence}")
+    return "\n".join(lines)
+
+
 def _scoring_config(args: argparse.Namespace) -> ExperimentConfig:
     base = load_config_file(args.config) if args.config else default_config()
     return apply_cli(base, args)
 
 
-def _settings_were_customized(args: argparse.Namespace) -> bool:
-    return any(
-        (
-            args.config,
-            args.set,
-            args.taxonomy,
-            args.closed_slice,
-            args.on_tie,
-            args.categories,
-            args.pair_list,
-            args.min_score is not None,
-        )
-    )
-
-
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Score keywords against the UCS list.")
     parser.add_argument("manifest", nargs="?", type=Path, help="envsound CSV to score")
-    parser.add_argument("-o", "--output", type=Path, help="CSV with pred_* columns added")
-    parser.add_argument(
-        "--make-manifests",
-        action="store_true",
-        help="rewrite slice manifests from their own membership and the audio-folder label files. Test only, unless --write-splits or a config says otherwise",
-    )
-    parser.add_argument(
-        "--source-dir",
-        type=Path,
-        default=DEFAULT_SOURCE,
-        help="directory of full envsound_*.csv lists (manifests/original-envsound). Category and SubCategory are copied from these when the file exists, otherwise kept from the slice manifest",
-    )
-    parser.add_argument(
-        "--audio",
-        type=Path,
-        default=DEFAULT_AUDIO,
-        help="dataset root containing AudioSet, ESC-50, and FSD50K",
-    )
+    parser.add_argument("-o", "--output", type=Path, help="CSV with pred_* columns added. --candidates also adds cand_*")
     parser.add_argument(
         "--no-audio",
         action="store_true",
@@ -2234,35 +2141,7 @@ def main(argv: list[str] | None = None) -> int:
         default=DEFAULT_MANIFESTS,
         help="slice manifests (manifests/slice). Experiments never write here; splits they do not score are copied from here",
     )
-    parser.add_argument("--ucs", type=Path, default=DEFAULT_UCS)
-    parser.add_argument("--ontology", type=Path, default=DEFAULT_ONTOLOGY)
-    parser.add_argument(
-        "--min-score",
-        type=float,
-        default=None,
-        help=f"minimum score to assign a subcategory (default: {default_config().min_score:g})",
-    )
-    parser.add_argument(
-        "--closed-slice",
-        action="store_true",
-        help="score only the closed list in configs/default.json, or the config's own closed list (same as --taxonomy closed)",
-    )
-    parser.add_argument("--taxonomy", choices=TAXONOMY_MODES, help="open, closed, categories, or pairs")
-    parser.add_argument("--categories", help="comma-separated UCS categories for --taxonomy categories")
-    parser.add_argument(
-        "--pairs",
-        dest="pair_list",
-        help="comma-separated CATEGORY/SUBCATEGORY pairs for --taxonomy pairs",
-    )
-    parser.add_argument("--on-tie", choices=("blank", "first"), help="blank leaves a tie empty; first keeps one of them")
-    parser.add_argument(
-        "--set",
-        action="append",
-        default=None,
-        metavar="NAME=VALUE",
-        help="override one weight or min_score, for example --set exact_sub=8 --set pp_bonus=1",
-    )
-    parser.add_argument("--config", type=Path, help="JSON scoring config for one manifest, --make-manifests, or --experiment-name")
+    parser.add_argument("--config", type=Path, help="JSON scoring config for one manifest")
     parser.add_argument(
         "--experiment",
         action="append",
@@ -2270,59 +2149,61 @@ def main(argv: list[str] | None = None) -> int:
         default=None,
         help="JSON config for one tagging experiment. Repeat to run several. Writes experiments/<name>/ and does not touch manifests/slice/",
     )
-    parser.add_argument(
-        "--experiment-dir",
-        type=Path,
-        help="run every JSON config in this directory except configs/default.json",
-    )
-    parser.add_argument("--experiment-name", help="name for an experiment built from flags, or rename a single --experiment file")
     parser.add_argument("--output-dir", type=Path, help="folder for experiment manifests. A batch writes one subfolder per name")
     parser.add_argument(
         "--write-splits",
-        help="splits to score or rebuild, comma-separated. Default is test. Train and val left off the list stay as the slice files, and an experiment copies them into its output folder. Example: train,val,test",
+        help="splits to score, comma-separated. Default is the config's list, which is test unless the file says otherwise. Example: train,val,test",
     )
     parser.add_argument("--keywords", help="score one keyword list and print the top candidates")
     parser.add_argument("--category", default="", help="existing Category, used only to break a tie")
-    parser.add_argument("--pp", default="", help="predominant labels, comma-separated like Keywords")
-    parser.add_argument("--uploader-tags", default="")
-    parser.add_argument("--title", default="")
-    parser.add_argument("--description", default="")
-    parser.add_argument("--top", type=int, default=8)
+    parser.add_argument(
+        "--candidates",
+        action="store_true",
+        help=(
+            f"write the top subcategories for each row (cand_* columns, default {DEFAULT_CANDIDATE_TOP}). "
+            "An experiment is written to experiments/<name>-candidates/ unless --output-dir is set"
+        ),
+    )
+    parser.add_argument(
+        "--evidence",
+        action="store_true",
+        help="with --candidates, add cand_<n>_evidence, the tags that produced the points",
+    )
+    parser.add_argument(
+        "--top",
+        type=int,
+        default=None,
+        help=f"candidates to print or write (default: {DEFAULT_PROBE_TOP} for a probe, {DEFAULT_CANDIDATE_TOP} with --candidates)",
+    )
     args = parser.parse_args(argv)
 
-    experiment_mode = bool(args.experiment or args.experiment_dir or args.experiment_name)
-    if args.write_splits is not None and not (args.make_manifests or experiment_mode):
-        raise SystemExit("--write-splits applies to --make-manifests and --experiment")
+    if args.top is not None and args.top < 1:
+        raise SystemExit("--top must be at least 1")
+    if args.evidence and not args.candidates:
+        raise SystemExit("--evidence applies to --candidates")
+    top = args.top if args.top is not None else (DEFAULT_CANDIDATE_TOP if args.candidates else DEFAULT_PROBE_TOP)
+
+    experiment_mode = bool(args.experiment)
+    if args.write_splits is not None and not experiment_mode:
+        raise SystemExit("--write-splits applies to --experiment")
     if args.output_dir is not None and not experiment_mode:
         raise SystemExit("--output-dir applies to --experiment")
 
-    configs: list[ExperimentConfig] | None = None
     if experiment_mode:
         if args.manifest is not None or args.keywords is not None:
             raise SystemExit("pass an experiment or a manifest to score, not both")
         configs = collect_experiments(args)
-
-    if args.make_manifests:
-        if configs is not None:
-            if len(configs) != 1:
-                raise SystemExit("pass one experiment config, or --write-splits, when also building manifests")
-            split_choice = configs[0].splits
-        else:
-            split_choice = _scoring_config(args).splits
-        make_manifests(args.source_dir, args.manifest_dir, args.audio, split_choice)
-        if not experiment_mode and args.manifest is None and args.keywords is None:
-            return 0
-
-    if experiment_mode:
-        assert configs is not None
+        if args.candidates:
+            configs = [candidate_config(config) for config in configs]
         run_experiments(
             configs,
-            ucs_path=args.ucs,
-            ontology_path=args.ontology,
+            ucs_path=DEFAULT_UCS,
+            ontology_path=DEFAULT_ONTOLOGY,
             manifest_dir=args.manifest_dir,
-            audio_dir=args.audio,
+            audio_dir=DEFAULT_AUDIO,
             no_audio=args.no_audio,
             output_dir=args.output_dir,
+            write_split=split_writer(top, args.evidence) if args.candidates else None,
         )
         return 0
 
@@ -2330,19 +2211,19 @@ def main(argv: list[str] | None = None) -> int:
         parser.print_help()
         return 2
 
-    if not args.ucs.is_file():
-        raise SystemExit(f"UCS list not found: {args.ucs}")
-    if not args.ontology.is_file():
-        raise SystemExit(f"AudioSet ontology not found: {args.ontology}")
+    if not DEFAULT_UCS.is_file():
+        raise SystemExit(f"UCS list not found: {DEFAULT_UCS}")
+    if not DEFAULT_ONTOLOGY.is_file():
+        raise SystemExit(f"AudioSet ontology not found: {DEFAULT_ONTOLOGY}")
 
     config = _scoring_config(args)
-    score_depths, score_alias = load_ontology(args.ontology)
-    score_records = load_ucs(args.ucs, None)
+    score_depths, score_alias = load_ontology(DEFAULT_ONTOLOGY)
+    score_records = load_ucs(DEFAULT_UCS, None)
     catalog, _resolved, skipped, borrowed = catalog_for(config, score_records, score_depths, score_alias)
     full_catalog = build_catalog(score_records, score_depths, score_alias)
     background = None if config.taxonomy == "open" else full_catalog
     allowed_pairs = {(entry.category, entry.subcategory) for entry in catalog.entries}
-    if _settings_were_customized(args):
+    if args.config:
         print(format_scoring(config, len(catalog.entries)))
     if borrowed:
         print("borrowed: " + "; ".join(borrowed))
@@ -2354,31 +2235,33 @@ def main(argv: list[str] | None = None) -> int:
             catalog,
             args.keywords,
             category=args.category,
-            pp_labels=args.pp,
-            uploader_tags=args.uploader_tags,
-            title=args.title,
-            description=args.description,
             min_score=config.min_score,
             weights=config.weights,
             on_tie=config.on_tie,
-            keep_ranked=args.top,
+            keep_ranked=top,
         )
         if background is not None and prediction.status in ("tie", "below"):
             full = score_text(
                 background,
                 args.keywords,
                 category=args.category,
-                pp_labels=args.pp,
-                uploader_tags=args.uploader_tags,
-                title=args.title,
-                description=args.description,
                 min_score=config.min_score,
                 weights=config.weights,
                 on_tie=config.on_tie,
-                keep_ranked=args.top,
+                keep_ranked=top,
             )
             prediction = recover_category(prediction, full, allowed_pairs)
-        print(explain(prediction, args.top))
+        if args.candidates:
+            found = candidates_for(
+                catalog,
+                args.keywords,
+                config=config,
+                top=top,
+                category=args.category,
+            )
+            print(format_candidates(prediction, found))
+        else:
+            print(explain(prediction, top))
         return 0
 
     fieldnames, rows = load_manifest(args.manifest)
@@ -2389,12 +2272,12 @@ def main(argv: list[str] | None = None) -> int:
             "Drop --no-audio so labels are read from the audio folder."
         )
     if not args.no_audio:
-        if not args.audio.is_dir():
-            raise SystemExit(f"audio folder not found: {args.audio}")
-        counts = apply_audio(rows, load_audio_index(args.audio))
+        if not DEFAULT_AUDIO.is_dir():
+            raise SystemExit(f"audio folder not found: {DEFAULT_AUDIO}")
+        counts = apply_audio(rows, load_audio_index(DEFAULT_AUDIO))
         if is_split and counts["missing"]:
             raise SystemExit(
-                f"{counts['missing']} split rows have no label file under {args.audio}"
+                f"{counts['missing']} split rows have no label file under {DEFAULT_AUDIO}"
             )
         for name in META_COLUMNS:
             if name not in fieldnames:
@@ -2414,7 +2297,16 @@ def main(argv: list[str] | None = None) -> int:
         allowed_pairs=None if background is None else allowed_pairs,
     )
     print(report(rows, predictions))
-    if args.output:
+    if args.candidates:
+        if args.output is None:
+            raise SystemExit("pass -o for the candidates CSV")
+        lists = row_candidates(catalog, rows, config=config, top=top)
+        results = list(zip(predictions, lists))
+        print(f"top {top} candidates per row")
+        print(coverage(rows, results, top))
+        write_candidates(args.output, fieldnames, rows, results, top=top, evidence=args.evidence)
+        print(f"wrote {args.output}")
+    elif args.output:
         write_scored(args.output, fieldnames, rows, predictions)
         print(f"wrote {args.output}")
     return 0

@@ -1,6 +1,6 @@
 # Data
 
-[Usage](usage.md) covers how to score and rebuild these files. [Scoring](scoring.md) covers how a keyword becomes a UCS label.
+[Usage](usage.md) covers how to score these files. [Scoring](scoring.md) covers how a keyword becomes a UCS label.
 
 ## Slice files
 
@@ -10,7 +10,7 @@
 | `manifests/slice/envsound_val.csv` | 140 | Score while the converter is still changing. Hand-label this. |
 | `manifests/slice/envsound_test.csv` | 140 | Score once, after the converter is frozen. Hand-label this. |
 
-Membership is `filename`, `source`, and `path`. `manifests/original-envsound/` holds the full lists those rows were drawn from: train 40642, val 8707, test 8708. A rebuild copies `Category` and `SubCategory` from there.
+Membership is `filename`, `source`, and `path`. `manifests/original-envsound/` holds the full lists those rows were drawn from: train 40642, val 8707, test 8708. `Category` and `SubCategory` on the slice were copied from there.
 
 Rows that already have `SubCategory` are finished mappings. Use them as positive examples. Rows with an empty `SubCategory` are the cleaning task, and some of them do not belong to any subcategory in the closed list. Train has 1535 filled rows and 484 empty ones. Val and test each have 103 filled and 37 empty.
 
@@ -28,7 +28,7 @@ Rows that already have `SubCategory` are finished mappings. Use them as positive
 
 AudioSet labels contain commas of their own (`Waves, surf`). In `Keywords`, the separator between labels is a comma that is not followed by a space. A comma followed by a space stays inside one label.
 
-A rebuild also writes `pp_labels`, `uploader_tags`, `title`, and `description`. The checked-in slice files do not have those columns. A scoring run reads them from `audio/` unless you pass `--no-audio`, in which case it uses whatever is already on the CSV.
+Scoring reads `pp_labels`, `uploader_tags`, `title`, and `description` from `audio/` unless you pass `--no-audio`, in which case it uses whatever is already on the CSV. The checked-in slice files do not have those columns.
 
 ## Where the keywords come from
 
