@@ -1,0 +1,816 @@
+source,label,role,category,subcategory
+AudioSet,A capella,primary,MUSICAL,CHORAL
+AudioSet,"Accelerating, revving, vroom",primary,MOTORS,COMBUSTION
+AudioSet,Accordion,primary,MUSICAL,KEYED
+AudioSet,Acoustic guitar,primary,MUSICAL,PLUCKED
+AudioSet,Afrobeat,context,,
+AudioSet,Air brake,primary,VEHICLES,BRAKE
+AudioSet,Air conditioning,primary,MACHINES,HVAC
+AudioSet,"Air horn, truck horn",primary,VEHICLES,HORN
+AudioSet,Aircraft,parent,AIRCRAFT,
+AudioSet,Aircraft engine,parent,AIRCRAFT,
+AudioSet,Alarm,parent,ALARMS,
+AudioSet,Alarm clock,primary,ALARMS,CLOCK
+AudioSet,Ambient music,context,,
+AudioSet,Ambulance (siren),primary,ALARMS,SIREN
+AudioSet,Angry music,context,,
+AudioSet,Animal,parent,ANIMALS,
+AudioSet,Applause,primary,CROWDS,APPLAUSE
+AudioSet,Arrow,primary,WEAPONS,ARROW
+AudioSet,Artillery fire,primary,GUNS,ARTILLERY
+AudioSet,Babbling,primary,VOICES,BABY
+AudioSet,"Baby cry, infant cry",primary,VOICES,CRYING
+AudioSet,Baby laughter,primary,VOICES,LAUGH
+AudioSet,Background music,context,,
+AudioSet,Bang,primary,DESIGNED,IMPACT
+AudioSet,Banjo,primary,MUSICAL,PLUCKED
+AudioSet,Bark,primary,ANIMALS,DOG
+AudioSet,Basketball bounce,primary,SPORTS,COURT
+AudioSet,Bass guitar,primary,MUSICAL,PLUCKED
+AudioSet,Bathtub (filling or washing),primary,WATER,PLUMBING
+AudioSet,Battle cry,primary,VOICES,SCREAM
+AudioSet,Beatboxing,primary,MUSICAL,EXPERIMENTAL
+AudioSet,"Bee, wasp, etc.",primary,ANIMALS,INSECT
+AudioSet,"Beep, bleep",primary,BEEPS,GENERAL
+AudioSet,Bell,parent,BELLS,
+AudioSet,Bellow,primary,VOICES,SCREAM
+AudioSet,Belly laugh,primary,VOICES,LAUGH
+AudioSet,Bicycle,primary,VEHICLES,BICYCLE
+AudioSet,Bicycle bell,primary,BELLS,MISC
+AudioSet,Bird,parent,BIRDS,
+AudioSet,"Bird flight, flapping wings",primary,WINGS,BIRD
+AudioSet,"Bird vocalization, bird call, bird song",primary,BIRDS,SONGBIRD
+AudioSet,Biting,primary,FOOD & DRINK,EATING
+AudioSet,Bleat,primary,ANIMALS,FARM
+AudioSet,Blender,primary,MACHINES,APPLIANCE
+AudioSet,Bluegrass,context,,
+AudioSet,Blues,context,,
+AudioSet,"Boat, Water vehicle",parent,BOATS,
+AudioSet,Boiling,primary,WATER,STEAM
+AudioSet,Boing,primary,CARTOON,BOING
+AudioSet,Boom,primary,EXPLOSIONS,REAL
+AudioSet,Bouncing,primary,OBJECTS,MISC
+AudioSet,Bow-wow,primary,ANIMALS,DOG
+AudioSet,Bowed string instrument,primary,MUSICAL,STRINGED
+AudioSet,Brass instrument,primary,MUSICAL,BRASS
+AudioSet,Breaking,primary,DESTRUCTION,MISC
+AudioSet,Breathing,primary,HUMAN,BREATH
+AudioSet,"Burping, eructation",primary,HUMAN,BURP
+AudioSet,"Burst, pop",primary,AIR,BURST
+AudioSet,Bus,primary,VEHICLES,BUS
+AudioSet,Busy signal,primary,COMMUNICATIONS,TELEPHONE
+AudioSet,Buzz,primary,ANIMALS,INSECT
+AudioSet,Buzzer,primary,ALARMS,BUZZER
+AudioSet,Cacophony,context,,
+AudioSet,Camera,primary,COMMUNICATIONS,CAMERA
+AudioSet,"Canidae, dogs, wolves",primary,ANIMALS,DOG WILD
+AudioSet,Cap gun,primary,TOYS,MECHANICAL
+AudioSet,Car,parent,VEHICLES,
+AudioSet,Car alarm,primary,VEHICLES,ALARM
+AudioSet,Car passing by,primary,VEHICLES,CAR
+AudioSet,Carnatic music,context,,
+AudioSet,Cash register,primary,MACHINES,MISC
+AudioSet,Cat,primary,ANIMALS,CAT DOMESTIC
+AudioSet,Caterwaul,primary,ANIMALS,CAT DOMESTIC
+AudioSet,"Cattle, bovinae",primary,ANIMALS,FARM
+AudioSet,Caw,primary,BIRDS,CROW
+AudioSet,Chainsaw,primary,TOOLS,POWER
+AudioSet,Change ringing (campanology),primary,BELLS,LARGE
+AudioSet,Chant,primary,MUSICAL,CHORAL
+AudioSet,Chatter,primary,CROWDS,WALLA
+AudioSet,Cheering,primary,CROWDS,CHEERING
+AudioSet,"Chewing, mastication",primary,FOOD & DRINK,EATING
+AudioSet,"Chicken, rooster",primary,BIRDS,FOWL
+AudioSet,Child singing,primary,VOICES,SINGING
+AudioSet,"Child speech, kid speaking",primary,VOICES,CHILD
+AudioSet,Children playing,primary,CROWDS,CHILDREN
+AudioSet,Children shouting,primary,CROWDS,CHILDREN
+AudioSet,Chime,primary,MUSICAL,CHIME
+AudioSet,"Chink, clink",primary,GLASS,TONAL
+AudioSet,Chirp tone,context,,
+AudioSet,"Chirp, tweet",primary,BIRDS,SONGBIRD
+AudioSet,Choir,primary,MUSICAL,CHORAL
+AudioSet,Chop,primary,WOOD,IMPACT
+AudioSet,Chopping (food),primary,FOOD & DRINK,COOKING
+AudioSet,Chorus effect,primary,DESIGNED,MISC
+AudioSet,Christian music,context,,
+AudioSet,Christmas music,context,,
+AudioSet,"Chuckle, chortle",primary,VOICES,LAUGH
+AudioSet,Church bell,primary,BELLS,LARGE
+AudioSet,Civil defense siren,primary,ALARMS,SIREN
+AudioSet,Clang,primary,METAL,IMPACT
+AudioSet,Clapping,primary,CROWDS,APPLAUSE
+AudioSet,Classical music,context,,
+AudioSet,Clatter,primary,METAL,IMPACT
+AudioSet,Clickety-clack,primary,TRAINS,CLACK
+AudioSet,Clicking,primary,MECHANICAL,CLICK
+AudioSet,Clip-clop,primary,FOOTSTEPS,HORSE
+AudioSet,Clock,parent,CLOCKS,
+AudioSet,Cluck,primary,BIRDS,FOWL
+AudioSet,Coin (dropping),primary,OBJECTS,COIN
+AudioSet,Computer keyboard,primary,COMPUTERS,KEYBOARD & MOUSE
+AudioSet,Conversation,primary,CROWDS,CONVERSATION
+AudioSet,Coo,primary,BIRDS,MISC
+AudioSet,Cough,primary,HUMAN,COUGH
+AudioSet,Country,context,,
+AudioSet,Cowbell,primary,BELLS,ANIMAL
+AudioSet,Crack,primary,WOOD,BREAK
+AudioSet,Crackle,primary,FIRE,CRACKLE
+AudioSet,Creak,primary,DOORS,CREAK
+AudioSet,Cricket,primary,ANIMALS,INSECT
+AudioSet,Croak,primary,ANIMALS,AMPHIBIAN
+AudioSet,Crow,primary,BIRDS,CROW
+AudioSet,Crowd,primary,CROWDS,WALLA
+AudioSet,"Crowing, cock-a-doodle-doo",primary,BIRDS,FOWL
+AudioSet,"Crumpling, crinkling",primary,PAPER,FRICTION
+AudioSet,Crunch,primary,FOOD & DRINK,EATING
+AudioSet,Crushing,primary,DESTRUCTION,MISC
+AudioSet,"Crying, sobbing",primary,VOICES,CRYING
+AudioSet,Cupboard open or close,primary,DOORS,CABINET
+AudioSet,"Cutlery, silverware",primary,FOOD & DRINK,TABLEWARE
+AudioSet,Cymbal,primary,MUSICAL,PERCUSSION
+AudioSet,Dance music,context,,
+AudioSet,"Dental drill, dentist's drill",primary,MACHINES,MEDICAL
+AudioSet,Dial tone,primary,COMMUNICATIONS,TELEPHONE
+AudioSet,Didgeridoo,primary,MUSICAL,WOODWIND
+AudioSet,Ding,primary,BELLS,MISC
+AudioSet,Ding-dong,primary,BELLS,DOORBELL
+AudioSet,Disco,context,,
+AudioSet,"Dishes, pots, and pans",primary,FOOD & DRINK,KITCHENWARE
+AudioSet,Distortion,context,,
+AudioSet,Dog,primary,ANIMALS,DOG
+AudioSet,"Domestic animals, pets",parent,ANIMALS,
+AudioSet,Door,parent,DOORS,
+AudioSet,Doorbell,primary,BELLS,DOORBELL
+AudioSet,Drawer open or close,primary,DRAWERS,WOOD
+AudioSet,Drill,primary,TOOLS,POWER
+AudioSet,Drip,primary,WATER,DRIP
+AudioSet,Drum,primary,MUSICAL,PERCUSSION
+AudioSet,Drum and bass,context,,
+AudioSet,Drum kit,primary,MUSICAL,PERCUSSION
+AudioSet,Drum machine,primary,MUSICAL,SYNTHESIZED
+AudioSet,Dubstep,context,,
+AudioSet,Duck,primary,BIRDS,FOWL
+AudioSet,Echo,context,,
+AudioSet,Effects unit,parent,DESIGNED,
+AudioSet,Electric guitar,primary,MUSICAL,PLUCKED
+AudioSet,"Electric shaver, electric razor",primary,MACHINES,APPLIANCE
+AudioSet,Electric toothbrush,primary,MACHINES,APPLIANCE
+AudioSet,Electronic dance music,context,,
+AudioSet,Electronic music,context,,
+AudioSet,Electronic tuner,primary,MUSICAL,MISC
+AudioSet,Electronica,context,,
+AudioSet,Emergency vehicle,parent,VEHICLES,
+AudioSet,Engine,parent,MOTORS,
+AudioSet,Engine knocking,primary,MOTORS,COMBUSTION
+AudioSet,Engine starting,primary,MOTORS,COMBUSTION
+AudioSet,Environmental noise,context,,
+AudioSet,Eruption,primary,NATURAL DISASTER,VOLCANO
+AudioSet,Exciting music,context,,
+AudioSet,Explosion,parent,EXPLOSIONS,
+AudioSet,Fart,primary,FARTS,REAL
+AudioSet,"Female speech, woman speaking",primary,VOICES,FEMALE
+AudioSet,Field recording,context,,
+AudioSet,Filing (rasp),primary,TOOLS,HAND
+AudioSet,Fill (with liquid),primary,WATER,POUR
+AudioSet,Finger snapping,primary,FOLEY,HANDS
+AudioSet,Fire,parent,FIRE,
+AudioSet,Fire alarm,primary,ALARMS,BELL
+AudioSet,"Fire engine, fire truck (siren)",primary,ALARMS,SIREN
+AudioSet,Firecracker,primary,FIREWORKS,RECREATIONAL
+AudioSet,Fireworks,primary,FIREWORKS,RECREATIONAL
+AudioSet,"Fixed-wing aircraft, airplane",primary,AIRCRAFT,JET
+AudioSet,Flamenco,context,,
+AudioSet,Flap,primary,CLOTH,FLAP
+AudioSet,Flute,primary,MUSICAL,WOODWIND
+AudioSet,"Fly, housefly",primary,ANIMALS,INSECT
+AudioSet,Foghorn,primary,BOATS,HORN
+AudioSet,Folk music,context,,
+AudioSet,Fowl,primary,BIRDS,FOWL
+AudioSet,Frog,primary,ANIMALS,AMPHIBIAN
+AudioSet,Frying (food),primary,FOOD & DRINK,COOKING
+AudioSet,Funk,context,,
+AudioSet,Funny music,context,,
+AudioSet,Fusillade,primary,GUNS,AUTOMATIC
+AudioSet,Gargling,primary,HUMAN,MISC
+AudioSet,Gasp,primary,HUMAN,BREATH
+AudioSet,Gears,primary,MECHANICAL,GEARS
+AudioSet,Giggle,primary,VOICES,LAUGH
+AudioSet,Glass,parent,GLASS,
+AudioSet,Goat,primary,ANIMALS,FARM
+AudioSet,Gobble,primary,BIRDS,FOWL
+AudioSet,Gong,primary,BELLS,GONG
+AudioSet,Goose,primary,BIRDS,FOWL
+AudioSet,Gospel music,context,,
+AudioSet,Groan,primary,VOICES,EFFORTS
+AudioSet,Growling,primary,ANIMALS,MISC
+AudioSet,Grunge,context,,
+AudioSet,Grunt,primary,VOICES,EFFORTS
+AudioSet,Guitar,primary,MUSICAL,PLUCKED
+AudioSet,"Gunshot, gunfire",parent,GUNS,
+AudioSet,Gurgling,primary,WATER,BUBBLES
+AudioSet,Gush,primary,WATER,FLOW
+AudioSet,Hair dryer,primary,MACHINES,APPLIANCE
+AudioSet,Hammer,primary,TOOLS,HAND
+AudioSet,Hands,parent,,
+AudioSet,Happy music,context,,
+AudioSet,Harmonic,context,,
+AudioSet,Harpsichord,primary,MUSICAL,KEYED
+AudioSet,Heart murmur,primary,HUMAN,HEARTBEAT
+AudioSet,"Heart sounds, heartbeat",primary,HUMAN,HEARTBEAT
+AudioSet,Heavy engine (low frequency),primary,MOTORS,COMBUSTION
+AudioSet,Heavy metal,context,,
+AudioSet,Helicopter,primary,AIRCRAFT,HELICOPTER
+AudioSet,Hi-hat,primary,MUSICAL,PERCUSSION
+AudioSet,Hiccup,primary,HUMAN,MISC
+AudioSet,Hip hop music,context,,
+AudioSet,Hiss,primary,AIR,HISS
+AudioSet,Honk,primary,BIRDS,FOWL
+AudioSet,Hoot,primary,BIRDS,BIRD OF PREY
+AudioSet,Horse,primary,ANIMALS,HORSE
+AudioSet,House music,context,,
+AudioSet,Howl,primary,ANIMALS,DOG WILD
+AudioSet,"Hubbub, speech noise, speech babble",primary,CROWDS,WALLA
+AudioSet,Hum,primary,ELECTRICITY,BUZZ & HUM
+AudioSet,Humming,primary,VOICES,SINGING
+AudioSet,"Ice cream truck, ice cream van",primary,VEHICLES,TRUCK VAN & SUV
+AudioSet,Idling,primary,MOTORS,COMBUSTION
+AudioSet,Independent music,context,,
+AudioSet,Insect,primary,ANIMALS,INSECT
+AudioSet,"Inside, large room or hall",context,,
+AudioSet,"Inside, public space",context,,
+AudioSet,"Inside, small room",context,,
+AudioSet,Jackhammer,primary,TOOLS,PNEUMATIC
+AudioSet,Jazz,context,,
+AudioSet,Jet engine,primary,AIRCRAFT,JET
+AudioSet,Jingle (music),context,,
+AudioSet,Jingle bell,primary,BELLS,MISC
+AudioSet,"Jingle, tinkle",primary,BELLS,MISC
+AudioSet,Keyboard (musical),primary,MUSICAL,KEYED
+AudioSet,Keys jangling,primary,OBJECTS,KEYS
+AudioSet,Knock,primary,DOORS,KNOCK
+AudioSet,Laughter,primary,VOICES,LAUGH
+AudioSet,Lawn mower,primary,TOOLS,GARDEN
+AudioSet,Light engine (high frequency),parent,MOTORS,
+AudioSet,Liquid,parent,WATER,
+AudioSet,"Livestock, farm animals, working animals",parent,ANIMALS,
+AudioSet,Lullaby,context,,
+AudioSet,Machine gun,primary,GUNS,AUTOMATIC
+AudioSet,Mains hum,primary,ELECTRICITY,BUZZ & HUM
+AudioSet,"Male speech, man speaking",primary,VOICES,MALE
+AudioSet,Mandolin,primary,MUSICAL,PLUCKED
+AudioSet,Mantra,primary,MUSICAL,CHORAL
+AudioSet,Maraca,primary,MUSICAL,SHAKEN
+AudioSet,Mechanical fan,primary,MACHINES,FAN
+AudioSet,Mechanisms,parent,MACHINES,
+AudioSet,Medium engine (mid frequency),primary,MOTORS,COMBUSTION
+AudioSet,Meow,primary,ANIMALS,CAT DOMESTIC
+AudioSet,Microwave oven,primary,MACHINES,APPLIANCE
+AudioSet,Middle Eastern music,context,,
+AudioSet,Moo,primary,ANIMALS,FARM
+AudioSet,Mosquito,primary,ANIMALS,INSECT
+AudioSet,Motor vehicle (road),parent,VEHICLES,
+AudioSet,"Motorboat, speedboat",primary,BOATS,MOTORBOAT
+AudioSet,Motorcycle,primary,VEHICLES,MOTORCYCLE
+AudioSet,Mouse,primary,ANIMALS,RODENT
+AudioSet,Music,context,,
+AudioSet,Music for children,context,,
+AudioSet,Music of Africa,context,,
+AudioSet,Music of Asia,context,,
+AudioSet,Music of Bollywood,context,,
+AudioSet,Music of Latin America,context,,
+AudioSet,Musical instrument,parent,MUSICAL,
+AudioSet,"Narration, monologue",primary,VOICES,MISC
+AudioSet,"Neigh, whinny",primary,ANIMALS,HORSE
+AudioSet,New-age music,context,,
+AudioSet,Noise,context,,
+AudioSet,Ocean,parent,WATER,
+AudioSet,Oink,primary,ANIMALS,FARM
+AudioSet,Opera,primary,MUSICAL,PERFORMANCE
+AudioSet,Orchestra,primary,MUSICAL,PERFORMANCE
+AudioSet,Organ,primary,MUSICAL,KEYED
+AudioSet,"Outside, rural or natural",context,,
+AudioSet,"Outside, urban or manmade",context,,
+AudioSet,Owl,primary,BIRDS,BIRD OF PREY
+AudioSet,Pant,primary,HUMAN,BREATH
+AudioSet,Patter,primary,ANIMALS,RODENT
+AudioSet,Piano,primary,MUSICAL,KEYED
+AudioSet,Pig,primary,ANIMALS,FARM
+AudioSet,"Pigeon, dove",primary,BIRDS,MISC
+AudioSet,Ping,primary,USER INTERFACE,ALERT
+AudioSet,Pink noise,context,,
+AudioSet,Plop,primary,WATER,IMPACT
+AudioSet,Plucked string instrument,primary,MUSICAL,PLUCKED
+AudioSet,Police car (siren),primary,ALARMS,SIREN
+AudioSet,Pop music,context,,
+AudioSet,Pour,primary,WATER,POUR
+AudioSet,Power tool,parent,TOOLS,
+AudioSet,"Power windows, electric windows",primary,VEHICLES,WINDOW
+AudioSet,Printer,primary,MACHINES,MISC
+AudioSet,Progressive rock,context,,
+AudioSet,"Propeller, airscrew",primary,AIRCRAFT,PROP
+AudioSet,Psychedelic rock,context,,
+AudioSet,Pulleys,primary,MECHANICAL,PULLEY
+AudioSet,Pulse,context,,
+AudioSet,Pump (liquid),primary,MACHINES,PUMP
+AudioSet,Punk rock,context,,
+AudioSet,Purr,primary,ANIMALS,CAT DOMESTIC
+AudioSet,Quack,primary,BIRDS,FOWL
+AudioSet,"Race car, auto racing",primary,VEHICLES,RACING
+AudioSet,Radio,primary,COMMUNICATIONS,RADIO
+AudioSet,Rail transport,parent,TRAINS,
+AudioSet,"Railroad car, train wagon",primary,TRAINS,MISC
+AudioSet,Rain,parent,RAIN,
+AudioSet,Rain on surface,primary,RAIN,GENERAL
+AudioSet,Raindrop,primary,RAIN,GENERAL
+AudioSet,Rapping,primary,MUSICAL,SONG & PHRASE
+AudioSet,"Ratchet, pawl",primary,MECHANICAL,RATCHET
+AudioSet,Rattle,primary,METAL,MOVEMENT
+AudioSet,Rattle (instrument),primary,MUSICAL,SHAKEN
+AudioSet,Reggae,context,,
+AudioSet,Reverberation,context,,
+AudioSet,Reversing beeps,primary,BEEPS,VEHICLE
+AudioSet,Rhythm and blues,context,,
+AudioSet,Ringtone,primary,COMMUNICATIONS,TELEPHONE
+AudioSet,Roar,primary,ANIMALS,CAT WILD
+AudioSet,"Roaring cats (lions, tigers)",primary,ANIMALS,CAT WILD
+AudioSet,Rock and roll,context,,
+AudioSet,Rock music,context,,
+AudioSet,"Rodents, rats, mice",primary,ANIMALS,RODENT
+AudioSet,Roll,primary,OBJECTS,WHEELED
+AudioSet,"Rowboat, canoe, kayak",primary,BOATS,ROWBOAT
+AudioSet,Rub,primary,FOLEY,MISC
+AudioSet,Rumble,primary,DESIGNED,RUMBLE
+AudioSet,Run,primary,FOOTSTEPS,HUMAN
+AudioSet,Rustle,primary,CLOTH,MOVEMENT
+AudioSet,Rustling leaves,primary,WIND,VEGETATION
+AudioSet,Sad music,context,,
+AudioSet,"Sailboat, sailing ship",primary,BOATS,SAILBOAT
+AudioSet,Salsa music,context,,
+AudioSet,Sampler,primary,MUSICAL,SAMPLE
+AudioSet,Sanding,primary,TOOLS,HAND
+AudioSet,Sawing,primary,TOOLS,HAND
+AudioSet,Scary music,context,,
+AudioSet,Scissors,primary,TOOLS,HAND
+AudioSet,Scrape,primary,METAL,FRICTION
+AudioSet,Scratch,primary,FOLEY,MISC
+AudioSet,Scratching (performance technique),primary,MUSICAL,EXPERIMENTAL
+AudioSet,Screaming,primary,VOICES,SCREAM
+AudioSet,Sewing machine,primary,MACHINES,APPLIANCE
+AudioSet,Shatter,primary,GLASS,BREAK
+AudioSet,Sheep,primary,ANIMALS,FARM
+AudioSet,Ship,primary,BOATS,SHIP
+AudioSet,Shofar,primary,MUSICAL,BRASS
+AudioSet,Shout,primary,VOICES,SCREAM
+AudioSet,Shuffle,primary,FOOTSTEPS,HUMAN
+AudioSet,Shuffling cards,primary,GAMES,MISC
+AudioSet,Sidetone,context,,
+AudioSet,Sigh,primary,HUMAN,BREATH
+AudioSet,Silence,context,,
+AudioSet,Sine wave,context,,
+AudioSet,Singing,primary,VOICES,SINGING
+AudioSet,Singing bowl,primary,MUSICAL,PERCUSSION TUNED
+AudioSet,Single-lens reflex camera,primary,COMMUNICATIONS,CAMERA
+AudioSet,Sink (filling or washing),primary,WATER,PLUMBING
+AudioSet,Siren,primary,ALARMS,SIREN
+AudioSet,Sitar,primary,MUSICAL,PLUCKED
+AudioSet,Sizzle,primary,FIRE,SIZZLE
+AudioSet,Ska,context,,
+AudioSet,Skateboard,primary,SPORTS,SKATE
+AudioSet,Skidding,primary,VEHICLES,SKID
+AudioSet,Slam,primary,DOORS,MISC
+AudioSet,"Slap, smack",primary,FIGHT,IMPACT
+AudioSet,Sliding door,primary,DOORS,SLIDING
+AudioSet,Slosh,primary,WATER,MOVEMENT
+AudioSet,"Smash, crash",primary,DESTRUCTION,CRASH & DEBRIS
+AudioSet,"Smoke detector, smoke alarm",primary,ALARMS,ELECTRONIC
+AudioSet,Snake,primary,ANIMALS,REPTILE
+AudioSet,Snare drum,primary,MUSICAL,PERCUSSION
+AudioSet,Sneeze,primary,HUMAN,SNEEZE
+AudioSet,Snicker,primary,VOICES,LAUGH
+AudioSet,Sniff,primary,HUMAN,SNIFF
+AudioSet,Snoring,primary,HUMAN,SNORE
+AudioSet,Snort,primary,HUMAN,BREATH
+AudioSet,Sonar,primary,COMMUNICATIONS,TELEMETRY
+AudioSet,Song,primary,MUSICAL,SONG & PHRASE
+AudioSet,Soul music,context,,
+AudioSet,Sound effect,context,,
+AudioSet,Soundtrack music,context,,
+AudioSet,Speech,context,,
+AudioSet,Speech synthesizer,primary,VOICES,FUTZED
+AudioSet,"Splash, splatter",primary,WATER,SPLASH
+AudioSet,Splinter,primary,WOOD,BREAK
+AudioSet,Spray,primary,WATER,SPRAY
+AudioSet,Squawk,primary,BIRDS,MISC
+AudioSet,Squeak,primary,DOORS,CREAK
+AudioSet,Squeal,primary,VEHICLES,TIRE
+AudioSet,Squish,primary,LIQUID & MUD,MOVEMENT
+AudioSet,Static,primary,COMMUNICATIONS,STATIC
+AudioSet,Steam,primary,WATER,STEAM
+AudioSet,Steam whistle,primary,WHISTLES,MECHANICAL
+AudioSet,"Steel guitar, slide guitar",primary,MUSICAL,PLUCKED
+AudioSet,Stir,primary,FOOD & DRINK,COOKING
+AudioSet,Stomach rumble,primary,HUMAN,MISC
+AudioSet,Stream,primary,WATER,FLOW
+AudioSet,Strum,primary,MUSICAL,PLUCKED
+AudioSet,"Subway, metro, underground",primary,TRAINS,SUBWAY
+AudioSet,Swing music,context,,
+AudioSet,Synthesizer,primary,MUSICAL,SYNTHESIZED
+AudioSet,Synthetic singing,primary,VOICES,FUTZED
+AudioSet,Tabla,primary,MUSICAL,PERCUSSION
+AudioSet,Tambourine,primary,MUSICAL,SHAKEN
+AudioSet,Tap,primary,MECHANICAL,CLICK
+AudioSet,Tapping (guitar technique),primary,MUSICAL,PLUCKED
+AudioSet,Tearing,primary,PAPER,RIP
+AudioSet,Techno,context,,
+AudioSet,Telephone,primary,COMMUNICATIONS,TELEPHONE
+AudioSet,Telephone bell ringing,primary,COMMUNICATIONS,TELEPHONE
+AudioSet,"Telephone dialing, DTMF",primary,COMMUNICATIONS,TELEPHONE
+AudioSet,Television,primary,COMMUNICATIONS,TELEVISION
+AudioSet,Tender music,context,,
+AudioSet,Theme music,context,,
+AudioSet,Theremin,primary,MUSICAL,EXPERIMENTAL
+AudioSet,Throat clearing,primary,HUMAN,COUGH
+AudioSet,Throbbing,context,,
+AudioSet,"Thump, thud",primary,DESIGNED,IMPACT
+AudioSet,Thunder,primary,WEATHER,THUNDER
+AudioSet,Thunderstorm,parent,WEATHER,
+AudioSet,Thunk,primary,DESIGNED,IMPACT
+AudioSet,Tick,primary,CLOCKS,TICK
+AudioSet,Tick-tock,primary,CLOCKS,TICK
+AudioSet,Timpani,primary,MUSICAL,PERCUSSION TUNED
+AudioSet,Tire squeal,primary,VEHICLES,TIRE
+AudioSet,Toilet flush,primary,WATER,PLUMBING
+AudioSet,Tools,parent,TOOLS,
+AudioSet,Toot,primary,VEHICLES,HORN
+AudioSet,Toothbrush,primary,HUMAN,MISC
+AudioSet,Traditional music,context,,
+AudioSet,"Traffic noise, roadway noise",primary,AMBIENCE,TRAFFIC
+AudioSet,Train,parent,TRAINS,
+AudioSet,Train horn,primary,TRAINS,HORN
+AudioSet,Train wheels squealing,primary,TRAINS,BRAKE
+AudioSet,Train whistle,primary,TRAINS,HORN
+AudioSet,Trance music,context,,
+AudioSet,"Trickle, dribble",primary,WATER,POUR
+AudioSet,Truck,parent,VEHICLES,
+AudioSet,Trumpet,primary,MUSICAL,BRASS
+AudioSet,Tubular bells,primary,MUSICAL,BELLS
+AudioSet,Tuning fork,primary,MUSICAL,PERCUSSION TUNED
+AudioSet,Turkey,primary,BIRDS,FOWL
+AudioSet,Typewriter,primary,COMMUNICATIONS,TYPEWRITER
+AudioSet,Typing,parent,,
+AudioSet,Ukulele,primary,MUSICAL,PLUCKED
+AudioSet,Vacuum cleaner,primary,MACHINES,APPLIANCE
+AudioSet,Vehicle,parent,,
+AudioSet,"Vehicle horn, car horn, honking",primary,VEHICLES,HORN
+AudioSet,Vibraphone,primary,MUSICAL,PERCUSSION TUNED
+AudioSet,Vibration,context,,
+AudioSet,Video game music,context,,
+AudioSet,Vocal music,context,,
+AudioSet,"Wail, moan",primary,VOICES,CRYING
+AudioSet,"Walk, footsteps",primary,FOOTSTEPS,HUMAN
+AudioSet,Water,parent,WATER,
+AudioSet,"Water tap, faucet",primary,WATER,PLUMBING
+AudioSet,Waterfall,primary,WATER,WATERFALL
+AudioSet,"Waves, surf",primary,WATER,SURF
+AudioSet,Wedding music,context,,
+AudioSet,"Whack, thwack",primary,FIGHT,IMPACT
+AudioSet,Whale vocalization,primary,ANIMALS,AQUATIC
+AudioSet,Wheeze,primary,HUMAN,BREATH
+AudioSet,Whimper,primary,VOICES,CRYING
+AudioSet,Whimper (dog),primary,ANIMALS,DOG
+AudioSet,Whip,primary,WEAPONS,WHIP
+AudioSet,Whir,primary,MOTORS,ELECTRIC
+AudioSet,Whispering,primary,VOICES,WHISPER
+AudioSet,Whistle,primary,WHISTLES,MECHANICAL
+AudioSet,Whistling,primary,WHISTLES,HUMAN
+AudioSet,White noise,context,,
+AudioSet,Whoop,primary,VOICES,CHEER
+AudioSet,"Whoosh, swoosh, swish",primary,SWOOSHES,WHOOSH
+AudioSet,Wild animals,parent,ANIMALS,
+AudioSet,Wind,parent,WIND,
+AudioSet,"Wind instrument, woodwind instrument",primary,MUSICAL,WOODWIND
+AudioSet,Wind noise (microphone),primary,COMMUNICATIONS,MICROPHONE
+AudioSet,Wood,parent,WOOD,
+AudioSet,Writing,primary,OBJECTS,WRITING
+AudioSet,Yell,primary,VOICES,SCREAM
+AudioSet,Yip,primary,ANIMALS,DOG
+AudioSet,Yodeling,primary,VOICES,SINGING
+AudioSet,Zing,primary,SWOOSHES,SWISH
+AudioSet,Zipper (clothing),primary,OBJECTS,ZIPPER
+ESC-50,airplane,primary,AIRCRAFT,JET
+ESC-50,breathing,primary,HUMAN,BREATH
+ESC-50,brushing_teeth,primary,HUMAN,MISC
+ESC-50,can_opening,primary,METAL,FRICTION
+ESC-50,car_horn,primary,VEHICLES,HORN
+ESC-50,cat,primary,ANIMALS,CAT DOMESTIC
+ESC-50,chainsaw,primary,TOOLS,POWER
+ESC-50,chirping_birds,primary,BIRDS,SONGBIRD
+ESC-50,church_bells,primary,BELLS,LARGE
+ESC-50,clapping,primary,CROWDS,APPLAUSE
+ESC-50,clock_alarm,primary,ALARMS,CLOCK
+ESC-50,clock_tick,primary,CLOCKS,TICK
+ESC-50,coughing,primary,HUMAN,COUGH
+ESC-50,cow,primary,ANIMALS,FARM
+ESC-50,crackling_fire,primary,FIRE,CRACKLE
+ESC-50,crickets,primary,ANIMALS,INSECT
+ESC-50,crow,primary,BIRDS,CROW
+ESC-50,crying_baby,primary,VOICES,CRYING
+ESC-50,dog,primary,ANIMALS,DOG
+ESC-50,door_wood_creaks,primary,DOORS,CREAK
+ESC-50,door_wood_knock,primary,DOORS,KNOCK
+ESC-50,drinking_sipping,primary,FOOD & DRINK,DRINKING
+ESC-50,engine,primary,MOTORS,COMBUSTION
+ESC-50,fireworks,primary,FIREWORKS,RECREATIONAL
+ESC-50,footsteps,primary,FOOTSTEPS,HUMAN
+ESC-50,frog,primary,ANIMALS,AMPHIBIAN
+ESC-50,glass_breaking,primary,GLASS,BREAK
+ESC-50,hand_saw,primary,TOOLS,HAND
+ESC-50,helicopter,primary,AIRCRAFT,HELICOPTER
+ESC-50,hen,primary,BIRDS,FOWL
+ESC-50,insects,primary,ANIMALS,INSECT
+ESC-50,keyboard_typing,primary,COMPUTERS,KEYBOARD & MOUSE
+ESC-50,laughing,primary,VOICES,LAUGH
+ESC-50,mouse_click,primary,COMPUTERS,KEYBOARD & MOUSE
+ESC-50,pig,primary,ANIMALS,FARM
+ESC-50,pouring_water,primary,WATER,POUR
+ESC-50,rain,primary,RAIN,GENERAL
+ESC-50,rooster,primary,BIRDS,FOWL
+ESC-50,sea_waves,primary,WATER,WAVE
+ESC-50,sheep,primary,ANIMALS,FARM
+ESC-50,siren,primary,ALARMS,SIREN
+ESC-50,sneezing,primary,HUMAN,SNEEZE
+ESC-50,snoring,primary,HUMAN,SNORE
+ESC-50,thunderstorm,primary,WEATHER,THUNDER
+ESC-50,toilet_flush,primary,WATER,PLUMBING
+ESC-50,train,primary,TRAINS,MISC
+ESC-50,vacuum_cleaner,primary,MACHINES,APPLIANCE
+ESC-50,washing_machine,primary,MACHINES,APPLIANCE
+ESC-50,water_drops,primary,WATER,DRIP
+ESC-50,wind,primary,WIND,GENERAL
+FSD50K,Accelerating_and_revving_and_vroom,primary,MOTORS,COMBUSTION
+FSD50K,Accordion,primary,MUSICAL,KEYED
+FSD50K,Aircraft,parent,AIRCRAFT,
+FSD50K,Alarm,parent,ALARMS,
+FSD50K,Animal,parent,ANIMALS,
+FSD50K,Applause,primary,CROWDS,APPLAUSE
+FSD50K,Bark,primary,ANIMALS,DOG
+FSD50K,Bathtub_(filling_or_washing),primary,WATER,PLUMBING
+FSD50K,Bell,parent,BELLS,
+FSD50K,Bicycle,primary,VEHICLES,BICYCLE
+FSD50K,Bicycle_bell,primary,BELLS,MISC
+FSD50K,Bird,parent,BIRDS,
+FSD50K,Bird_vocalization_and_bird_call_and_bird_song,primary,BIRDS,SONGBIRD
+FSD50K,Boat_and_Water_vehicle,parent,BOATS,
+FSD50K,Boiling,primary,WATER,STEAM
+FSD50K,Boom,primary,EXPLOSIONS,REAL
+FSD50K,Bowed_string_instrument,primary,MUSICAL,STRINGED
+FSD50K,Brass_instrument,primary,MUSICAL,BRASS
+FSD50K,Breathing,primary,HUMAN,BREATH
+FSD50K,Burping_and_eructation,primary,HUMAN,BURP
+FSD50K,Bus,primary,VEHICLES,BUS
+FSD50K,Buzz,primary,ANIMALS,INSECT
+FSD50K,Camera,primary,COMMUNICATIONS,CAMERA
+FSD50K,Car,parent,VEHICLES,
+FSD50K,Car_passing_by,primary,VEHICLES,CAR
+FSD50K,Cat,primary,ANIMALS,CAT DOMESTIC
+FSD50K,Chatter,primary,CROWDS,WALLA
+FSD50K,Cheering,primary,CROWDS,CHEERING
+FSD50K,Chewing_and_mastication,primary,FOOD & DRINK,EATING
+FSD50K,Chicken_and_rooster,primary,BIRDS,FOWL
+FSD50K,Child_speech_and_kid_speaking,primary,VOICES,CHILD
+FSD50K,Chime,primary,MUSICAL,CHIME
+FSD50K,Chink_and_clink,primary,GLASS,TONAL
+FSD50K,Chirp_and_tweet,primary,BIRDS,SONGBIRD
+FSD50K,Chuckle_and_chortle,primary,VOICES,LAUGH
+FSD50K,Church_bell,primary,BELLS,LARGE
+FSD50K,Clapping,primary,CROWDS,APPLAUSE
+FSD50K,Clock,parent,CLOCKS,
+FSD50K,Coin_(dropping),primary,OBJECTS,COIN
+FSD50K,Computer_keyboard,primary,COMPUTERS,KEYBOARD & MOUSE
+FSD50K,Conversation,primary,CROWDS,CONVERSATION
+FSD50K,Cough,primary,HUMAN,COUGH
+FSD50K,Cowbell,primary,BELLS,ANIMAL
+FSD50K,Crack,primary,WOOD,BREAK
+FSD50K,Crackle,primary,FIRE,CRACKLE
+FSD50K,Cricket,primary,ANIMALS,INSECT
+FSD50K,Crow,primary,BIRDS,CROW
+FSD50K,Crowd,primary,CROWDS,WALLA
+FSD50K,Crumpling_and_crinkling,primary,PAPER,FRICTION
+FSD50K,Crushing,primary,DESTRUCTION,MISC
+FSD50K,Crying_and_sobbing,primary,VOICES,CRYING
+FSD50K,Cupboard_open_or_close,primary,DOORS,CABINET
+FSD50K,Cutlery_and_silverware,primary,FOOD & DRINK,TABLEWARE
+FSD50K,Dishes_and_pots_and_pans,primary,FOOD & DRINK,KITCHENWARE
+FSD50K,Dog,primary,ANIMALS,DOG
+FSD50K,Domestic_animals_and_pets,parent,ANIMALS,
+FSD50K,Domestic_sounds_and_home_sounds,parent,,
+FSD50K,Door,parent,DOORS,
+FSD50K,Doorbell,primary,BELLS,DOORBELL
+FSD50K,Drawer_open_or_close,primary,DRAWERS,WOOD
+FSD50K,Drill,primary,TOOLS,POWER
+FSD50K,Drip,primary,WATER,DRIP
+FSD50K,Drum,primary,MUSICAL,PERCUSSION
+FSD50K,Drum_kit,primary,MUSICAL,PERCUSSION
+FSD50K,Electric_guitar,primary,MUSICAL,PLUCKED
+FSD50K,Engine,parent,MOTORS,
+FSD50K,Engine_starting,primary,MOTORS,COMBUSTION
+FSD50K,Explosion,parent,EXPLOSIONS,
+FSD50K,Fart,primary,FARTS,REAL
+FSD50K,Female_speech_and_woman_speaking,primary,VOICES,FEMALE
+FSD50K,Fill_(with_liquid),primary,WATER,POUR
+FSD50K,Finger_snapping,primary,FOLEY,HANDS
+FSD50K,Fire,parent,FIRE,
+FSD50K,Fireworks,primary,FIREWORKS,RECREATIONAL
+FSD50K,Fixed-wing_aircraft_and_airplane,primary,AIRCRAFT,JET
+FSD50K,Fowl,primary,BIRDS,FOWL
+FSD50K,Frog,primary,ANIMALS,AMPHIBIAN
+FSD50K,Frying_(food),primary,FOOD & DRINK,COOKING
+FSD50K,Gasp,primary,HUMAN,BREATH
+FSD50K,Giggle,primary,VOICES,LAUGH
+FSD50K,Glass,parent,GLASS,
+FSD50K,Gong,primary,BELLS,GONG
+FSD50K,Growling,primary,ANIMALS,MISC
+FSD50K,Guitar,primary,MUSICAL,PLUCKED
+FSD50K,Gull_and_seagull,primary,BIRDS,SEA
+FSD50K,Gunshot_and_gunfire,primary,GUNS,MISC
+FSD50K,Gurgling,primary,WATER,BUBBLES
+FSD50K,Hammer,primary,TOOLS,HAND
+FSD50K,Hands,parent,,
+FSD50K,Harmonica,primary,MUSICAL,WOODWIND
+FSD50K,Hiss,primary,AIR,HISS
+FSD50K,Human_group_actions,parent,CROWDS,
+FSD50K,Human_voice,parent,VOICES,
+FSD50K,Idling,primary,MOTORS,COMBUSTION
+FSD50K,Insect,primary,ANIMALS,INSECT
+FSD50K,Keyboard_(musical),primary,MUSICAL,KEYED
+FSD50K,Keys_jangling,primary,OBJECTS,KEYS
+FSD50K,Knock,primary,DOORS,KNOCK
+FSD50K,Laughter,primary,VOICES,LAUGH
+FSD50K,Liquid,parent,WATER,
+FSD50K,Livestock_and_farm_animals_and_working_animals,parent,ANIMALS,
+FSD50K,Male_speech_and_man_speaking,primary,VOICES,MALE
+FSD50K,Mallet_percussion,primary,MUSICAL,PERCUSSION TUNED
+FSD50K,Marimba_and_xylophone,primary,MUSICAL,PERCUSSION TUNED
+FSD50K,Mechanical_fan,primary,MACHINES,FAN
+FSD50K,Mechanisms,parent,MACHINES,
+FSD50K,Meow,primary,ANIMALS,CAT DOMESTIC
+FSD50K,Microwave_oven,primary,MACHINES,APPLIANCE
+FSD50K,Motor_vehicle_(road),parent,VEHICLES,
+FSD50K,Motorcycle,primary,VEHICLES,MOTORCYCLE
+FSD50K,Music,context,,
+FSD50K,Musical_instrument,parent,MUSICAL,
+FSD50K,Ocean,parent,WATER,
+FSD50K,Organ,primary,MUSICAL,KEYED
+FSD50K,Packing_tape_and_duct_tape,primary,OBJECTS,TAPE
+FSD50K,Percussion,primary,MUSICAL,PERCUSSION
+FSD50K,Plucked_string_instrument,primary,MUSICAL,PLUCKED
+FSD50K,Pour,primary,WATER,POUR
+FSD50K,Power_tool,parent,TOOLS,
+FSD50K,Printer,primary,MACHINES,MISC
+FSD50K,Purr,primary,ANIMALS,CAT DOMESTIC
+FSD50K,Race_car_and_auto_racing,primary,VEHICLES,RACING
+FSD50K,Rail_transport,parent,TRAINS,
+FSD50K,Rain,parent,RAIN,
+FSD50K,Raindrop,primary,RAIN,GENERAL
+FSD50K,Ratchet_and_pawl,primary,MECHANICAL,RATCHET
+FSD50K,Rattle,primary,METAL,MOVEMENT
+FSD50K,Rattle_(instrument),primary,MUSICAL,SHAKEN
+FSD50K,Respiratory_sounds,parent,HUMAN,
+FSD50K,Ringtone,primary,COMMUNICATIONS,TELEPHONE
+FSD50K,Run,primary,FOOTSTEPS,HUMAN
+FSD50K,Sawing,primary,TOOLS,HAND
+FSD50K,Scissors,primary,TOOLS,HAND
+FSD50K,Screaming,primary,VOICES,SCREAM
+FSD50K,Screech,primary,VEHICLES,TIRE
+FSD50K,Shatter,primary,GLASS,BREAK
+FSD50K,Shout,primary,VOICES,SCREAM
+FSD50K,Sigh,primary,HUMAN,BREATH
+FSD50K,Singing,primary,VOICES,SINGING
+FSD50K,Sink_(filling_or_washing),primary,WATER,PLUMBING
+FSD50K,Siren,primary,ALARMS,SIREN
+FSD50K,Skateboard,primary,SPORTS,SKATE
+FSD50K,Slam,primary,DOORS,MISC
+FSD50K,Sliding_door,primary,DOORS,SLIDING
+FSD50K,Sneeze,primary,HUMAN,SNEEZE
+FSD50K,Speech,context,,
+FSD50K,Speech_synthesizer,primary,VOICES,FUTZED
+FSD50K,Splash_and_splatter,primary,WATER,SPLASH
+FSD50K,Squeak,primary,DOORS,CREAK
+FSD50K,Stream,primary,WATER,FLOW
+FSD50K,Subway_and_metro_and_underground,primary,TRAINS,SUBWAY
+FSD50K,Tap,primary,MECHANICAL,CLICK
+FSD50K,Tearing,primary,PAPER,RIP
+FSD50K,Telephone,primary,COMMUNICATIONS,TELEPHONE
+FSD50K,Thump_and_thud,primary,DESIGNED,IMPACT
+FSD50K,Thunder,primary,WEATHER,THUNDER
+FSD50K,Thunderstorm,parent,WEATHER,
+FSD50K,Tick,primary,CLOCKS,TICK
+FSD50K,Tick-tock,primary,CLOCKS,TICK
+FSD50K,Toilet_flush,primary,WATER,PLUMBING
+FSD50K,Tools,parent,TOOLS,
+FSD50K,Traffic_noise_and_roadway_noise,primary,AMBIENCE,TRAFFIC
+FSD50K,Train,primary,TRAINS,MISC
+FSD50K,Trickle_and_dribble,primary,WATER,POUR
+FSD50K,Truck,primary,VEHICLES,TRUCK VAN & SUV
+FSD50K,Trumpet,primary,MUSICAL,BRASS
+FSD50K,Typewriter,primary,COMMUNICATIONS,TYPEWRITER
+FSD50K,Typing,parent,,
+FSD50K,Vehicle,parent,,
+FSD50K,Vehicle_horn_and_car_horn_and_honking,primary,VEHICLES,HORN
+FSD50K,Walk_and_footsteps,primary,FOOTSTEPS,HUMAN
+FSD50K,Water,parent,WATER,
+FSD50K,Water_tap_and_faucet,primary,WATER,PLUMBING
+FSD50K,Waves_and_surf,primary,WATER,SURF
+FSD50K,Whispering,primary,VOICES,WHISPER
+FSD50K,Whoosh_and_swoosh_and_swish,primary,SWOOSHES,WHOOSH
+FSD50K,Wild_animals,parent,ANIMALS,
+FSD50K,Wind,primary,WIND,GENERAL
+FSD50K,Wind_chime,primary,MUSICAL,CHIME
+FSD50K,Wind_instrument_and_woodwind_instrument,primary,MUSICAL,WOODWIND
+FSD50K,Wood,parent,WOOD,
+FSD50K,Writing,primary,OBJECTS,WRITING
+FSD50K,Yell,primary,VOICES,SCREAM
+FSD50K,Zipper_(clothing),primary,OBJECTS,ZIPPER
+FoleySet,Bone Break,primary,GORE,BONE
+FoleySet,Bottle Crush,primary,PLASTIC,BREAK
+FoleySet,Break/Drop,group,,
+FoleySet,Breath,primary,HUMAN,BREATH
+FoleySet,Bubble,primary,WATER,BUBBLES
+FoleySet,Bullet Drop,primary,BULLETS,SHELL
+FoleySet,Burp,primary,HUMAN,BURP
+FoleySet,Button Press,primary,MECHANICAL,CLICK
+FoleySet,Can Crush,primary,METAL,BREAK
+FoleySet,Chain,primary,CHAINS,MOVEMENT
+FoleySet,Click,group,,
+FoleySet,Cloth Movement,primary,CLOTH,MOVEMENT
+FoleySet,Cloth Ripping,primary,CLOTH,RIP
+FoleySet,Cloth Rubbing,primary,CLOTH,MOVEMENT
+FoleySet,Clothing,group,,
+FoleySet,Coin Jingle,primary,OBJECTS,COIN
+FoleySet,Cough,primary,HUMAN,COUGH
+FoleySet,Door Open Close,primary,DOORS,MISC
+FoleySet,Door Slam,primary,DOORS,MISC
+FoleySet,Door Squeak,primary,DOORS,CREAK
+FoleySet,Drawer Open Close,primary,DRAWERS,WOOD
+FoleySet,Drip,primary,WATER,DRIP
+FoleySet,Eat Drink,primary,FOOD & DRINK,EATING
+FoleySet,Fall,primary,FIGHT,BODYFALL
+FoleySet,Fart,primary,FARTS,REAL
+FoleySet,Faucet,primary,WATER,PLUMBING
+FoleySet,Footstep,group,,
+FoleySet,Glass Break,primary,GLASS,BREAK
+FoleySet,Glass Ding,primary,GLASS,TONAL
+FoleySet,Gun Mechanism,primary,GUNS,MECHANISM
+FoleySet,Heart Beat,primary,HUMAN,HEARTBEAT
+FoleySet,Human,group,,
+FoleySet,Ice Break,primary,ICE,BREAK
+FoleySet,Ice Cube,primary,ICE,MOVEMENT
+FoleySet,Key Jingle,primary,OBJECTS,KEYS
+FoleySet,Keyboard Typing,primary,COMPUTERS,KEYBOARD & MOUSE
+FoleySet,Kiss,primary,HUMAN,KISS
+FoleySet,Knife,primary,WEAPONS,KNIFE
+FoleySet,Knob,primary,DOORS,HARDWARE
+FoleySet,Knock,primary,DOORS,KNOCK
+FoleySet,Latch,primary,MECHANICAL,LATCH
+FoleySet,Liquid,group,,
+FoleySet,Liquid Shaking,primary,LIQUID & MUD,MOVEMENT
+FoleySet,Lock,primary,MECHANICAL,LOCK
+FoleySet,Magazine,primary,OBJECTS,BOOK
+FoleySet,Material-Interaction,group,,
+FoleySet,Metal,group,,
+FoleySet,Metal Clank,primary,METAL,IMPACT
+FoleySet,Metal Drop,primary,METAL,IMPACT
+FoleySet,Metal Scape,primary,METAL,FRICTION
+FoleySet,Mouse Button Click,primary,COMPUTERS,KEYBOARD & MOUSE
+FoleySet,Open/Close-Mechanism,group,,
+FoleySet,Paper Rubbing,primary,PAPER,FRICTION
+FoleySet,Paper Tear,primary,PAPER,RIP
+FoleySet,Pen Writing,primary,OBJECTS,WRITING
+FoleySet,Pencil Writing,primary,OBJECTS,WRITING
+FoleySet,Pipe,primary,METAL,IMPACT
+FoleySet,Plastic Rubbing,primary,PLASTIC,FRICTION
+FoleySet,Pour,primary,WATER,POUR
+FoleySet,Punch Hit,primary,FIGHT,IMPACT
+FoleySet,Run,primary,FOOTSTEPS,HUMAN
+FoleySet,Shower,primary,WATER,SPRAY
+FoleySet,Single Step,primary,FOOTSTEPS,HUMAN
+FoleySet,Slurping,primary,FOOD & DRINK,DRINKING
+FoleySet,Sneeze,primary,HUMAN,SNEEZE
+FoleySet,Sniffle,primary,HUMAN,SNIFF
+FoleySet,Snore,primary,HUMAN,SNORE
+FoleySet,Splash,primary,WATER,SPLASH
+FoleySet,Stapler,primary,OBJECTS,OFFICE
+FoleySet,Straw Sip,primary,FOOD & DRINK,DRINKING
+FoleySet,Switch Toggle,primary,MECHANICAL,SWITCH
+FoleySet,Sword,primary,WEAPONS,SWORD
+FoleySet,Tape Peel,primary,OBJECTS,TAPE
+FoleySet,Toilet,primary,WATER,PLUMBING
+FoleySet,Umbrella,primary,OBJECTS,UMBRELLA
+FoleySet,Velcro Rip,primary,CLOTH,RIP
+FoleySet,Walk,primary,FOOTSTEPS,HUMAN
+FoleySet,Whiteboard Writing,primary,OBJECTS,WRITING
+FoleySet,Window Cleaning,primary,GLASS,FRICTION
+FoleySet,Window Open Close,primary,WINDOWS,MISC
+FoleySet,Wood Break,primary,WOOD,BREAK
+FoleySet,Zipper Zip,primary,OBJECTS,ZIPPER
