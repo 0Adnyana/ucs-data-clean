@@ -34,7 +34,11 @@ class MakeMasterManifestTests(unittest.TestCase):
             write_manifest(
                 audio / "ESC-50" / "meta" / "esc50.csv",
                 ["filename", "category", "src_file"],
-                [{"filename": "1-100032-A-0.wav", "category": "dog", "src_file": "100032"}],
+                [
+                    {"filename": "1-100032-A-0.wav", "category": "dog", "src_file": "100032"},
+                    {"filename": "1-200000-A-0.wav", "category": "coughing", "src_file": "200000"},
+                    {"filename": "1-200000-B-0.wav", "category": "coughing", "src_file": "200000"},
+                ],
             )
             write_manifest(
                 audio / "FSD50K" / "FSD50K.ground_truth" / "dev.csv",
@@ -57,20 +61,29 @@ class MakeMasterManifestTests(unittest.TestCase):
             rows, stats = rows_from_audio(audio)
 
         by_name = {row["filename"]: row for row in rows}
-        assert [row["filename"] for row in rows] == ["Ywaves.wav", "1-100032-A-0.wav", "64760.wav", "100032.wav", "00002.wav"]
+        assert [row["filename"] for row in rows] == [
+            "Ywaves.wav",
+            "1-200000-A-0.wav",
+            "1-200000-B-0.wav",
+            "64760.wav",
+            "100032.wav",
+            "00002.wav",
+        ]
         assert list(by_name["Ywaves.wav"]) == list(COLUMNS)
         assert by_name["Ywaves.wav"]["Keywords"] == "Water tap, faucet,Speech"
         assert by_name["Ywaves.wav"]["source"] == "AudioSet"
         assert by_name["Ywaves.wav"]["path"] == "AudioSet/audios/balanced_train_segments/Ywaves.wav"
         assert by_name["Ywaves.wav"]["Category"] == "" and by_name["Ywaves.wav"]["exists"] == "False"
-        assert by_name["1-100032-A-0.wav"]["Keywords"] == "dog"
+        assert "1-100032-A-0.wav" not in by_name
+        assert by_name["1-200000-A-0.wav"]["Keywords"] == "coughing"
+        assert by_name["1-200000-A-0.wav"]["source"] == "ESC-50"
         assert by_name["64760.wav"]["Keywords"] == "Bark,Dog"
         assert by_name["64760.wav"]["path"] == "FSD50K/FSD50K.dev_audio/64760.wav"
         assert by_name["64760.wav"]["exists"] == "True"
         assert by_name["100032.wav"]["path"] == "FSD50K/FSD50K.eval_audio/100032.wav"
         assert by_name["00002.wav"]["Keywords"] == "Break/Drop,Paper Tear"
         assert "00003.wav" not in by_name
-        assert stats == {"foley_omitted": 1, "missing_wav": 4}
+        assert stats == {"esc_omitted": 1, "foley_omitted": 1, "missing_wav": 5}
 
     def test_fill_ucs_uses_the_agreed_label(self) -> None:
         label_map = {

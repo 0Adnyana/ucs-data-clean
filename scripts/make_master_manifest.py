@@ -1,9 +1,10 @@
 """Build manifests/master.csv from the metadata shipped with each dataset.
 
 Each run replaces the file. Rows come from the label files under ``audio/``,
-not from the envsound manifests. A FoleySet clip whose Freesound id is
-already an FSD50K or ESC-50 clip is left out, so the same upload is not
-listed twice.
+not from the envsound manifests. An ESC-50 clip whose Freesound id is
+already an FSD50K clip is left out, and a FoleySet clip whose id is already
+in either set is left out too, so the same upload is not listed twice.
+FSD50K is the copy that stays.
 
   AudioSet   ``audio/AudioSet/audios/{balanced_train,eval}_segments.csv`` ``human_labels``
   ESC-50     ``audio/ESC-50/meta/esc50.csv`` ``category``
@@ -203,10 +204,39 @@ def _clip(audio_dir: Path, filename: str, source: str, path: str, keywords: str)
     }
 
 
+def _fsd_clips(audio_dir: Path) -> tuple[list[dict[str, str]], set[str]]:
+    """FSD50K rows and the Freesound ids they use. Read once so ESC-50 can skip those ids."""
+    clips: list[dict[str, str]] = []
+    ids: set[str] = set()
+    ground = audio_dir / "FSD50K" / "FSD50K.ground_truth"
+    for folder, name in (("FSD50K.dev_audio", "dev.csv"), ("FSD50K.eval_audio", "eval.csv")):
+        for row in _read_csv(ground / name):
+            fname = (row.get("fname") or "").strip()
+            if not fname:
+                continue
+            ids.add(fname)
+            labels = [part.strip() for part in (row.get("labels") or "").split(",") if part.strip()]
+            clips.append(
+                _clip(
+                    audio_dir,
+                    f"{fname}.wav",
+                    "FSD50K",
+                    f"FSD50K/{folder}/{fname}.wav",
+                    ",".join(labels),
+                )
+            )
+    return clips, ids
+
+
 def rows_from_audio(audio_dir: Path) -> tuple[list[dict[str, str]], dict[str, int]]:
-    """One row per metadata record. FoleySet uploads already in FSD50K or ESC-50 are omitted."""
+    """One row per metadata record. Shared Freesound uploads are omitted.
+
+    FSD50K is kept. An ESC-50 clip with the same ``src_file`` is omitted, and
+    a FoleySet clip already covered by either set is omitted.
+    """
     rows: list[dict[str, str]] = []
-    freesound: set[str] = set()
+    fsd_rows, fsd_ids = _fsd_clips(audio_dir)
+    freesound = set(fsd_ids)
     audioset = audio_dir / "AudioSet" / "audios"
     for folder, name in (
         ("balanced_train_segments", "balanced_train_segments.csv"),
@@ -225,24 +255,19 @@ def rows_from_audio(audio_dir: Path) -> tuple[list[dict[str, str]], dict[str, in
                     _audioset_keywords(row.get("human_labels") or ""),
                 )
             )
+    esc_omitted = 0
     for row in _read_csv(audio_dir / "ESC-50" / "meta" / "esc50.csv"):
         filename = (row.get("filename") or "").strip()
         if not filename:
             continue
         src_file = (row.get("src_file") or "").strip()
+        if src_file and src_file in fsd_ids:
+            esc_omitted += 1
+            continue
         if src_file:
             freesound.add(src_file)
         rows.append(_clip(audio_dir, filename, "ESC-50", f"ESC-50/audio/{filename}", (row.get("category") or "").strip()))
-    ground = audio_dir / "FSD50K" / "FSD50K.ground_truth"
-    for folder, name in (("FSD50K.dev_audio", "dev.csv"), ("FSD50K.eval_audio", "eval.csv")):
-        for row in _read_csv(ground / name):
-            fname = (row.get("fname") or "").strip()
-            if not fname:
-                continue
-            freesound.add(fname)
-            labels = [part.strip() for part in (row.get("labels") or "").split(",") if part.strip()]
-            filename = f"{fname}.wav"
-            rows.append(_clip(audio_dir, filename, "FSD50K", f"FSD50K/{folder}/{filename}", ",".join(labels)))
+    rows.extend(fsd_rows)
     foley_omitted = 0
     for row in _read_csv(audio_dir / "FoleySet" / "metadata" / "foleyset_metadata.csv"):
         filename = (row.get("name") or "").strip()
@@ -262,7 +287,7 @@ def rows_from_audio(audio_dir: Path) -> tuple[list[dict[str, str]], dict[str, in
             )
         )
     missing_wav = sum(1 for row in rows if row["exists"] != "True")
-    return rows, {"foley_omitted": foley_omitted, "missing_wav": missing_wav}
+    return rows, {"esc_omitted": esc_omitted, "foley_omitted": foley_omitted, "missing_wav": missing_wav}
 
 
 def main(argv: list[str] | None = None) -> None:
@@ -299,6 +324,7 @@ def main(argv: list[str] | None = None) -> None:
     sources = ", ".join(f"{name} {by_source[name]}" for name in ("AudioSet", "ESC-50", "FSD50K", "FoleySet") if name in by_source)
     print(
         f"wrote {OUT} ({len(rows)} rows: {sources}; "
+        f"ESC-50 overlap omitted {stats['esc_omitted']}; "
         f"FoleySet overlap omitted {stats['foley_omitted']}; "
         f"wavs missing {stats['missing_wav']}{filled})"
     )
