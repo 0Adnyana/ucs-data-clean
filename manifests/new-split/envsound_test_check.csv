@@ -1,0 +1,510 @@
+filename,Category,SubCategory,Keywords,source,path,exists
+Y_g9kPEUUNfE.wav,,,"Ratchet, pawl,Mechanisms",AudioSet,AudioSet/audios/balanced_train_segments/Y_g9kPEUUNfE.wav,True
+YppCtPNVwU7I.wav,,,"Male speech, man speaking",AudioSet,AudioSet/audios/balanced_train_segments/YppCtPNVwU7I.wav,True
+Yx9Kkv8j42mI.wav,,,"Female speech, woman speaking,Music,Speech",AudioSet,AudioSet/audios/balanced_train_segments/Yx9Kkv8j42mI.wav,True
+YyR6ejO1NO10.wav,,,Door,AudioSet,AudioSet/audios/balanced_train_segments/YyR6ejO1NO10.wav,True
+Yzz8TGV83nkE.wav,,,"Motor vehicle (road),Engine,Motorcycle,Vehicle",AudioSet,AudioSet/audios/balanced_train_segments/Yzz8TGV83nkE.wav,True
+YC5BteXnPQNk.wav,,,"Bird vocalization, bird call, bird song,Environmental noise,Chirp, tweet,Speech",AudioSet,AudioSet/audios/eval_segments/YC5BteXnPQNk.wav,True
+YCL5vkiMs2c0.wav,,,Reversing beeps,AudioSet,AudioSet/audios/eval_segments/YCL5vkiMs2c0.wav,True
+YCa3b8qNUbsk.wav,,,"Sampler,Drum and bass,Music,Techno,Electronica",AudioSet,AudioSet/audios/eval_segments/YCa3b8qNUbsk.wav,True
+YDcU6AzN7imA.wav,,,"Reversing beeps,Vehicle",AudioSet,AudioSet/audios/eval_segments/YDcU6AzN7imA.wav,True
+YHrWlKN1DSYo.wav,,,"Vehicle,Speech,Traffic noise, roadway noise",AudioSet,AudioSet/audios/eval_segments/YHrWlKN1DSYo.wav,True
+YL7wH_Co3RXY.wav,,,"Clip-clop,Animal",AudioSet,AudioSet/audios/eval_segments/YL7wH_Co3RXY.wav,True
+YLALkgnffr0I.wav,,,Clip-clop,AudioSet,AudioSet/audios/eval_segments/YLALkgnffr0I.wav,True
+YLH8GnA-aJ_M.wav,,,"Dishes, pots, and pans",AudioSet,AudioSet/audios/eval_segments/YLH8GnA-aJ_M.wav,True
+YPfXdcsW8dJI.wav,,,"Cutlery, silverware",AudioSet,AudioSet/audios/eval_segments/YPfXdcsW8dJI.wav,True
+YQN-ZHevDa4s.wav,,,Snake,AudioSet,AudioSet/audios/eval_segments/YQN-ZHevDa4s.wav,True
+YRWvkJKMRbFg.wav,,,"Gears,Mechanisms",AudioSet,AudioSet/audios/eval_segments/YRWvkJKMRbFg.wav,True
+YRqPFslG2Pgo.wav,,,"Scratch,Speech",AudioSet,AudioSet/audios/eval_segments/YRqPFslG2Pgo.wav,True
+YSDl0tWf9Q44.wav,,,"Bicycle,Music,Vehicle",AudioSet,AudioSet/audios/eval_segments/YSDl0tWf9Q44.wav,True
+YSRpAtHjJni0.wav,,,"Humming,Speech",AudioSet,AudioSet/audios/eval_segments/YSRpAtHjJni0.wav,True
+YSUyaiLzdWDk.wav,,,"Boat, Water vehicle,Sailboat, sailing ship",AudioSet,AudioSet/audios/eval_segments/YSUyaiLzdWDk.wav,True
+YTGrBFqptVDg.wav,,,"Boat, Water vehicle,Speech,Pink noise",AudioSet,AudioSet/audios/eval_segments/YTGrBFqptVDg.wav,True
+YTKxGWjvYmT8.wav,,,Sliding door,AudioSet,AudioSet/audios/eval_segments/YTKxGWjvYmT8.wav,True
+YUf4bBFR5j08.wav,,,Car alarm,AudioSet,AudioSet/audios/eval_segments/YUf4bBFR5j08.wav,True
+YUfZP677y3Dc.wav,,,"Music,Bouncing",AudioSet,AudioSet/audios/eval_segments/YUfZP677y3Dc.wav,True
+YUjlwtQeFdWY.wav,,,"Alarm clock,Speech",AudioSet,AudioSet/audios/eval_segments/YUjlwtQeFdWY.wav,True
+YUkCEuwYUW8c.wav,,,Car alarm,AudioSet,AudioSet/audios/eval_segments/YUkCEuwYUW8c.wav,True
+YUmpe982WRGA.wav,,,"Sigh,Sniff",AudioSet,AudioSet/audios/eval_segments/YUmpe982WRGA.wav,True
+YUoelVWyciuE.wav,,,"Cat,Purr,Domestic animals, pets,Animal,Inside, small room",AudioSet,AudioSet/audios/eval_segments/YUoelVWyciuE.wav,True
+YUsNUR6tsoTs.wav,,,"Boat, Water vehicle,Motorboat, speedboat",AudioSet,AudioSet/audios/eval_segments/YUsNUR6tsoTs.wav,True
+YUx1MPZOPgmk.wav,,,Scratch,AudioSet,AudioSet/audios/eval_segments/YUx1MPZOPgmk.wav,True
+YV2Q-Pqffdxs.wav,,,Whir,AudioSet,AudioSet/audios/eval_segments/YV2Q-Pqffdxs.wav,True
+YVR0Lz4JOoBU.wav,,,"Radio,Sidetone",AudioSet,AudioSet/audios/eval_segments/YVR0Lz4JOoBU.wav,True
+YVUGB-2HL6YE.wav,,,"Vehicle,Air brake",AudioSet,AudioSet/audios/eval_segments/YVUGB-2HL6YE.wav,True
+YVXR1M-X_akU.wav,,,"Chink, clink,Speech",AudioSet,AudioSet/audios/eval_segments/YVXR1M-X_akU.wav,True
+YVdYakZ4Yciw.wav,,,"Theme music,Music,Whir",AudioSet,AudioSet/audios/eval_segments/YVdYakZ4Yciw.wav,True
+YVp4DzRFSeq8.wav,,,Radio,AudioSet,AudioSet/audios/eval_segments/YVp4DzRFSeq8.wav,True
+YVp4lOXVBQzQ.wav,,,"Hoot,Owl",AudioSet,AudioSet/audios/eval_segments/YVp4lOXVBQzQ.wav,True
+YVtF461zWIkk.wav,,,"Speech,Speech synthesizer",AudioSet,AudioSet/audios/eval_segments/YVtF461zWIkk.wav,True
+YVwi-81FuNWE.wav,,,Rustle,AudioSet,AudioSet/audios/eval_segments/YVwi-81FuNWE.wav,True
+YWAUn8kFhvZw.wav,,,"Hoot,Owl",AudioSet,AudioSet/audios/eval_segments/YWAUn8kFhvZw.wav,True
+YWAqO-bCYH-g.wav,,,"Bouncing,Sound effect",AudioSet,AudioSet/audios/eval_segments/YWAqO-bCYH-g.wav,True
+YWBYa_u20cVo.wav,,,"Motor vehicle (road),Skidding,Vehicle,Car",AudioSet,AudioSet/audios/eval_segments/YWBYa_u20cVo.wav,True
+YWeJwj-Zmlms.wav,,,"Vehicle,Air brake",AudioSet,AudioSet/audios/eval_segments/YWeJwj-Zmlms.wav,True
+YWu--g0m8oWA.wav,,,"Bus,Vehicle",AudioSet,AudioSet/audios/eval_segments/YWu--g0m8oWA.wav,True
+YX1ifV2yQLOg.wav,,,"Narration, monologue,Music,Middle Eastern music,Speech",AudioSet,AudioSet/audios/eval_segments/YX1ifV2yQLOg.wav,True
+YX5gSlfpDDnQ.wav,,,Ship,AudioSet,AudioSet/audios/eval_segments/YX5gSlfpDDnQ.wav,True
+YXHC8k_NzQOc.wav,,,Yip,AudioSet,AudioSet/audios/eval_segments/YXHC8k_NzQOc.wav,True
+YXIOPyIkOhbs.wav,,,Sizzle,AudioSet,AudioSet/audios/eval_segments/YXIOPyIkOhbs.wav,True
+YXNGrVxQFrdI.wav,,,"Pump (liquid),Water",AudioSet,AudioSet/audios/eval_segments/YXNGrVxQFrdI.wav,True
+YX_tvm6Eoa3g.wav,,,"Conversation,Speech",AudioSet,AudioSet/audios/eval_segments/YX_tvm6Eoa3g.wav,True
+YXtWAC4vL1GI.wav,,,Sizzle,AudioSet,AudioSet/audios/eval_segments/YXtWAC4vL1GI.wav,True
+YY-qOOR0izlE.wav,,,"Music,Helicopter",AudioSet,AudioSet/audios/eval_segments/YY-qOOR0izlE.wav,True
+YYHnXVr0T8Ik.wav,,,"Keys jangling,Speech",AudioSet,AudioSet/audios/eval_segments/YYHnXVr0T8Ik.wav,True
+YYKa5h3sZLLU.wav,,,"Boat, Water vehicle,Ship",AudioSet,AudioSet/audios/eval_segments/YYKa5h3sZLLU.wav,True
+YYV0noe1sZAs.wav,,,"Skateboard,Speech",AudioSet,AudioSet/audios/eval_segments/YYV0noe1sZAs.wav,True
+YYWAchXE2HqQ.wav,,,Crackle,AudioSet,AudioSet/audios/eval_segments/YYWAchXE2HqQ.wav,True
+YYn3O8_R76Mc.wav,,,"Splinter,Wood",AudioSet,AudioSet/audios/eval_segments/YYn3O8_R76Mc.wav,True
+YYsrlv2UlG8A.wav,,,"Music,Cacophony,Soundtrack music,Synthesizer,Exciting music",AudioSet,AudioSet/audios/eval_segments/YYsrlv2UlG8A.wav,True
+YYyWvBi-4QhI.wav,,,Chop,AudioSet,AudioSet/audios/eval_segments/YYyWvBi-4QhI.wav,True
+YZ11Dd4oe9So.wav,,,"Canidae, dogs, wolves,Howl,Animal",AudioSet,AudioSet/audios/eval_segments/YZ11Dd4oe9So.wav,True
+YZHK2VTTMMWs.wav,,,"Music,Speech,Drawer open or close",AudioSet,AudioSet/audios/eval_segments/YZHK2VTTMMWs.wav,True
+YZNvYI7zxUgY.wav,,,Crushing,AudioSet,AudioSet/audios/eval_segments/YZNvYI7zxUgY.wav,True
+YZOFMyCxuq6E.wav,,,"Narration, monologue,Music,Speech",AudioSet,AudioSet/audios/eval_segments/YZOFMyCxuq6E.wav,True
+YZYjsfZjjeU0.wav,,,"Scratching (performance technique),Music",AudioSet,AudioSet/audios/eval_segments/YZYjsfZjjeU0.wav,True
+YZoAfkpmztww.wav,,,"Roar,Music,Inside, large room or hall",AudioSet,AudioSet/audios/eval_segments/YZoAfkpmztww.wav,True
+YZook_bGHT3E.wav,,,"Cello,Double bass,Bowed string instrument",AudioSet,AudioSet/audios/eval_segments/YZook_bGHT3E.wav,True
+YZopQlxu4190.wav,,,"Sniff,Speech",AudioSet,AudioSet/audios/eval_segments/YZopQlxu4190.wav,True
+Y_3lZfWAQU0U.wav,,,"Whale vocalization,Speech",AudioSet,AudioSet/audios/eval_segments/Y_3lZfWAQU0U.wav,True
+Y_5FQFj1d9Qs.wav,,,"Single-lens reflex camera,Camera",AudioSet,AudioSet/audios/eval_segments/Y_5FQFj1d9Qs.wav,True
+Y_IdzMujZ6vQ.wav,,,"Speech,Children playing,Outside, rural or natural",AudioSet,AudioSet/audios/eval_segments/Y_IdzMujZ6vQ.wav,True
+Y_NNWV8FzX2A.wav,,,Sonar,AudioSet,AudioSet/audios/eval_segments/Y_NNWV8FzX2A.wav,True
+Y_U7cZJgNedc.wav,,,Plop,AudioSet,AudioSet/audios/eval_segments/Y_U7cZJgNedc.wav,True
+Y_W0goL0IzmE.wav,,,Whip,AudioSet,AudioSet/audios/eval_segments/Y_W0goL0IzmE.wav,True
+Y__p-iA312kg.wav,,,"Cat,Domestic animals, pets,Growling,Animal",AudioSet,AudioSet/audios/eval_segments/Y__p-iA312kg.wav,True
+Y_kZDScT9wz0.wav,,,String section,AudioSet,AudioSet/audios/eval_segments/Y_kZDScT9wz0.wav,True
+Y_mr2Rpuqlyw.wav,,,Chop,AudioSet,AudioSet/audios/eval_segments/Y_mr2Rpuqlyw.wav,True
+Y_n3r2inlqBc.wav,,,"Whale vocalization,Music",AudioSet,AudioSet/audios/eval_segments/Y_n3r2inlqBc.wav,True
+Y_oqjmbfLg0o.wav,,,"Engine,Idling,Medium engine (mid frequency)",AudioSet,AudioSet/audios/eval_segments/Y_oqjmbfLg0o.wav,True
+Y_r40VYk0Y-o.wav,,,Tubular bells,AudioSet,AudioSet/audios/eval_segments/Y_r40VYk0Y-o.wav,True
+Ya7g3P1HGV4E.wav,,,Rustling leaves,AudioSet,AudioSet/audios/eval_segments/Ya7g3P1HGV4E.wav,True
+YaP7UEZ4k-m0.wav,,,"Knock,Speech,Outside, rural or natural",AudioSet,AudioSet/audios/eval_segments/YaP7UEZ4k-m0.wav,True
+YaUXKK9AmrPU.wav,,,"Music,Zing",AudioSet,AudioSet/audios/eval_segments/YaUXKK9AmrPU.wav,True
+YaUfDxRelPHg.wav,,,"Roar,Roaring cats (lions, tigers),Animal",AudioSet,AudioSet/audios/eval_segments/YaUfDxRelPHg.wav,True
+YaX_q01mdId4.wav,,,Mechanical fan,AudioSet,AudioSet/audios/eval_segments/YaX_q01mdId4.wav,True
+YaXaC8DTLKYU.wav,,,Whip,AudioSet,AudioSet/audios/eval_segments/YaXaC8DTLKYU.wav,True
+YaY8-pXDdwiw.wav,,,"Chant,Music",AudioSet,AudioSet/audios/eval_segments/YaY8-pXDdwiw.wav,True
+Ya_P44FBxgMY.wav,,,"Gurgling,Speech",AudioSet,AudioSet/audios/eval_segments/Ya_P44FBxgMY.wav,True
+YacoqKEVczug.wav,,,"Smoke detector, smoke alarm",AudioSet,AudioSet/audios/eval_segments/YacoqKEVczug.wav,True
+Yad6UhYwTXXQ.wav,,,"Carnatic music,Mantra,Music",AudioSet,AudioSet/audios/eval_segments/Yad6UhYwTXXQ.wav,True
+Yad6lpG9Q5ZE.wav,,,"Plop,Speech",AudioSet,AudioSet/audios/eval_segments/Yad6lpG9Q5ZE.wav,True
+Yag4qUrpH9qo.wav,,,"Horse,Animal",AudioSet,AudioSet/audios/eval_segments/Yag4qUrpH9qo.wav,True
+Yal5JLR2skWY.wav,,,Babbling,AudioSet,AudioSet/audios/eval_segments/Yal5JLR2skWY.wav,True
+YayrzdxBwzGw.wav,,,"Rustling leaves,Speech",AudioSet,AudioSet/audios/eval_segments/YayrzdxBwzGw.wav,True
+YbAJrcYJgllE.wav,,,"Music,Musical instrument,Synthesizer",AudioSet,AudioSet/audios/eval_segments/YbAJrcYJgllE.wav,True
+YbBgA9bjCNyU.wav,,,"Mains hum,Hum",AudioSet,AudioSet/audios/eval_segments/YbBgA9bjCNyU.wav,True
+YbHHRCJHLApA.wav,,,Tubular bells,AudioSet,AudioSet/audios/eval_segments/YbHHRCJHLApA.wav,True
+YbHmbZDvqpyo.wav,,,"Babbling,Speech",AudioSet,AudioSet/audios/eval_segments/YbHmbZDvqpyo.wav,True
+YbKzyLIonf0c.wav,,,"Boat, Water vehicle,Motorboat, speedboat",AudioSet,AudioSet/audios/eval_segments/YbKzyLIonf0c.wav,True
+YbN2enX2DvU4.wav,,,Sonar,AudioSet,AudioSet/audios/eval_segments/YbN2enX2DvU4.wav,True
+YbQR7moK_WZg.wav,,,"Gargling,Speech",AudioSet,AudioSet/audios/eval_segments/YbQR7moK_WZg.wav,True
+Ybg9fsF7o0HY.wav,,,"Thunderstorm,Thunder",AudioSet,AudioSet/audios/eval_segments/Ybg9fsF7o0HY.wav,True
+YbjuKGvHSUmE.wav,,,"Mains hum,Hum",AudioSet,AudioSet/audios/eval_segments/YbjuKGvHSUmE.wav,True
+YbrEMnFXsTqo.wav,,,"Sampler,Music,Techno,Trance music,Dubstep,Electronica",AudioSet,AudioSet/audios/eval_segments/YbrEMnFXsTqo.wav,True
+YbrfHK1WL1II.wav,,,"Music,Thump, thud",AudioSet,AudioSet/audios/eval_segments/YbrfHK1WL1II.wav,True
+YbvapjUmC7bY.wav,,,"Ringtone,Music",AudioSet,AudioSet/audios/eval_segments/YbvapjUmC7bY.wav,True
+Yc33tVGlM0Z8.wav,,,Train whistle,AudioSet,AudioSet/audios/eval_segments/Yc33tVGlM0Z8.wav,True
+YcB-Es9GaVs0.wav,,,String section,AudioSet,AudioSet/audios/eval_segments/YcB-Es9GaVs0.wav,True
+YcBRStp9ClEg.wav,,,Fusillade,AudioSet,AudioSet/audios/eval_segments/YcBRStp9ClEg.wav,True
+YcCn5uAJi5J4.wav,,,"Crowd,Children shouting",AudioSet,AudioSet/audios/eval_segments/YcCn5uAJi5J4.wav,True
+YcDqpKAy6jkQ.wav,,,Scissors,AudioSet,AudioSet/audios/eval_segments/YcDqpKAy6jkQ.wav,True
+YcHGziT0hrZU.wav,,,"Music,Roll,Rock and roll",AudioSet,AudioSet/audios/eval_segments/YcHGziT0hrZU.wav,True
+YcHMOHhd540w.wav,,,"Music,Speech,Children playing,Outside, urban or manmade",AudioSet,AudioSet/audios/eval_segments/YcHMOHhd540w.wav,True
+YcNPwX7nKmOs.wav,,,"Boat, Water vehicle,Wind,Rowboat, canoe, kayak",AudioSet,AudioSet/audios/eval_segments/YcNPwX7nKmOs.wav,True
+YcQiVY6w90_8.wav,,,"Boat, Water vehicle,Rowboat, canoe, kayak",AudioSet,AudioSet/audios/eval_segments/YcQiVY6w90_8.wav,True
+YcUanP3nzMvU.wav,,,"Fusillade,Speech",AudioSet,AudioSet/audios/eval_segments/YcUanP3nzMvU.wav,True
+YcVQsteRY8F4.wav,,,"Skidding,Vehicle,Car,Outside, rural or natural",AudioSet,AudioSet/audios/eval_segments/YcVQsteRY8F4.wav,True
+YcX0L9NWDbug.wav,,,Clatter,AudioSet,AudioSet/audios/eval_segments/YcX0L9NWDbug.wav,True
+YcfPb5NHN6ec.wav,,,"Whoosh, swoosh, swish",AudioSet,AudioSet/audios/eval_segments/YcfPb5NHN6ec.wav,True
+YcxXhHDgduHo.wav,,,"Telephone dialing, DTMF,Speech,Traffic noise, roadway noise",AudioSet,AudioSet/audios/eval_segments/YcxXhHDgduHo.wav,True
+YcxkCPSXyT-Y.wav,,,"Turkey,Fowl,Gobble",AudioSet,AudioSet/audios/eval_segments/YcxkCPSXyT-Y.wav,True
+Ycy7yYRlsmwA.wav,,,"Rain,Raindrop",AudioSet,AudioSet/audios/eval_segments/Ycy7yYRlsmwA.wav,True
+Yd-ESQK6L9-o.wav,,,"Pink noise,Fixed-wing aircraft, airplane",AudioSet,AudioSet/audios/eval_segments/Yd-ESQK6L9-o.wav,True
+Yd0Uz_RnRV88.wav,,,"Flamenco,Guitar,Acoustic guitar,Music,Musical instrument,Plucked string instrument",AudioSet,AudioSet/audios/eval_segments/Yd0Uz_RnRV88.wav,True
+YdCXfMwU9cMk.wav,,,"Wind chime,Chime",AudioSet,AudioSet/audios/eval_segments/YdCXfMwU9cMk.wav,True
+YdDbXkI4sbUM.wav,,,"Tick,Speech",AudioSet,AudioSet/audios/eval_segments/YdDbXkI4sbUM.wav,True
+YdEc7tV30KJo.wav,,,"Music,Roll,Rock and roll",AudioSet,AudioSet/audios/eval_segments/YdEc7tV30KJo.wav,True
+YdMzQiu2mUlE.wav,,,"Bagpipes,Wind instrument, woodwind instrument",AudioSet,AudioSet/audios/eval_segments/YdMzQiu2mUlE.wav,True
+YdNHBnwhOfHY.wav,,,"Music,Electronic tuner",AudioSet,AudioSet/audios/eval_segments/YdNHBnwhOfHY.wav,True
+YdODtKQA4ptc.wav,,,Fire alarm,AudioSet,AudioSet/audios/eval_segments/YdODtKQA4ptc.wav,True
+YdRXiRijSNOE.wav,,,"Bird,Horse,Environmental noise,Speech,Livestock, farm animals, working animals",AudioSet,AudioSet/audios/eval_segments/YdRXiRijSNOE.wav,True
+YdVYjJc2KdnY.wav,,,"Croak,Frog",AudioSet,AudioSet/audios/eval_segments/YdVYjJc2KdnY.wav,True
+Ydfwr8wgZU8M.wav,,,Car passing by,AudioSet,AudioSet/audios/eval_segments/Ydfwr8wgZU8M.wav,True
+Ydj3NKqIm_sw.wav,,,"Creak,Mechanisms",AudioSet,AudioSet/audios/eval_segments/Ydj3NKqIm_sw.wav,True
+YdrmG948QZMI.wav,,,"Bathtub (filling or washing),Water",AudioSet,AudioSet/audios/eval_segments/YdrmG948QZMI.wav,True
+YdswOcb7pn6g.wav,,,Squeal,AudioSet,AudioSet/audios/eval_segments/YdswOcb7pn6g.wav,True
+Ydt8eRF7lCt4.wav,,,"Smoke detector, smoke alarm",AudioSet,AudioSet/audios/eval_segments/Ydt8eRF7lCt4.wav,True
+YdtYo287OEJ8.wav,,,Fire alarm,AudioSet,AudioSet/audios/eval_segments/YdtYo287OEJ8.wav,True
+Ydv0D_-x1k04.wav,,,"Jackhammer,Outside, urban or manmade",AudioSet,AudioSet/audios/eval_segments/Ydv0D_-x1k04.wav,True
+YdvR0Km6r2KI.wav,,,"Bee, wasp, etc.,Insect,Fly, housefly",AudioSet,AudioSet/audios/eval_segments/YdvR0Km6r2KI.wav,True
+YdvzwRooVGJI.wav,,,Howl,AudioSet,AudioSet/audios/eval_segments/YdvzwRooVGJI.wav,True
+YdxI8P6-Ll68.wav,,,Change ringing (campanology),AudioSet,AudioSet/audios/eval_segments/YdxI8P6-Ll68.wav,True
+Ydzw5qQo-i4Y.wav,,,Pump (liquid),AudioSet,AudioSet/audios/eval_segments/Ydzw5qQo-i4Y.wav,True
+Ye4qVs0kpC_w.wav,,,Vacuum cleaner,AudioSet,AudioSet/audios/eval_segments/Ye4qVs0kpC_w.wav,True
+Ye97FQHvMrP0.wav,,,"Flap,Vehicle,Car",AudioSet,AudioSet/audios/eval_segments/Ye97FQHvMrP0.wav,True
+YeAl9WwRaWUE.wav,,,"Flap,Vehicle,Car",AudioSet,AudioSet/audios/eval_segments/YeAl9WwRaWUE.wav,True
+YeEalWQr_KV4.wav,,,"Shuffling cards,Speech",AudioSet,AudioSet/audios/eval_segments/YeEalWQr_KV4.wav,True
+YeEdaLHC0yA4.wav,,,Explosion,AudioSet,AudioSet/audios/eval_segments/YeEdaLHC0yA4.wav,True
+YeG964VYp9Tw.wav,,,Bell,AudioSet,AudioSet/audios/eval_segments/YeG964VYp9Tw.wav,True
+YeKz6Jpg9op8.wav,,,"Music,Groan,Speech",AudioSet,AudioSet/audios/eval_segments/YeKz6Jpg9op8.wav,True
+YeOmQbJljnqE.wav,,,"Music,Electronic tuner",AudioSet,AudioSet/audios/eval_segments/YeOmQbJljnqE.wav,True
+YeQcvlyjcaPM.wav,,,"Rodents, rats, mice",AudioSet,AudioSet/audios/eval_segments/YeQcvlyjcaPM.wav,True
+YeV5JX81GzqA.wav,,,"Skidding,Vehicle,Tire squeal,Car,Race car, auto racing",AudioSet,AudioSet/audios/eval_segments/YeV5JX81GzqA.wav,True
+YeWfkC7BfP6E.wav,,,"Mouse,Speech",AudioSet,AudioSet/audios/eval_segments/YeWfkC7BfP6E.wav,True
+YeWvOCr__m5o.wav,,,"Whimper,Belly laugh,Speech",AudioSet,AudioSet/audios/eval_segments/YeWvOCr__m5o.wav,True
+YeYV9sUHLb2c.wav,,,"Music,Shout,Speech",AudioSet,AudioSet/audios/eval_segments/YeYV9sUHLb2c.wav,True
+YeZE0RmJESFU.wav,,,"Music,Zing",AudioSet,AudioSet/audios/eval_segments/YeZE0RmJESFU.wav,True
+Ye_XYyi7ihzo.wav,,,"Video game music,Theme music,Music,Song",AudioSet,AudioSet/audios/eval_segments/Ye_XYyi7ihzo.wav,True
+Ye_qmjD8QlK4.wav,,,"Music,Television,Speech",AudioSet,AudioSet/audios/eval_segments/Ye_qmjD8QlK4.wav,True
+YeaHCev3LDIw.wav,,,"Zipper (clothing),Speech",AudioSet,AudioSet/audios/eval_segments/YeaHCev3LDIw.wav,True
+YebwdFQB-5Fg.wav,,,"Pulleys,Mechanisms",AudioSet,AudioSet/audios/eval_segments/YebwdFQB-5Fg.wav,True
+YeiyyoUt64Zc.wav,,,"Brass instrument,Jazz,Music,Musical instrument,Trumpet,Inside, large room or hall",AudioSet,AudioSet/audios/eval_segments/YeiyyoUt64Zc.wav,True
+YejiU3ncUomg.wav,,,Arrow,AudioSet,AudioSet/audios/eval_segments/YejiU3ncUomg.wav,True
+YeqXl8sSks-c.wav,,,"Liquid,Boiling",AudioSet,AudioSet/audios/eval_segments/YeqXl8sSks-c.wav,True
+YethH4rG7toU.wav,,,Arrow,AudioSet,AudioSet/audios/eval_segments/YethH4rG7toU.wav,True
+Yex-HO10fEpo.wav,,,Jackhammer,AudioSet,AudioSet/audios/eval_segments/Yex-HO10fEpo.wav,True
+Yf1MZbxQ9qgg.wav,,,Stream,AudioSet,AudioSet/audios/eval_segments/Yf1MZbxQ9qgg.wav,True
+Yf29BrDwel1g.wav,,,"Beep, bleep",AudioSet,AudioSet/audios/eval_segments/Yf29BrDwel1g.wav,True
+Yf2lVkHEwEgs.wav,,,"Cutlery, silverware,Dishes, pots, and pans",AudioSet,AudioSet/audios/eval_segments/Yf2lVkHEwEgs.wav,True
+Yf7p119TIgGc.wav,,,"Speech,Light engine (high frequency)",AudioSet,AudioSet/audios/eval_segments/Yf7p119TIgGc.wav,True
+YfAmA7zTw8SY.wav,,,"Gunshot, gunfire,Cap gun",AudioSet,AudioSet/audios/eval_segments/YfAmA7zTw8SY.wav,True
+YfAns8GJzYeQ.wav,,,Waterfall,AudioSet,AudioSet/audios/eval_segments/YfAns8GJzYeQ.wav,True
+YfB_tldbRb28.wav,,,"Gunshot, gunfire,Cap gun",AudioSet,AudioSet/audios/eval_segments/YfB_tldbRb28.wav,True
+YfFX04tOPv8s.wav,,,"Music,Whimper",AudioSet,AudioSet/audios/eval_segments/YfFX04tOPv8s.wav,True
+YfHNAxa0QaOM.wav,,,"Blues,Effects unit,Music,Distortion",AudioSet,AudioSet/audios/eval_segments/YfHNAxa0QaOM.wav,True
+YfJleZiuimzU.wav,,,Chopping (food),AudioSet,AudioSet/audios/eval_segments/YfJleZiuimzU.wav,True
+YfQRh2QW5RX8.wav,,,"Bird,Bird vocalization, bird call, bird song,Chirp, tweet,Coo,Pigeon, dove",AudioSet,AudioSet/audios/eval_segments/YfQRh2QW5RX8.wav,True
+YfRnZAKR3D80.wav,,,"Ping,Speech,Inside, large room or hall",AudioSet,AudioSet/audios/eval_segments/YfRnZAKR3D80.wav,True
+YfVygSS7i3kA.wav,,,"Air conditioning,Vehicle",AudioSet,AudioSet/audios/eval_segments/YfVygSS7i3kA.wav,True
+YfWwV7o4VjEQ.wav,,,"Christmas music,Christian music,Music,Psychedelic rock,Rock music,Song",AudioSet,AudioSet/audios/eval_segments/YfWwV7o4VjEQ.wav,True
+YfZUtSiJOx5U.wav,,,"Music,Boing",AudioSet,AudioSet/audios/eval_segments/YfZUtSiJOx5U.wav,True
+YfZhywChBkq0.wav,,,"Music,Ping,Speech",AudioSet,AudioSet/audios/eval_segments/YfZhywChBkq0.wav,True
+Yf_W83fZSYSE.wav,,,"Crow,Animal",AudioSet,AudioSet/audios/eval_segments/Yf_W83fZSYSE.wav,True
+YfalRG71iBqU.wav,,,"Television,Speech",AudioSet,AudioSet/audios/eval_segments/YfalRG71iBqU.wav,True
+Yfca_8duK9Rk.wav,,,Grunt,AudioSet,AudioSet/audios/eval_segments/Yfca_8duK9Rk.wav,True
+Yff21Bursam0.wav,,,"Cattle, bovinae,Moo,Livestock, farm animals, working animals",AudioSet,AudioSet/audios/eval_segments/Yff21Bursam0.wav,True
+Yfogo9NQ1g6A.wav,,,Eruption,AudioSet,AudioSet/audios/eval_segments/Yfogo9NQ1g6A.wav,True
+YfprQ-tmeDRY.wav,,,Gong,AudioSet,AudioSet/audios/eval_segments/YfprQ-tmeDRY.wav,True
+YfqSyibSPq5w.wav,,,"Music,Boom,Speech",AudioSet,AudioSet/audios/eval_segments/YfqSyibSPq5w.wav,True
+YfzhJ-Fmt-Po.wav,,,Snake,AudioSet,AudioSet/audios/eval_segments/YfzhJ-Fmt-Po.wav,True
+Yg3_g_nV88kw.wav,,,"Eruption,Speech",AudioSet,AudioSet/audios/eval_segments/Yg3_g_nV88kw.wav,True
+Yg7Ax_PCKexQ.wav,,,"Music,Ding-dong",AudioSet,AudioSet/audios/eval_segments/Yg7Ax_PCKexQ.wav,True
+YgGhgsrlwkaw.wav,,,Whistling,AudioSet,AudioSet/audios/eval_segments/YgGhgsrlwkaw.wav,True
+YgH90Uzuoj0U.wav,,,"Music,Musical instrument,Rattle (instrument),Speech,Maraca",AudioSet,AudioSet/audios/eval_segments/YgH90Uzuoj0U.wav,True
+YgJ1EjXFq5vQ.wav,,,Whistling,AudioSet,AudioSet/audios/eval_segments/YgJ1EjXFq5vQ.wav,True
+YgKagJSrvRew.wav,,,"Liquid,Speech",AudioSet,AudioSet/audios/eval_segments/YgKagJSrvRew.wav,True
+YgSyNNvHYyGg.wav,,,"Cupboard open or close,Speech",AudioSet,AudioSet/audios/eval_segments/YgSyNNvHYyGg.wav,True
+YgTI8l9Is0G0.wav,,,"Drill,Tools,Power tool",AudioSet,AudioSet/audios/eval_segments/YgTI8l9Is0G0.wav,True
+YgTO00a-LFYs.wav,,,"Silence,Music,Rumble",AudioSet,AudioSet/audios/eval_segments/YgTO00a-LFYs.wav,True
+YgTcKbsKDkWk.wav,,,"Music,Burst, pop,Speech",AudioSet,AudioSet/audios/eval_segments/YgTcKbsKDkWk.wav,True
+YgVDSFrufSJ8.wav,,,"Alarm,Speech",AudioSet,AudioSet/audios/eval_segments/YgVDSFrufSJ8.wav,True
+YgarZ8KkuBds.wav,,,"Toot,Vehicle,Vehicle horn, car horn, honking,Car",AudioSet,AudioSet/audios/eval_segments/YgarZ8KkuBds.wav,True
+YgiIBL5sDY0Y.wav,,,"Hands,Clapping",AudioSet,AudioSet/audios/eval_segments/YgiIBL5sDY0Y.wav,True
+YglLQrEijrKg.wav,,,"Organ,Hammond organ",AudioSet,AudioSet/audios/eval_segments/YglLQrEijrKg.wav,True
+YgqwjKbcfNBY.wav,,,"Music,Shatter,Speech",AudioSet,AudioSet/audios/eval_segments/YgqwjKbcfNBY.wav,True
+YgsoxPkxJw_4.wav,,,"Marimba, xylophone,Glockenspiel,Mallet percussion",AudioSet,AudioSet/audios/eval_segments/YgsoxPkxJw_4.wav,True
+YgtKcxDpBKxk.wav,,,"Whack, thwack",AudioSet,AudioSet/audios/eval_segments/YgtKcxDpBKxk.wav,True
+Yh-Krpgn00Ik.wav,,,"Marimba, xylophone,Glockenspiel,Mallet percussion",AudioSet,AudioSet/audios/eval_segments/Yh-Krpgn00Ik.wav,True
+Yh2XTOVCno2M.wav,,,Air conditioning,AudioSet,AudioSet/audios/eval_segments/Yh2XTOVCno2M.wav,True
+Yh3P2Si6bC6Y.wav,,,"Fire,Wind,Wind noise (microphone)",AudioSet,AudioSet/audios/eval_segments/Yh3P2Si6bC6Y.wav,True
+Yh5heq2QPP0s.wav,,,"Ice cream truck, ice cream van,Music,Speech",AudioSet,AudioSet/audios/eval_segments/Yh5heq2QPP0s.wav,True
+Yh81UOjlFmMs.wav,,,Jingle bell,AudioSet,AudioSet/audios/eval_segments/Yh81UOjlFmMs.wav,True
+Yh8S7yY7DOb4.wav,,,"Rumble,Vehicle,Car,Outside, rural or natural",AudioSet,AudioSet/audios/eval_segments/Yh8S7yY7DOb4.wav,True
+Yh8f-Wkv0VI8.wav,,,"Railroad car, train wagon,Train whistle,Rail transport,Train",AudioSet,AudioSet/audios/eval_segments/Yh8f-Wkv0VI8.wav,True
+YhAukn8dWZ2M.wav,,,"Laughter,Chuckle, chortle,Snicker,Belly laugh",AudioSet,AudioSet/audios/eval_segments/YhAukn8dWZ2M.wav,True
+YhCJ5hEnQo4s.wav,,,"Lawn mower,Speech",AudioSet,AudioSet/audios/eval_segments/YhCJ5hEnQo4s.wav,True
+YhG8odscqlfI.wav,,,"Fire,Wind,Wind noise (microphone)",AudioSet,AudioSet/audios/eval_segments/YhG8odscqlfI.wav,True
+YhHFqyvBK8cE.wav,,,Fire,AudioSet,AudioSet/audios/eval_segments/YhHFqyvBK8cE.wav,True
+YhMdEot-yfk8.wav,,,"Music,Tambourine,Speech",AudioSet,AudioSet/audios/eval_segments/YhMdEot-yfk8.wav,True
+YhYozkvT5ubU.wav,,,Ding,AudioSet,AudioSet/audios/eval_segments/YhYozkvT5ubU.wav,True
+Yhe8FyGJov3s.wav,,,"Clock,Music",AudioSet,AudioSet/audios/eval_segments/Yhe8FyGJov3s.wav,True
+YhfIfBPkH8Fo.wav,,,Waterfall,AudioSet,AudioSet/audios/eval_segments/YhfIfBPkH8Fo.wav,True
+YhppKuxkg_CI.wav,,,Foghorn,AudioSet,AudioSet/audios/eval_segments/YhppKuxkg_CI.wav,True
+Yi52hyDAEsgE.wav,,,"Lawn mower,Speech,Light engine (high frequency)",AudioSet,AudioSet/audios/eval_segments/Yi52hyDAEsgE.wav,True
+Yi99_Kgi0WIU.wav,,,"Whispering,Speech",AudioSet,AudioSet/audios/eval_segments/Yi99_Kgi0WIU.wav,True
+Yi9i-MjxVOnY.wav,,,"Basketball bounce,Speech",AudioSet,AudioSet/audios/eval_segments/Yi9i-MjxVOnY.wav,True
+YiAKUYTMv23Y.wav,,,"Clock,Beep, bleep,Music",AudioSet,AudioSet/audios/eval_segments/YiAKUYTMv23Y.wav,True
+YiB-lYX86rr4.wav,,,Clock,AudioSet,AudioSet/audios/eval_segments/YiB-lYX86rr4.wav,True
+YiBdbi99C0uI.wav,,,"Gospel music,Song,Choir",AudioSet,AudioSet/audios/eval_segments/YiBdbi99C0uI.wav,True
+YiEzcdCLsiwU.wav,,,Gong,AudioSet,AudioSet/audios/eval_segments/YiEzcdCLsiwU.wav,True
+YiJTMAO4phbw.wav,,,"Shuffling cards,Speech",AudioSet,AudioSet/audios/eval_segments/YiJTMAO4phbw.wav,True
+YiQJvAXOohoU.wav,,,"Effects unit,Music,Chorus effect",AudioSet,AudioSet/audios/eval_segments/YiQJvAXOohoU.wav,True
+YiQm2DVuHEU8.wav,,,"Smash, crash",AudioSet,AudioSet/audios/eval_segments/YiQm2DVuHEU8.wav,True
+Yi_Lb3nSyyfM.wav,,,"Speech,Boing,Inside, small room",AudioSet,AudioSet/audios/eval_segments/Yi_Lb3nSyyfM.wav,True
+Yi_NNY_mgxIs.wav,,,"Echo,Effects unit,Music",AudioSet,AudioSet/audios/eval_segments/Yi_NNY_mgxIs.wav,True
+YiotIxAR-eH8.wav,,,Squawk,AudioSet,AudioSet/audios/eval_segments/YiotIxAR-eH8.wav,True
+Yj1PrEuMq-_M.wav,,,"Typing,Typewriter",AudioSet,AudioSet/audios/eval_segments/Yj1PrEuMq-_M.wav,True
+Yj3fvpIan5x4.wav,,,"Buzzer,Music,Speech",AudioSet,AudioSet/audios/eval_segments/Yj3fvpIan5x4.wav,True
+Yj3hDxL26D48.wav,,,Chorus effect,AudioSet,AudioSet/audios/eval_segments/Yj3hDxL26D48.wav,True
+YjEQ0pS7lAH8.wav,,,"Dental drill, dentist's drill,Speech,Inside, small room",AudioSet,AudioSet/audios/eval_segments/YjEQ0pS7lAH8.wav,True
+YjHSWbKDx1Ms.wav,,,"Basketball bounce,Music,Speech",AudioSet,AudioSet/audios/eval_segments/YjHSWbKDx1Ms.wav,True
+YjKISMbxXTEc.wav,,,"Rattle,Speech,Inside, small room",AudioSet,AudioSet/audios/eval_segments/YjKISMbxXTEc.wav,True
+YjRtyNpbwsX8.wav,,,"Dental drill, dentist's drill,Inside, small room",AudioSet,AudioSet/audios/eval_segments/YjRtyNpbwsX8.wav,True
+YjWHoUKMCS8s.wav,,,Foghorn,AudioSet,AudioSet/audios/eval_segments/YjWHoUKMCS8s.wav,True
+Yjj1hd9KtLtw.wav,,,"Tabla,Drum,Percussion",AudioSet,AudioSet/audios/eval_segments/Yjj1hd9KtLtw.wav,True
+YjpvK6ACozAY.wav,,,"Chainsaw,Lawn mower",AudioSet,AudioSet/audios/eval_segments/YjpvK6ACozAY.wav,True
+YjqY2ZAxGZjc.wav,,,"Smash, crash",AudioSet,AudioSet/audios/eval_segments/YjqY2ZAxGZjc.wav,True
+Yk194hBdrHGU.wav,,,Whistle,AudioSet,AudioSet/audios/eval_segments/Yk194hBdrHGU.wav,True
+Yk2a30--j37Q.wav,,,"Siren,Civil defense siren",AudioSet,AudioSet/audios/eval_segments/Yk2a30--j37Q.wav,True
+Yk8WMNndhyN4.wav,,,"Cash register,Speech",AudioSet,AudioSet/audios/eval_segments/Yk8WMNndhyN4.wav,True
+YkE4uzVn69XQ.wav,,,Whistle,AudioSet,AudioSet/audios/eval_segments/YkE4uzVn69XQ.wav,True
+YkL189QDeo6o.wav,,,"Music,Burst, pop,Speech",AudioSet,AudioSet/audios/eval_segments/YkL189QDeo6o.wav,True
+YkRGwfNrnWsc.wav,,,"Propeller, airscrew,Speech",AudioSet,AudioSet/audios/eval_segments/YkRGwfNrnWsc.wav,True
+YkSeiFzV1J9w.wav,,,"Finger snapping,Speech,Inside, small room",AudioSet,AudioSet/audios/eval_segments/YkSeiFzV1J9w.wav,True
+YkTqOOc9iM08.wav,,,Snoring,AudioSet,AudioSet/audios/eval_segments/YkTqOOc9iM08.wav,True
+YkTyI2unrdv0.wav,,,"Heart murmur,Music",AudioSet,AudioSet/audios/eval_segments/YkTyI2unrdv0.wav,True
+YkXLwb3bvCKo.wav,,,"Bird,Domestic animals, pets,Squawk",AudioSet,AudioSet/audios/eval_segments/YkXLwb3bvCKo.wav,True
+YkZAwXjidHmM.wav,,,Sneeze,AudioSet,AudioSet/audios/eval_segments/YkZAwXjidHmM.wav,True
+Ykb3tfk8dxvU.wav,,,"Gunshot, gunfire,Artillery fire",AudioSet,AudioSet/audios/eval_segments/Ykb3tfk8dxvU.wav,True
+YkcL-cVwT6IM.wav,,,"Music,Speech,Hands,Child speech, kid speaking,Inside, small room",AudioSet,AudioSet/audios/eval_segments/YkcL-cVwT6IM.wav,True
+YkhDxR8Iy1Xc.wav,,,"Chatter,Speech,Inside, large room or hall",AudioSet,AudioSet/audios/eval_segments/YkhDxR8Iy1Xc.wav,True
+YklZPGhxTk-s.wav,,,"Vehicle,White noise,Aircraft",AudioSet,AudioSet/audios/eval_segments/YklZPGhxTk-s.wav,True
+Yktso7GeckG8.wav,,,"Cowbell,Livestock, farm animals, working animals",AudioSet,AudioSet/audios/eval_segments/Yktso7GeckG8.wav,True
+YkvnHiyb5xvw.wav,,,"Power windows, electric windows,Speech",AudioSet,AudioSet/audios/eval_segments/YkvnHiyb5xvw.wav,True
+Yl7bje9Ay9Ig.wav,,,Train wheels squealing,AudioSet,AudioSet/audios/eval_segments/Yl7bje9Ay9Ig.wav,True
+Yl8nMg5W2INk.wav,,,"Power windows, electric windows,Environmental noise,Speech",AudioSet,AudioSet/audios/eval_segments/Yl8nMg5W2INk.wav,True
+YlBBqkex3VXI.wav,,,"Glass,Speech",AudioSet,AudioSet/audios/eval_segments/YlBBqkex3VXI.wav,True
+Ylc9AGuY9YyA.wav,,,"Buzzer,Speech",AudioSet,AudioSet/audios/eval_segments/Ylc9AGuY9YyA.wav,True
+YldVtte9jK-s.wav,,,"Gunshot, gunfire,Artillery fire",AudioSet,AudioSet/audios/eval_segments/YldVtte9jK-s.wav,True
+YmPP7c8TSGes.wav,,,"Drip,Inside, small room",AudioSet,AudioSet/audios/eval_segments/YmPP7c8TSGes.wav,True
+Ynn1Le4Er7no.wav,,,"Music,Spray,Speech",AudioSet,AudioSet/audios/eval_segments/Ynn1Le4Er7no.wav,True
+Ynw-ECOC7GUs.wav,,,"Ratchet, pawl,Gears,Mechanisms",AudioSet,AudioSet/audios/eval_segments/Ynw-ECOC7GUs.wav,True
+YpEUp-2atU5I.wav,,,"Squish,Speech",AudioSet,AudioSet/audios/eval_segments/YpEUp-2atU5I.wav,True
+YpEcDgd_rpv8.wav,,,"Propeller, airscrew,Vehicle,Aircraft",AudioSet,AudioSet/audios/eval_segments/YpEcDgd_rpv8.wav,True
+YpSA-1u89oHM.wav,,,Train whistle,AudioSet,AudioSet/audios/eval_segments/YpSA-1u89oHM.wav,True
+YpWjfnwWIXQ4.wav,,,"Bird flight, flapping wings",AudioSet,AudioSet/audios/eval_segments/YpWjfnwWIXQ4.wav,True
+Ypz59_7vSeQE.wav,,,"Slosh,Speech,Inside, small room",AudioSet,AudioSet/audios/eval_segments/Ypz59_7vSeQE.wav,True
+Yq8tvmz6bD1I.wav,,,"Pulleys,Mechanisms",AudioSet,AudioSet/audios/eval_segments/Yq8tvmz6bD1I.wav,True
+YqhOaqSH-x5E.wav,,,"Bird flight, flapping wings",AudioSet,AudioSet/audios/eval_segments/YqhOaqSH-x5E.wav,True
+YrQTAW2fyWns.wav,,,"Ratchet, pawl,Pulleys,Gears,Mechanisms",AudioSet,AudioSet/audios/eval_segments/YrQTAW2fyWns.wav,True
+Ysc1wXGEhtzE.wav,,,"Tearing,Crumpling, crinkling",AudioSet,AudioSet/audios/eval_segments/Ysc1wXGEhtzE.wav,True
+Yt4NzQDTNDCQ.wav,,,"Music,Slosh,Speech,Outside, urban or manmade",AudioSet,AudioSet/audios/eval_segments/Yt4NzQDTNDCQ.wav,True
+YthCn14bf1r8.wav,,,"Gunshot, gunfire,Machine gun,Artillery fire",AudioSet,AudioSet/audios/eval_segments/YthCn14bf1r8.wav,True
+Yu2xEjJXkeG8.wav,,,"Whoop,Speech",AudioSet,AudioSet/audios/eval_segments/Yu2xEjJXkeG8.wav,True
+YuvlhlXGMPos.wav,,,Growling,AudioSet,AudioSet/audios/eval_segments/YuvlhlXGMPos.wav,True
+YvDOCkP74-FM.wav,,,"Music,Whoop,Speech",AudioSet,AudioSet/audios/eval_segments/YvDOCkP74-FM.wav,True
+4-149940-A-5.wav,,,cat,ESC-50,ESC-50/audio/4-149940-A-5.wav,True
+4-187504-A-17.wav,,,pouring_water,ESC-50,ESC-50/audio/4-187504-A-17.wav,True
+5-156026-C-4.wav,,,frog,ESC-50,ESC-50/audio/5-156026-C-4.wav,True
+5-157204-B-16.wav,,,wind,ESC-50,ESC-50/audio/5-157204-B-16.wav,True
+5-160614-C-48.wav,,,fireworks,ESC-50,ESC-50/audio/5-160614-C-48.wav,True
+5-171653-A-41.wav,,,chainsaw,ESC-50,ESC-50/audio/5-171653-A-41.wav,True
+5-177957-D-40.wav,,,helicopter,ESC-50,ESC-50/audio/5-177957-D-40.wav,True
+5-180156-A-43.wav,,,car_horn,ESC-50,ESC-50/audio/5-180156-A-43.wav,True
+5-185516-A-27.wav,,,brushing_teeth,ESC-50,ESC-50/audio/5-185516-A-27.wav,True
+5-188716-A-46.wav,,,church_bells,ESC-50,ESC-50/audio/5-188716-A-46.wav,True
+5-194899-C-3.wav,,,cow,ESC-50,ESC-50/audio/5-194899-C-3.wav,True
+5-197118-A-45.wav,,,train,ESC-50,ESC-50/audio/5-197118-A-45.wav,True
+5-207836-B-29.wav,,,drinking_sipping,ESC-50,ESC-50/audio/5-207836-B-29.wav,True
+5-208810-A-11.wav,,,sea_waves,ESC-50,ESC-50/audio/5-208810-A-11.wav,True
+5-208810-B-11.wav,,,sea_waves,ESC-50,ESC-50/audio/5-208810-B-11.wav,True
+5-219242-A-37.wav,,,clock_alarm,ESC-50,ESC-50/audio/5-219242-A-37.wav,True
+5-237795-A-34.wav,,,can_opening,ESC-50,ESC-50/audio/5-237795-A-34.wav,True
+5-254832-A-15.wav,,,water_drops,ESC-50,ESC-50/audio/5-254832-A-15.wav,True
+2832.wav,,,"Speech_synthesizer,Speech,Human_voice",FSD50K,FSD50K/FSD50K.dev_audio/2832.wav,True
+372655.wav,,,"Wind_instrument_and_woodwind_instrument,Musical_instrument,Music",FSD50K,FSD50K/FSD50K.dev_audio/372655.wav,True
+374951.wav,,,"Brass_instrument,Musical_instrument,Music",FSD50K,FSD50K/FSD50K.dev_audio/374951.wav,True
+383703.wav,,,"Bowed_string_instrument,Musical_instrument,Music",FSD50K,FSD50K/FSD50K.dev_audio/383703.wav,True
+418213.wav,,,"Sliding_door,Door,Domestic_sounds_and_home_sounds",FSD50K,FSD50K/FSD50K.dev_audio/418213.wav,True
+434537.wav,,,Fire,FSD50K,FSD50K/FSD50K.dev_audio/434537.wav,True
+44743.wav,,,"Subway_and_metro_and_underground,Rail_transport,Vehicle",FSD50K,FSD50K/FSD50K.dev_audio/44743.wav,True
+48302.wav,,,"Subway_and_metro_and_underground,Rail_transport,Vehicle",FSD50K,FSD50K/FSD50K.dev_audio/48302.wav,True
+50813.wav,,,"Bus,Motor_vehicle_(road),Vehicle",FSD50K,FSD50K/FSD50K.dev_audio/50813.wav,True
+58243.wav,,,"Car,Motor_vehicle_(road),Vehicle",FSD50K,FSD50K/FSD50K.dev_audio/58243.wav,True
+63352.wav,,,"Conversation,Speech,Human_voice",FSD50K,FSD50K/FSD50K.dev_audio/63352.wav,True
+66952.wav,,,Bell,FSD50K,FSD50K/FSD50K.dev_audio/66952.wav,True
+67096.wav,,,"Fireworks,Explosion",FSD50K,FSD50K/FSD50K.dev_audio/67096.wav,True
+69338.wav,,,"Cheering,Human_group_actions",FSD50K,FSD50K/FSD50K.dev_audio/69338.wav,True
+70098.wav,,,"Bark,Dog,Domestic_animals_and_pets,Animal",FSD50K,FSD50K/FSD50K.dev_audio/70098.wav,True
+70194.wav,,,"Crow,Bird,Wild_animals,Animal",FSD50K,FSD50K/FSD50K.dev_audio/70194.wav,True
+70214.wav,,,"Piano,Keyboard_(musical),Musical_instrument,Music",FSD50K,FSD50K/FSD50K.dev_audio/70214.wav,True
+72507.wav,,,"Applause,Human_group_actions",FSD50K,FSD50K/FSD50K.dev_audio/72507.wav,True
+72828.wav,,,Engine,FSD50K,FSD50K/FSD50K.dev_audio/72828.wav,True
+73623.wav,,,Tools,FSD50K,FSD50K/FSD50K.dev_audio/73623.wav,True
+76002.wav,,,"Boat_and_Water_vehicle,Vehicle",FSD50K,FSD50K/FSD50K.dev_audio/76002.wav,True
+76256.wav,,,Wind,FSD50K,FSD50K/FSD50K.dev_audio/76256.wav,True
+76443.wav,,,"Bird,Chicken_and_rooster,Wild_animals,Animal,Fowl,Livestock_and_farm_animals_and_working_animals",FSD50K,FSD50K/FSD50K.dev_audio/76443.wav,True
+76447.wav,,,"Gull_and_seagull,Bird,Wild_animals,Animal",FSD50K,FSD50K/FSD50K.dev_audio/76447.wav,True
+76511.wav,,,"Cheering,Human_voice,Human_group_actions",FSD50K,FSD50K/FSD50K.dev_audio/76511.wav,True
+80595.wav,,,"Gurgling,Water",FSD50K,FSD50K/FSD50K.dev_audio/80595.wav,True
+82111.wav,,,Explosion,FSD50K,FSD50K/FSD50K.dev_audio/82111.wav,True
+86953.wav,,,"Whispering,Human_voice",FSD50K,FSD50K/FSD50K.dev_audio/86953.wav,True
+87600.wav,,,"Truck,Motor_vehicle_(road),Vehicle",FSD50K,FSD50K/FSD50K.dev_audio/87600.wav,True
+88950.wav,,,"Shatter,Glass",FSD50K,FSD50K/FSD50K.dev_audio/88950.wav,True
+89567.wav,,,"Race_car_and_auto_racing,Car,Motor_vehicle_(road),Vehicle",FSD50K,FSD50K/FSD50K.dev_audio/89567.wav,True
+9164.wav,,,Glass,FSD50K,FSD50K/FSD50K.dev_audio/9164.wav,True
+91900.wav,,,"Snare_drum,Drum,Percussion,Musical_instrument,Music",FSD50K,FSD50K/FSD50K.dev_audio/91900.wav,True
+92887.wav,,,"Train,Rail_transport,Vehicle",FSD50K,FSD50K/FSD50K.dev_audio/92887.wav,True
+92992.wav,,,"Motorcycle,Motor_vehicle_(road),Vehicle",FSD50K,FSD50K/FSD50K.dev_audio/92992.wav,True
+93846.wav,,,"Boom,Explosion",FSD50K,FSD50K/FSD50K.dev_audio/93846.wav,True
+94402.wav,,,"Livestock_and_farm_animals_and_working_animals,Animal",FSD50K,FSD50K/FSD50K.dev_audio/94402.wav,True
+94993.wav,,,"Coin_(dropping),Domestic_sounds_and_home_sounds",FSD50K,FSD50K/FSD50K.dev_audio/94993.wav,True
+9542.wav,,,"Laughter,Human_voice",FSD50K,FSD50K/FSD50K.dev_audio/9542.wav,True
+96201.wav,,,Fart,FSD50K,FSD50K/FSD50K.dev_audio/96201.wav,True
+97562.wav,,,"Dishes_and_pots_and_pans,Domestic_sounds_and_home_sounds",FSD50K,FSD50K/FSD50K.dev_audio/97562.wav,True
+97916.wav,,,"Thunder,Rain,Water,Thunderstorm",FSD50K,FSD50K/FSD50K.dev_audio/97916.wav,True
+99459.wav,,,"Female_speech_and_woman_speaking,Speech,Human_voice",FSD50K,FSD50K/FSD50K.dev_audio/99459.wav,True
+100791.wav,,,"Race_car_and_auto_racing,Engine,Car,Motor_vehicle_(road),Vehicle",FSD50K,FSD50K/FSD50K.eval_audio/100791.wav,True
+101354.wav,,,Alarm,FSD50K,FSD50K/FSD50K.eval_audio/101354.wav,True
+123308.wav,,,"Ringtone,Telephone,Alarm",FSD50K,FSD50K/FSD50K.eval_audio/123308.wav,True
+124020.wav,,,"Traffic_noise_and_roadway_noise,Engine,Motor_vehicle_(road),Vehicle",FSD50K,FSD50K/FSD50K.eval_audio/124020.wav,True
+127955.wav,,,Run,FSD50K,FSD50K/FSD50K.eval_audio/127955.wav,True
+131357.wav,,,"Water,Engine,Splash_and_splatter,Liquid",FSD50K,FSD50K/FSD50K.eval_audio/131357.wav,True
+1406.wav,,,"Electric_guitar,Guitar,Plucked_string_instrument,Musical_instrument,Music",FSD50K,FSD50K/FSD50K.eval_audio/1406.wav,True
+144116.wav,,,Mechanisms,FSD50K,FSD50K/FSD50K.eval_audio/144116.wav,True
+153135.wav,,,Mechanisms,FSD50K,FSD50K/FSD50K.eval_audio/153135.wav,True
+153243.wav,,,"Water_tap_and_faucet,Domestic_sounds_and_home_sounds",FSD50K,FSD50K/FSD50K.eval_audio/153243.wav,True
+155650.wav,,,"Cough,Respiratory_sounds",FSD50K,FSD50K/FSD50K.eval_audio/155650.wav,True
+159778.wav,,,"Aircraft,Vehicle",FSD50K,FSD50K/FSD50K.eval_audio/159778.wav,True
+160907.wav,,,"Scratching_(performance_technique),Musical_instrument,Music",FSD50K,FSD50K/FSD50K.eval_audio/160907.wav,True
+167385.wav,,,Human_voice,FSD50K,FSD50K/FSD50K.eval_audio/167385.wav,True
+167556.wav,,,"Camera,Mechanisms",FSD50K,FSD50K/FSD50K.eval_audio/167556.wav,True
+168029.wav,,,"Doorbell,Door,Domestic_sounds_and_home_sounds,Alarm",FSD50K,FSD50K/FSD50K.eval_audio/168029.wav,True
+170311.wav,,,Tearing,FSD50K,FSD50K/FSD50K.eval_audio/170311.wav,True
+174924.wav,,,"Male_speech_and_man_speaking,Speech,Human_voice",FSD50K,FSD50K/FSD50K.eval_audio/174924.wav,True
+177045.wav,,,Wood,FSD50K,FSD50K/FSD50K.eval_audio/177045.wav,True
+17737.wav,,,"Applause,Crowd,Cheering,Human_group_actions",FSD50K,FSD50K/FSD50K.eval_audio/17737.wav,True
+178885.wav,,,"Slam,Door,Domestic_sounds_and_home_sounds",FSD50K,FSD50K/FSD50K.eval_audio/178885.wav,True
+181363.wav,,,"Tap,Alarm",FSD50K,FSD50K/FSD50K.eval_audio/181363.wav,True
+187609.wav,,,"Cutlery_and_silverware,Domestic_sounds_and_home_sounds",FSD50K,FSD50K/FSD50K.eval_audio/187609.wav,True
+188035.wav,,,"Bicycle,Vehicle",FSD50K,FSD50K/FSD50K.eval_audio/188035.wav,True
+189665.wav,,,"Drawer_open_or_close,Domestic_sounds_and_home_sounds",FSD50K,FSD50K/FSD50K.eval_audio/189665.wav,True
+194942.wav,,,"Gull_and_seagull,Bird,Wild_animals,Animal",FSD50K,FSD50K/FSD50K.eval_audio/194942.wav,True
+196562.wav,,,Thump_and_thud,FSD50K,FSD50K/FSD50K.eval_audio/196562.wav,True
+196655.wav,,,"Waves_and_surf,Ocean,Water",FSD50K,FSD50K/FSD50K.eval_audio/196655.wav,True
+196676.wav,,,"Waves_and_surf,Ocean,Water",FSD50K,FSD50K/FSD50K.eval_audio/196676.wav,True
+198402.wav,,,"Chink_and_clink,Glass",FSD50K,FSD50K/FSD50K.eval_audio/198402.wav,True
+203043.wav,,,"Stream,Water",FSD50K,FSD50K/FSD50K.eval_audio/203043.wav,True
+207395.wav,,,"Wood,Domestic_sounds_and_home_sounds",FSD50K,FSD50K/FSD50K.eval_audio/207395.wav,True
+216497.wav,,,"Female_singing,Singing,Human_voice",FSD50K,FSD50K/FSD50K.eval_audio/216497.wav,True
+216531.wav,,,"Engine_starting,Car,Motor_vehicle_(road),Vehicle,Engine",FSD50K,FSD50K/FSD50K.eval_audio/216531.wav,True
+218843.wav,,,"Boiling,Water,Alarm,Liquid",FSD50K,FSD50K/FSD50K.eval_audio/218843.wav,True
+222608.wav,,,Whoosh_and_swoosh_and_swish,FSD50K,FSD50K/FSD50K.eval_audio/222608.wav,True
+234382.wav,,,"Bird_vocalization_and_bird_call_and_bird_song,Bird,Wild_animals,Animal",FSD50K,FSD50K/FSD50K.eval_audio/234382.wav,True
+23519.wav,,,"Fixed-wing_aircraft_and_airplane,Engine,Aircraft,Vehicle",FSD50K,FSD50K/FSD50K.eval_audio/23519.wav,True
+238012.wav,,,"Raindrop,Rain,Water",FSD50K,FSD50K/FSD50K.eval_audio/238012.wav,True
+240377.wav,,,"Gunshot_and_gunfire,Explosion",FSD50K,FSD50K/FSD50K.eval_audio/240377.wav,True
+242846.wav,,,"Gunshot_and_gunfire,Explosion",FSD50K,FSD50K/FSD50K.eval_audio/242846.wav,True
+245459.wav,,,"Writing,Domestic_sounds_and_home_sounds",FSD50K,FSD50K/FSD50K.eval_audio/245459.wav,True
+25315.wav,,,"Crowd,Human_voice,Human_group_actions",FSD50K,FSD50K/FSD50K.eval_audio/25315.wav,True
+257435.wav,,,"Microwave_oven,Domestic_sounds_and_home_sounds",FSD50K,FSD50K/FSD50K.eval_audio/257435.wav,True
+265112.wav,,,"Keyboard_(musical),Bowed_string_instrument,Musical_instrument,Music",FSD50K,FSD50K/FSD50K.eval_audio/265112.wav,True
+26763.wav,,,Burping_and_eructation,FSD50K,FSD50K/FSD50K.eval_audio/26763.wav,True
+269423.wav,,,"Gasp,Breathing,Respiratory_sounds",FSD50K,FSD50K/FSD50K.eval_audio/269423.wav,True
+272093.wav,,,"Crying_and_sobbing,Human_voice",FSD50K,FSD50K/FSD50K.eval_audio/272093.wav,True
+276577.wav,,,"Growling,Human_voice,Wild_animals,Animal",FSD50K,FSD50K/FSD50K.eval_audio/276577.wav,True
+277004.wav,,,"Child_speech_and_kid_speaking,Speech,Human_voice",FSD50K,FSD50K/FSD50K.eval_audio/277004.wav,True
+278138.wav,,,Screech,FSD50K,FSD50K/FSD50K.eval_audio/278138.wav,True
+31987.wav,,,"Printer,Mechanisms",FSD50K,FSD50K/FSD50K.eval_audio/31987.wav,True
+320723.wav,,,"Buzz,Insect,Wild_animals,Animal",FSD50K,FSD50K/FSD50K.eval_audio/320723.wav,True
+32309.wav,,,Crackle,FSD50K,FSD50K/FSD50K.eval_audio/32309.wav,True
+325318.wav,,,Crushing,FSD50K,FSD50K/FSD50K.eval_audio/325318.wav,True
+325526.wav,,,"Rattle,Fire",FSD50K,FSD50K/FSD50K.eval_audio/325526.wav,True
+326462.wav,,,"Zipper_(clothing),Domestic_sounds_and_home_sounds",FSD50K,FSD50K/FSD50K.eval_audio/326462.wav,True
+326464.wav,,,Chewing_and_mastication,FSD50K,FSD50K/FSD50K.eval_audio/326464.wav,True
+326955.wav,,,"Sliding_door,Slam,Door,Domestic_sounds_and_home_sounds",FSD50K,FSD50K/FSD50K.eval_audio/326955.wav,True
+328751.wav,,,"Sawing,Tools",FSD50K,FSD50K/FSD50K.eval_audio/328751.wav,True
+329924.wav,,,"Knock,Door,Domestic_sounds_and_home_sounds",FSD50K,FSD50K/FSD50K.eval_audio/329924.wav,True
+333629.wav,,,"Chime,Bell",FSD50K,FSD50K/FSD50K.eval_audio/333629.wav,True
+335023.wav,,,"Crack,Hands",FSD50K,FSD50K/FSD50K.eval_audio/335023.wav,True
+336754.wav,,,"Car_passing_by,Car,Motor_vehicle_(road),Vehicle",FSD50K,FSD50K/FSD50K.eval_audio/336754.wav,True
+33676.wav,,,"Drip,Splash_and_splatter,Liquid",FSD50K,FSD50K/FSD50K.eval_audio/33676.wav,True
+336841.wav,,,"Screaming,Human_voice",FSD50K,FSD50K/FSD50K.eval_audio/336841.wav,True
+337081.wav,,,Crumpling_and_crinkling,FSD50K,FSD50K/FSD50K.eval_audio/337081.wav,True
+33844.wav,,,"Frying_(food),Domestic_sounds_and_home_sounds",FSD50K,FSD50K/FSD50K.eval_audio/33844.wav,True
+34272.wav,,,"Cowbell,Bell",FSD50K,FSD50K/FSD50K.eval_audio/34272.wav,True
+347947.wav,,,"Hiss,Fire",FSD50K,FSD50K/FSD50K.eval_audio/347947.wav,True
+348317.wav,,,"Skateboard,Vehicle",FSD50K,FSD50K/FSD50K.eval_audio/348317.wav,True
+348509.wav,,,"Finger_snapping,Hands",FSD50K,FSD50K/FSD50K.eval_audio/348509.wav,True
+352904.wav,,,"Hiss,Water",FSD50K,FSD50K/FSD50K.eval_audio/352904.wav,True
+354062.wav,,,"Rail_transport,Vehicle",FSD50K,FSD50K/FSD50K.eval_audio/354062.wav,True
+35627.wav,,,"Mechanical_fan,Mechanisms",FSD50K,FSD50K/FSD50K.eval_audio/35627.wav,True
+360648.wav,,,"Frying_(food),Dishes_and_pots_and_pans,Fire,Domestic_sounds_and_home_sounds",FSD50K,FSD50K/FSD50K.eval_audio/360648.wav,True
+364343.wav,,,"Tick-tock,Clock,Mechanisms",FSD50K,FSD50K/FSD50K.eval_audio/364343.wav,True
+366032.wav,,,"Cupboard_open_or_close,Wood,Domestic_sounds_and_home_sounds",FSD50K,FSD50K/FSD50K.eval_audio/366032.wav,True
+376195.wav,,,"Ratchet_and_pawl,Mechanisms",FSD50K,FSD50K/FSD50K.eval_audio/376195.wav,True
+377138.wav,,,"Computer_keyboard,Typing,Domestic_sounds_and_home_sounds",FSD50K,FSD50K/FSD50K.eval_audio/377138.wav,True
+380391.wav,,,Thunderstorm,FSD50K,FSD50K/FSD50K.eval_audio/380391.wav,True
+381732.wav,,,"Chatter,Zipper_(clothing),Human_group_actions,Domestic_sounds_and_home_sounds",FSD50K,FSD50K/FSD50K.eval_audio/381732.wav,True
+391301.wav,,,"Sneeze,Respiratory_sounds",FSD50K,FSD50K/FSD50K.eval_audio/391301.wav,True
+403978.wav,,,"Chirp_and_tweet,Crow,Bird_vocalization_and_bird_call_and_bird_song,Bird,Wild_animals,Animal",FSD50K,FSD50K/FSD50K.eval_audio/403978.wav,True
+405206.wav,,,"Breathing,Cough,Respiratory_sounds",FSD50K,FSD50K/FSD50K.eval_audio/405206.wav,True
+405585.wav,,,"Siren,Alarm",FSD50K,FSD50K/FSD50K.eval_audio/405585.wav,True
+408270.wav,,,"Packing_tape_and_duct_tape,Domestic_sounds_and_home_sounds",FSD50K,FSD50K/FSD50K.eval_audio/408270.wav,True
+433598.wav,,,"Typewriter,Typing,Domestic_sounds_and_home_sounds",FSD50K,FSD50K/FSD50K.eval_audio/433598.wav,True
+82656.wav,,,"Crumpling_and_crinkling,Tearing",FSD50K,FSD50K/FSD50K.eval_audio/82656.wav,True
+07692.wav,,,"Liquid,Shower",FoleySet,FoleySet/audio/07692.wav,True
+07953.wav,,,"Human,Burp",FoleySet,FoleySet/audio/07953.wav,True
+07961.wav,,,"Click,Keyboard Typing",FoleySet,FoleySet/audio/07961.wav,True
+08102.wav,,,"Liquid,Splash",FoleySet,FoleySet/audio/08102.wav,True
+08194.wav,,,"Liquid,Pour",FoleySet,FoleySet/audio/08194.wav,True
+08213.wav,,,"Metal,Chain",FoleySet,FoleySet/audio/08213.wav,True
+08216.wav,,,"Break/Drop,Bottle Crush",FoleySet,FoleySet/audio/08216.wav,True
+08275.wav,,,"Click,Button Press",FoleySet,FoleySet/audio/08275.wav,True
+08311.wav,,,"Clothing,Cloth Ripping",FoleySet,FoleySet/audio/08311.wav,True
+08333.wav,,,"Click,Stapler",FoleySet,FoleySet/audio/08333.wav,True
+08369.wav,,,"Click,Stapler",FoleySet,FoleySet/audio/08369.wav,True
+08391.wav,,,"Human,Kiss",FoleySet,FoleySet/audio/08391.wav,True
+08413.wav,,,"Click,Switch Toggle",FoleySet,FoleySet/audio/08413.wav,True
+08417.wav,,,"Break/Drop,Bottle Crush",FoleySet,FoleySet/audio/08417.wav,True
+08430.wav,,,"Click,Switch Toggle",FoleySet,FoleySet/audio/08430.wav,True
+08453.wav,,,"Footstep,Walk",FoleySet,FoleySet/audio/08453.wav,True
+08474.wav,,,"Metal,Chain",FoleySet,FoleySet/audio/08474.wav,True
+08475.wav,,,"Material-Interaction,Tape Peel",FoleySet,FoleySet/audio/08475.wav,True
+08476.wav,,,"Material-Interaction,Magazine",FoleySet,FoleySet/audio/08476.wav,True
+08494.wav,,,"Clothing,Cloth Ripping",FoleySet,FoleySet/audio/08494.wav,True
+08505.wav,,,"Metal,Metal Clank",FoleySet,FoleySet/audio/08505.wav,True
+08510.wav,,,"Clothing,Cloth Movement",FoleySet,FoleySet/audio/08510.wav,True
+08518.wav,,,"Metal,Sword",FoleySet,FoleySet/audio/08518.wav,True
+08522.wav,,,"Break/Drop,Paper Tear",FoleySet,FoleySet/audio/08522.wav,True
+08539.wav,,,"Metal,Lock",FoleySet,FoleySet/audio/08539.wav,True
+08550.wav,,,"Open/Close-Mechanism,Door Open Close",FoleySet,FoleySet/audio/08550.wav,True
+08552.wav,,,"Metal,Knife",FoleySet,FoleySet/audio/08552.wav,True
+08558.wav,,,"Human,Eat Drink",FoleySet,FoleySet/audio/08558.wav,True
+08569.wav,,,"Metal,Metal Scape",FoleySet,FoleySet/audio/08569.wav,True
+08581.wav,,,"Human,Punch Hit",FoleySet,FoleySet/audio/08581.wav,True
+08584.wav,,,"Open/Close-Mechanism,Door Squeak",FoleySet,FoleySet/audio/08584.wav,True
+08589.wav,,,"Metal,Lock",FoleySet,FoleySet/audio/08589.wav,True
+08601.wav,,,"Metal,Knife",FoleySet,FoleySet/audio/08601.wav,True
+08607.wav,,,"Open/Close-Mechanism,Window Open Close",FoleySet,FoleySet/audio/08607.wav,True
+08618.wav,,,"Material-Interaction,Magazine",FoleySet,FoleySet/audio/08618.wav,True
+08619.wav,,,"Click,Gun Mechanism",FoleySet,FoleySet/audio/08619.wav,True
+08622.wav,,,"Metal,Sword",FoleySet,FoleySet/audio/08622.wav,True
+08634.wav,,,"Break/Drop,Bone Break",FoleySet,FoleySet/audio/08634.wav,True
+08639.wav,,,"Material-Interaction,Pen Writing",FoleySet,FoleySet/audio/08639.wav,True
+08653.wav,,,"Human,Fart",FoleySet,FoleySet/audio/08653.wav,True
+08689.wav,,,"Metal,Coin Jingle",FoleySet,FoleySet/audio/08689.wav,True
+08716.wav,,,"Break/Drop,Ice Break",FoleySet,FoleySet/audio/08716.wav,True
+08772.wav,,,"Human,Kiss",FoleySet,FoleySet/audio/08772.wav,True
+08806.wav,,,"Human,Heart Beat",FoleySet,FoleySet/audio/08806.wav,True
+08824.wav,,,"Clothing,Umbrella",FoleySet,FoleySet/audio/08824.wav,True
+08825.wav,,,"Break/Drop,Ice Break",FoleySet,FoleySet/audio/08825.wav,True
+08831.wav,,,"Metal,Latch",FoleySet,FoleySet/audio/08831.wav,True
+08836.wav,,,"Human,Slurping",FoleySet,FoleySet/audio/08836.wav,True
+08841.wav,,,"Material-Interaction,Ice Cube",FoleySet,FoleySet/audio/08841.wav,True
+08842.wav,,,"Material-Interaction,Ice Cube",FoleySet,FoleySet/audio/08842.wav,True
+08847.wav,,,"Material-Interaction,Plastic Rubbing",FoleySet,FoleySet/audio/08847.wav,True
+08853.wav,,,"Material-Interaction,Paper Rubbing",FoleySet,FoleySet/audio/08853.wav,True
+08861.wav,,,"Metal,Latch",FoleySet,FoleySet/audio/08861.wav,True
+08883.wav,,,"Material-Interaction,Window Cleaning",FoleySet,FoleySet/audio/08883.wav,True
+08884.wav,,,"Metal,Key Jingle",FoleySet,FoleySet/audio/08884.wav,True
+08885.wav,,,"Material-Interaction,Plastic Rubbing",FoleySet,FoleySet/audio/08885.wav,True
+08893.wav,,,"Click,Knob",FoleySet,FoleySet/audio/08893.wav,True
+08896.wav,,,"Break/Drop,Bone Break",FoleySet,FoleySet/audio/08896.wav,True
+08917.wav,,,"Metal,Bullet Drop",FoleySet,FoleySet/audio/08917.wav,True
+08927.wav,,,"Open/Close-Mechanism,Window Open Close",FoleySet,FoleySet/audio/08927.wav,True
+08932.wav,,,"Human,Breath",FoleySet,FoleySet/audio/08932.wav,True
+08943.wav,,,"Clothing,Umbrella",FoleySet,FoleySet/audio/08943.wav,True
+08985.wav,,,"Human,Cough",FoleySet,FoleySet/audio/08985.wav,True
+09019.wav,,,"Break/Drop,Can Crush",FoleySet,FoleySet/audio/09019.wav,True
+09026.wav,,,"Human,Snore",FoleySet,FoleySet/audio/09026.wav,True
+09033.wav,,,"Human,Sniffle",FoleySet,FoleySet/audio/09033.wav,True
+09034.wav,,,"Material-Interaction,Window Cleaning",FoleySet,FoleySet/audio/09034.wav,True
+09036.wav,,,"Liquid,Liquid Shaking",FoleySet,FoleySet/audio/09036.wav,True
+09079.wav,,,"Click,Knob",FoleySet,FoleySet/audio/09079.wav,True
+09106.wav,,,"Metal,Bullet Drop",FoleySet,FoleySet/audio/09106.wav,True
+09143.wav,,,"Click,Gun Mechanism",FoleySet,FoleySet/audio/09143.wav,True
+09202.wav,,,"Human,Fall",FoleySet,FoleySet/audio/09202.wav,True
+09364.wav,,,"Break/Drop,Can Crush",FoleySet,FoleySet/audio/09364.wav,True
+09598.wav,,,"Human,Fall",FoleySet,FoleySet/audio/09598.wav,True
