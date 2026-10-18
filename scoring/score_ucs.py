@@ -20,7 +20,7 @@ one subcategory stays a word hit. A category word in a longer label
 chooses a shared subcategory name (``door wood knock`` is DOORS/KNOCK).
 
 The points, the cutoff, tie handling, and the default taxonomy live in
-``configs/default.json``. That file is what a run uses when no other
+``scoring/configs/default.json``. That file is what a run uses when no other
 config is passed. An exact subcategory or synonym is a fixed score.
 Each overlapping word in a synonym or the explanation adds ``word``.
 Ontology depth multiplies those points by ``1 + depth_step * depth``.
@@ -53,13 +53,13 @@ A predominant label that is not already a keyword is scored as its own
 tag. ``dev_clips_info_FSD50K.json`` and ``eval_clips_info_FSD50K.json``
 supply uploader tags, the title, and the description. A match there is the subcategory name or a synonym as a whole phrase.
 The points are ``uploader_tag``, ``title_match``, and ``description_match``
-in ``configs/default.json``.
+in ``scoring/configs/default.json``.
 Those fields are also read from the manifest when the audio folder is
 not used (``--no-audio``).
 
-An experiment config (see ``configs/``) changes the weights, the minimum
+An experiment config (see ``scoring/configs/``) changes the weights, the minimum
 score, tie handling, and how much of the UCS list is eligible. Each
-experiment writes its own manifests under ``experiments/<name>/`` and does
+experiment writes its own manifests under ``scoring/experiments/<name>/`` and does
 not modify ``manifests/slice/``. Those copies are what a separate
 linear-probing project trains and compares. A split the config does not
 list is copied from ``manifests/slice/`` into that same output folder, so
@@ -69,16 +69,16 @@ train and val are present even when only test is scored.
 ``--candidates`` writes that same decision, plus the top subcategories for
 each row (``cand_*``). ``--evidence`` adds the tags that produced each
 candidate's points. An experiment run with ``--candidates`` writes
-``experiments/<name>-candidates/``. A config's own ``output_dir`` gets
+``scoring/experiments/<name>-candidates/``. A config's own ``output_dir`` gets
 the same suffix. ``--output-dir`` is used as given.
 
 Usage:
-  python scripts/score_ucs.py --experiment configs/default-open.json
-  python scripts/score_ucs.py --experiment configs/default-open.json --write-splits train,val,test
-  python scripts/score_ucs.py manifests/slice/envsound_test.csv --config configs/default-open.json
-  python scripts/score_ucs.py --keywords "Meow,Cat,Animal"
-  python scripts/score_ucs.py manifests/slice/envsound_train.csv -o candidates.csv --candidates --evidence
-  python scripts/score_ucs.py --experiment configs/open-weighted-min075.json --candidates
+  python scoring/score_ucs.py --experiment scoring/configs/default-open.json
+  python scoring/score_ucs.py --experiment scoring/configs/default-open.json --write-splits train,val,test
+  python scoring/score_ucs.py manifests/slice/envsound_test.csv --config scoring/configs/default-open.json
+  python scoring/score_ucs.py --keywords "Meow,Cat,Animal"
+  python scoring/score_ucs.py manifests/slice/envsound_train.csv -o candidates.csv --candidates --evidence
+  python scoring/score_ucs.py --experiment scoring/configs/open-weighted-min075.json --candidates
 
 Tests live in ``scripts/tests/``:
   python -m unittest discover -s scripts/tests
@@ -104,7 +104,7 @@ DEFAULT_UCS = ROOT / "references" / "ucs-v8.2.1.xlsx"
 DEFAULT_ONTOLOGY = ROOT / "references" / "audioset_ontology.json"
 DEFAULT_MANIFESTS = ROOT / "manifests" / "slice"
 DEFAULT_AUDIO = ROOT / "audio"
-DEFAULT_CONFIG = ROOT / "configs" / "default.json"
+DEFAULT_CONFIG = ROOT / "scoring" / "configs" / "default.json"
 SPLIT_NAMES = ("train", "val", "test")
 # Train and val are hand-tagged. Nothing writes them unless asked.
 DEFAULT_WRITE_SPLITS = ("test",)
@@ -151,7 +151,7 @@ def as_finite(name: str, value: object) -> float:
 class Weights:
     """Points added or multiplied while one tag is scored against one subcategory.
 
-    The numbers come from ``configs/default.json``, not from this class.
+    The numbers come from ``scoring/configs/default.json``, not from this class.
     """
 
     exact_sub: float
@@ -1431,7 +1431,7 @@ _DEFAULT_CONFIG: ExperimentConfig | None = None
 
 
 def default_config() -> ExperimentConfig:
-    """The scorer in ``configs/default.json``. Other configs overlay this."""
+    """The scorer in ``scoring/configs/default.json``. Other configs overlay this."""
     global _DEFAULT_CONFIG
     if _DEFAULT_CONFIG is None:
         if not DEFAULT_CONFIG.is_file():
@@ -1630,7 +1630,7 @@ def output_directory(config: ExperimentConfig, output_dir: Path | None, *, multi
         return root / config.name if multiple else root
     if config.output_dir is not None:
         return config.output_dir
-    return ROOT / "experiments" / config.name
+    return ROOT / "scoring" / "experiments" / config.name
 
 
 def load_split_rows(
@@ -1691,7 +1691,7 @@ def catalog_for(
     alias: dict[str, str],
 ) -> tuple[Catalog, set[tuple[str, str]] | None, list[tuple[str, str]], list[str]]:
     allowed = allowlist_for(config, records)
-    # ``closed`` is the list in the config (configs/default.json unless a file
+    # ``closed`` is the list in the config (scoring/configs/default.json unless a file
     # replaces it). A pair the workbook files under another category
     # (DOORS/DOORBELL is BELLS/DOORBELL) keeps that row's synonyms. An explicit
     # pairs list still fails on a typo.
@@ -2147,7 +2147,7 @@ def main(argv: list[str] | None = None) -> int:
         action="append",
         type=Path,
         default=None,
-        help="JSON config for one tagging experiment. Repeat to run several. Writes experiments/<name>/ and does not touch manifests/slice/",
+        help="JSON config for one tagging experiment. Repeat to run several. Writes scoring/experiments/<name>/ and does not touch manifests/slice/",
     )
     parser.add_argument("--output-dir", type=Path, help="folder for experiment manifests. A batch writes one subfolder per name")
     parser.add_argument(
@@ -2161,7 +2161,7 @@ def main(argv: list[str] | None = None) -> int:
         action="store_true",
         help=(
             f"write the top subcategories for each row (cand_* columns, default {DEFAULT_CANDIDATE_TOP}). "
-            "An experiment is written to experiments/<name>-candidates/ unless --output-dir is set"
+            "An experiment is written to scoring/experiments/<name>-candidates/ unless --output-dir is set"
         ),
     )
     parser.add_argument(

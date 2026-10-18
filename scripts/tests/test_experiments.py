@@ -6,7 +6,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "scoring"))
 
 from score_ucs import (  # noqa: E402
     DEFAULT_WRITE_SPLITS,
@@ -111,7 +111,7 @@ class ExperimentTests(unittest.TestCase):
         slice_dir = ROOT / "manifests" / "slice"
         self.assert_exits(lambda: assert_outside_manifests(slice_dir, slice_dir), "slice")
         self.assert_exits(lambda: assert_outside_manifests(slice_dir / "nested", slice_dir), "slice")
-        assert_outside_manifests(ROOT / "experiments" / "demo", slice_dir)
+        assert_outside_manifests(ROOT / "scoring" / "experiments" / "demo", slice_dir)
 
     def test_copy_manual_manifests(self) -> None:
         assert manual_splits_to_copy(("test",)) == ("train", "val")

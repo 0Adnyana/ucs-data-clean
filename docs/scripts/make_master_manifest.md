@@ -22,11 +22,11 @@ The script prints one summary line with row counts per source, the omitted overl
 
 **--fill-ucs** [*map*]
 
-Fills `Category` and `SubCategory` from a label map CSV with `source`, `label`, `role`, `category`, and `subcategory` columns, and adds the assigned, category-only, blank, and unmapped counts to the summary. Bare, it reads `references/mapping/label_map_llm.csv`.
+Fills `Category` and `SubCategory` from a label map CSV with `source`, `label`, `role`, `category`, and `subcategory` columns, and adds the assigned, category-only, blank, and unmapped counts to the summary. Bare, it reads `mapping/label_map_llm.csv`.
 
 ```bash
 python scripts/make_master_manifest.py --fill-ucs
-python scripts/make_master_manifest.py --fill-ucs references/mapping/label_map_base.csv
+python scripts/make_master_manifest.py --fill-ucs mapping/label_map_base.csv
 ```
 
 ## Files
@@ -39,7 +39,7 @@ python scripts/make_master_manifest.py --fill-ucs references/mapping/label_map_b
 
 `audio/FoleySet/metadata/foleyset_metadata.csv` — FoleySet labels and Freesound ids.
 
-`references/mapping/label_map_llm.csv` — default `--fill-ucs` map.
+`mapping/label_map_llm.csv` — default `--fill-ucs` map.
 
 `manifests/master.csv` — output.
 

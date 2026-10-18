@@ -21,7 +21,7 @@ usable label, leave both empty.
 
 Usage:
   python scripts/make_master_manifest.py
-  python scripts/make_master_manifest.py --fill-ucs references/mapping/label_map_llm.csv
+  python scripts/make_master_manifest.py --fill-ucs mapping/label_map_llm.csv
 """
 
 from __future__ import annotations
@@ -34,7 +34,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 AUDIO_DIR = ROOT / "audio"
 OUT = ROOT / "manifests" / "master.csv"
-DEFAULT_LABEL_MAP = ROOT / "references" / "mapping" / "label_map_llm.csv"
+DEFAULT_LABEL_MAP = ROOT / "mapping" / "label_map_llm.csv"
 COLUMNS = [
     "filename",
     "Category",

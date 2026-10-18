@@ -1,4 +1,4 @@
-"""Build references/mapping/label_map_base.csv from the labels in audio/.
+"""Build mapping/label_map_base.csv from the labels in audio/.
 
 Each row is one ``(source, label)`` pair that ``make_master_manifest`` writes
 into ``manifests/master.csv``. Category and subcategory are copied from
@@ -17,8 +17,10 @@ Role is not copied. It comes from the source metadata:
   ``Chant``). A class that also sits under a physical source stays ``parent``
   or ``primary``.
 
+The original conversion scripts are in ``references/beck_lerch_tools/``.
+
 Usage:
-  python scripts/make_label_map_base.py
+  python mapping/make_label_map_base.py
 """
 
 from __future__ import annotations
@@ -26,7 +28,10 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import sys
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 
 from make_master_manifest import (
     AUDIO_DIR,
@@ -39,10 +44,10 @@ from make_master_manifest import (
     write_manifest,
 )
 
-DEFAULT_PRIOR_MAP = ROOT / "references" / "mapping" / "label_map_llm.csv"
+DEFAULT_PRIOR_MAP = ROOT / "mapping" / "label_map_llm.csv"
 HIERARCHY = ROOT / "references" / "audioset_hierarchy.json"
 FOLEY_METADATA = AUDIO_DIR / "FoleySet" / "metadata" / "foleyset_metadata.csv"
-OUT = ROOT / "references" / "mapping" / "label_map_base.csv"
+OUT = ROOT / "mapping" / "label_map_base.csv"
 SOURCE_ORDER = ("AudioSet", "ESC-50", "FSD50K", "FoleySet")
 
 # Ontology branches that describe style, mood, setting, or a channel, not a sound source.

@@ -7,7 +7,7 @@
 ## Synopsis
 
 ```
-python scripts/make_label_map_base.py [--prior map] [--output csv]
+python mapping/make_label_map_base.py [--prior map] [--output csv]
 ```
 
 ## Description
@@ -18,18 +18,18 @@ Reads the dataset label files under `audio/`, keeping the clips `make_master_man
 
 **--prior** *map*
 
-Label map CSV with `source`, `label`, `role`, `category`, and `subcategory` columns to copy categories from. Default is `references/mapping/label_map_llm.csv`.
+Label map CSV with `source`, `label`, `role`, `category`, and `subcategory` columns to copy categories from. Default is `mapping/label_map_llm.csv`.
 
 ```bash
-python scripts/make_label_map_base.py --prior references/mapping/label_map_manual.csv
+python mapping/make_label_map_base.py --prior mapping/label_map_manual.csv
 ```
 
 **--output** *csv*
 
-Where to write the base map, creating parent folders as needed. Default is `references/mapping/label_map_base.csv`.
+Where to write the base map, creating parent folders as needed. Default is `mapping/label_map_base.csv`.
 
 ```bash
-python scripts/make_label_map_base.py --output references/mapping/label_map_base.csv
+python mapping/make_label_map_base.py --output mapping/label_map_base.csv
 ```
 
 ## Files
@@ -44,9 +44,9 @@ python scripts/make_label_map_base.py --output references/mapping/label_map_base
 
 `references/audioset_hierarchy.json` — AudioSet ontology used for AudioSet and FSD50K roles.
 
-`references/mapping/label_map_llm.csv` — default `--prior` map.
+`mapping/label_map_llm.csv` — default `--prior` map.
 
-`references/mapping/label_map_base.csv` — default output.
+`mapping/label_map_base.csv` — default output.
 
 ## Exit status
 

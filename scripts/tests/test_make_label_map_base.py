@@ -3,7 +3,8 @@ import tempfile
 import unittest
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "scripts"))
+sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "mapping"))
 
 from make_label_map_base import Hierarchy, role_for_label, unique_label_rows  # noqa: E402
 from make_master_manifest import rows_from_audio, write_manifest  # noqa: E402

@@ -1,6 +1,6 @@
 # Scoring
 
-`scripts/score_ucs.py` compares each keyword with every eligible subcategory. The highest score wins. Weights and the cutoff live in [configs](configs.md). Eligible labels depend on the taxonomy mode described there.
+`scoring/score_ucs.py` compares each keyword with every eligible subcategory. The highest score wins. Weights and the cutoff live in [configs](configs.md). Eligible labels depend on the taxonomy mode described there.
 
 ## What each match is worth
 

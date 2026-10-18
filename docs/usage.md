@@ -1,6 +1,6 @@
 # Usage
 
-These are the manuals for the scripts in `scripts/`, with paths given repo-relative.
+These are the manuals for the scripts, with paths given repo-relative.
 
 - [`score_ucs`](scripts/score_ucs.md) — score keywords against the UCS list
 - [`make_master_manifest`](scripts/make_master_manifest.md) — build manifests/master.csv from the dataset metadata in audio/

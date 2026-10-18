@@ -59,7 +59,7 @@ Wav layout and file counts are in [audio/README.md](../audio/README.md).
 
 ## Closed taxonomy
 
-The slice only contains these pairs. The scorer reads them from `closed` in `configs/default.json`. An empty subcategory is included everywhere except `WEATHER`. The scorer never assigns an empty subcategory; an empty value means no assignment.
+The slice only contains these pairs. The scorer reads them from `closed` in `scoring/configs/default.json`. An empty subcategory is included everywhere except `WEATHER`. The scorer never assigns an empty subcategory; an empty value means no assignment.
 
 | Category | Subcategories |
 | --- | --- |
