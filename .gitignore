@@ -2,9 +2,6 @@
 audio/*
 !audio/README.md
 
-# Experiment outputs
-experiments/
-
 # Local copies of a split for listening tests
 test-audio/
 

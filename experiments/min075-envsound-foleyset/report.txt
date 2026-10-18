@@ -1,0 +1,41 @@
+experiment open-weighted-min075-candidates
+  taxonomy open, all UCS subcategories
+  min_score 0.75  on_tie blank
+  weights exact_sub=8 exact_syn=2 word=0.25 depth_step=0.5 pp_bonus=2 uploader_tag=0 title_match=0.5 description_match=0
+  splits train, val, test
+  note Same weights as open-weighted, scored on train, val, and test. The cutoff is 0.75, so a three-word overlap such as door wood creaks is kept. One unaided word stays blank. Ties stay blank.
+
+output E:\github\ucs-data-clean\experiments\min075-envsound-foleyset
+
+[train] source manifests\envsound-foleyset\envsound_train.csv
+rows 47450
+assigned 31191  category 3692  tie 11831  below 736
+gold category 0
+category where subcategory was empty 0
+gold subcategory rows 0
+rows with no candidate 141/47450
+gold category among top 10 0
+gold category/subcategory among top 10 0
+gold category/subcategory ranked first 0
+
+[val] source manifests\envsound-foleyset\envsound_val.csv
+rows 9548
+assigned 6261  category 775  tie 2390  below 122
+gold category 0
+category where subcategory was empty 0
+gold subcategory rows 0
+rows with no candidate 15/9548
+gold category among top 10 0
+gold category/subcategory among top 10 0
+gold category/subcategory ranked first 0
+
+[test] source manifests\envsound-foleyset\envsound_test.csv
+rows 9551
+assigned 6257  category 801  tie 2339  below 154
+gold category 0
+category where subcategory was empty 0
+gold subcategory rows 0
+rows with no candidate 39/9551
+gold category among top 10 0
+gold category/subcategory among top 10 0
+gold category/subcategory ranked first 0

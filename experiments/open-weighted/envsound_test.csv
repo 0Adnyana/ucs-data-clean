@@ -1,0 +1,187 @@
+filename,Category,SubCategory,Keywords,source,path,exists,pp_labels,uploader_tags,title,description
+Y4xcSq8UjPCI.wav,VOICES,HISTORICAL,"Speech,Fire alarm",AudioSet,AudioSet/audios/balanced_train_segments/Y4xcSq8UjPCI.wav,TRUE,,,,
+YQXO9tlwgvKc.wav,ALARMS,,Car alarm,AudioSet,AudioSet/audios/balanced_train_segments/YQXO9tlwgvKc.wav,TRUE,,,,
+1-14262-A-37.wav,,,clock_alarm,ESC-50,ESC-50/audio/1-14262-A-37.wav,TRUE,,,,
+201855.wav,ALARMS,,Alarm,FSD50K,FSD50K/FSD50K.dev_audio/201855.wav,TRUE,Alarm,"sound,alarm,audacity,loop",TASPINAR_Zeyneb_2013_2014_SOUND1.,"Generated sound on Audacitiy. 
+Sounds like an Alarm. ( car, store, or else )
+Durée 4 secondes
+
+Sinusoïde début 440 hz fin 1320 Hz
+Amplitude début 0.8 fin 0.1 
+Interpolation linéaire 
+De 0,6 secondes en loop x 5 
+
+Masse : sifflet 
+Timbre harmonique : brillant
+Grain : lisse
+Allure : pas de vibrato
+Dynamique : attaque forte
+Profil mélodique : scalaire
+Calibre : Amplification + 6,4 et un fondu en fermeture à la fin."
+33497.wav,ALARMS,,Alarm,FSD50K,FSD50K/FSD50K.dev_audio/33497.wav,TRUE,Alarm,"air,alarm,ambient,effect,recreation,sound,virtual",air-alarm_new.wav,dramatic air alarm loop
+YkLDsAolJumU.wav,ALARMS,BELL,Bell,AudioSet,AudioSet/audios/eval_segments/YkLDsAolJumU.wav,TRUE,,,,
+179198.wav,ALARMS,BELL,"Microwave_oven,Bell,Domestic_sounds_and_home_sounds",FSD50K,FSD50K/FSD50K.dev_audio/179198.wav,TRUE,"Microwave_oven,Bell","bell,ping,microwave,wave,ting,micro,done,ring,percussion,kitchen",MICRO_BELL.wav,"microwave bell going 'ping' done
+
+download the <a href=""http://www.freesound.org/people/Snapper4298/packs/11316/"" rel=""nofollow"">kitchen percussion</a> pack for more great kitchen percussion."
+219050.wav,ALARMS,BELL,"Church_bell,Bell",FSD50K,FSD50K/FSD50K.dev_audio/219050.wav,TRUE,Church_bell,"ringing,church-bell,bell,clock,church,cathedral,bells",Church Clock Strikes 3.wav,The church bell strikes 3 oclock
+366128.wav,ALARMS,BELL,Bell,FSD50K,FSD50K/FSD50K.dev_audio/366128.wav,TRUE,Bell,"owi,bell,ringing,toy,memories,kids-toy",Bike Bell,A childrens bike bell.
+423626.wav,VEHICLES,BICYCLE,"Bicycle_bell,Bicycle,Vehicle,Alarm,Bell",FSD50K,FSD50K/FSD50K.eval_audio/423626.wav,TRUE,"Bicycle_bell,Bicycle,Bell","bell,cycle,horn,bicycle,bike",Bike bell.wav,Bike bell recorded in room.
+YFRpq7o1mKXY.wav,ALARMS,BUZZER,Buzzer,AudioSet,AudioSet/audios/eval_segments/YFRpq7o1mKXY.wav,TRUE,,,,
+Y_lHkONy37nA.wav,ALARMS,BUZZER,Buzzer,AudioSet,AudioSet/audios/eval_segments/Y_lHkONy37nA.wav,TRUE,,,,
+YaYjEIddVRQk.wav,ALARMS,BUZZER,Buzzer,AudioSet,AudioSet/audios/balanced_train_segments/YaYjEIddVRQk.wav,TRUE,,,,
+YqhOLpvMMmEc.wav,ALARMS,BUZZER,"Buzzer,Music,Speech",AudioSet,AudioSet/audios/eval_segments/YqhOLpvMMmEc.wav,TRUE,,,,
+YuBCBppnw7OU.wav,ALARMS,BUZZER,"Buzzer,Alarm,Fire alarm",AudioSet,AudioSet/audios/balanced_train_segments/YuBCBppnw7OU.wav,TRUE,,,,
+Y2Pq9c0tFt1g.wav,ALARMS,SIREN,"Ambulance (siren),Emergency vehicle,Siren",AudioSet,AudioSet/audios/balanced_train_segments/Y2Pq9c0tFt1g.wav,TRUE,,,,
+Yf9rClVI52e0.wav,ALARMS,SIREN,"Fire engine, fire truck (siren),Emergency vehicle,Siren",AudioSet,AudioSet/audios/balanced_train_segments/Yf9rClVI52e0.wav,TRUE,,,,
+2-70052-A-42.wav,ALARMS,SIREN,siren,ESC-50,ESC-50/audio/2-70052-A-42.wav,TRUE,,,,
+405592.wav,ALARMS,SIREN,"Siren,Alarm",FSD50K,FSD50K/FSD50K.eval_audio/405592.wav,TRUE,"Siren,Fire_alarm","carpet,electronic,annoying,touch,warning,ipod,loud,concrete,recording,alarm,building,sound,stairwell,alert,fire,emergency,noise,hallway,ambience,safety,field,system,apartment,siren,city",Siren ( Carpeted Hallway Direct ).wav,"There are a lot of silly old people in my 15 story, 250+ unit apartment building. They burn toast & instead of opening a window... they open the door from their apartment into the hallway. This sets off the fire alarm for the whole building & the Fire Department has to come. 
+
+ Two years ago, when I first moved here, I used to go outside. Now I just ignore it. The whole place is concrete & pretty fireproof."
+431651.wav,ALARMS,SIREN,"Motor_vehicle_(road),Siren,Vehicle,Alarm",FSD50K,FSD50K/FSD50K.eval_audio/431651.wav,TRUE,"Ambulance_(siren),Police_car_(siren)","ambulance,emergency,police,siren",police siren.wav,"Other places 
+Recorder: ZOOM H2 / other portable device 
+Software: Pro Tools / Audacity / Ocenaudio / Reaper
+
+Your comments are greatly appreciated
+Cheers, Piotr Zaczek"
+YTJfaUX_qYkI.wav,,,"Pig,Speech,Animal",AudioSet,AudioSet/audios/eval_segments/YTJfaUX_qYkI.wav,TRUE,,,,
+Ye6Df7Ocuqcs.wav,BELLS,ANIMAL,"Roaring cats (lions, tigers),Animal,Outside, rural or natural",AudioSet,AudioSet/audios/balanced_train_segments/Ye6Df7Ocuqcs.wav,TRUE,,,,
+3-253084-A-2.wav,,,pig,ESC-50,ESC-50/audio/3-253084-A-2.wav,TRUE,,,,
+114436.wav,WINGS,BIRD,"Bird,Wild_animals,Animal",FSD50K,FSD50K/FSD50K.dev_audio/114436.wav,TRUE,Bird,"aviary,bird,birds,exotic,hornbill,jungle,rainforest,tropical,zoo",silvery_cheeked_hornbill.wav,"Calls from a Silvery-cheeked Hornbill, with a waterfall in the background. Recorded with an Edirol R-09HR."
+116225.wav,WINGS,BIRD,"Bird,Wild_animals,Animal",FSD50K,FSD50K/FSD50K.dev_audio/116225.wav,TRUE,Bird,"bird,birds,field-recording,kingfisher,zoo",kingfisher.wav,Calls from a Belted Kingfisher flying past near the entrance to a zoo. Recorded with a Zoom H2.
+20472.wav,WINGS,BIRD,"Bird_vocalization_and_bird_call_and_bird_song,Bird,Wild_animals,Animal",FSD50K,FSD50K/FSD50K.dev_audio/20472.wav,TRUE,"Bird_vocalization_and_bird_call_and_bird_song,Pigeon_and_dove","bird,birdsong,coo,field-recording,flickr,pigeon,wings,woodpigeon",WoodPigeonNR.flac,"A Woodpigeon (Columba palumbus) in my garden, 4 July 2006. My best of many tries so far. His song usually (as here) ends with what seems like the first syllable of the next sequence. You can then hear him flying away. Sony MD and mic. Some noise reduction applied to allay sound of wind in the trees. "
+405486.wav,WINGS,BIRD,"Bird,Wild_animals,Animal",FSD50K,FSD50K/FSD50K.dev_audio/405486.wav,TRUE,Bird,"nature,forest,bird,birds",birt_21.wav,"Download [with rights-Creative Commons 0] from Freesound. Processed sounds of 
+
+natural birds, cliques, hammering also water, rain, sea and thunder. Delayed or hurried 
+
+with SoundForge XP. Package of 45 sound in 16bit / 44khz / stereo or mono."
+Y9fKEQbSN_vg.wav,,,Purr,AudioSet,AudioSet/audios/balanced_train_segments/Y9fKEQbSN_vg.wav,TRUE,,,,
+YDw2YNHvPbng.wav,,,Purr,AudioSet,AudioSet/audios/eval_segments/YDw2YNHvPbng.wav,TRUE,,,,
+1-47819-A-5.wav,ANIMALS,,cat,ESC-50,ESC-50/audio/1-47819-A-5.wav,TRUE,,,,
+213889.wav,ANIMALS,CAT DOMESTIC,"Meow,Cat,Domestic_animals_and_pets,Animal",FSD50K,FSD50K/FSD50K.dev_audio/213889.wav,TRUE,Meow,"sound,meow,kitty,mew,cat,s,kitten,cat",The cat's meow,The cat's meow
+64017.wav,ANIMALS,CAT DOMESTIC,"Cat,Domestic_animals_and_pets,Animal",FSD50K,FSD50K/FSD50K.dev_audio/64017.wav,TRUE,Cat,"animal,cat,voice",kitten22.wav,"Cat named Oscar, friendly purr meow response"
+YPtf9D8uflg4.wav,ANIMALS,DOG,"Canidae, dogs, wolves,Power windows, electric windows,Domestic animals, pets,Dog,Animal",AudioSet,AudioSet/audios/balanced_train_segments/YPtf9D8uflg4.wav,TRUE,,,,
+YZspyTazOS8I.wav,ANIMALS,DOG,"Domestic animals, pets,Pant,Dog,Animal",AudioSet,AudioSet/audios/balanced_train_segments/YZspyTazOS8I.wav,TRUE,,,,
+2-114587-A-0.wav,ANIMALS,DOG,dog,ESC-50,ESC-50/audio/2-114587-A-0.wav,TRUE,,,,
+236067.wav,ANIMALS,DOG,"Bark,Dog,Domestic_animals_and_pets,Animal",FSD50K,FSD50K/FSD50K.dev_audio/236067.wav,TRUE,Howl,"barking,jazz,barks,dog,howling,wolf,animal,bark,delphidebrain,howl",Jazz the Dog Howl & Bark (269).wav,Jazz the Dog (Howl & Bark)
+97756.wav,ANIMALS,DOG,"Male_speech_and_man_speaking,Dog,Speech,Human_voice,Domestic_animals_and_pets,Animal",FSD50K,FSD50K/FSD50K.eval_audio/97756.wav,TRUE,Dog,"canine,commands,dog-training,english,imperative,spoken-word",dog correction.wav,"Shouting correction to a small (20-25 lbs) barking dog named Spot. First the rat terrier barks then a man commands him to sit and rewards him with a ""good boy."""
+YJYe3AqaIxN0.wav,ALARMS,CLOCK,Clock,AudioSet,AudioSet/audios/balanced_train_segments/YJYe3AqaIxN0.wav,TRUE,,,,
+YiB-lYX86rr4.wav,ALARMS,CLOCK,Clock,AudioSet,AudioSet/audios/eval_segments/YiB-lYX86rr4.wav,TRUE,,,,
+1-62849-A-38.wav,CLOCKS,,clock_tick,ESC-50,ESC-50/audio/1-62849-A-38.wav,TRUE,,,,
+2-119748-A-38.wav,CLOCKS,,clock_tick,ESC-50,ESC-50/audio/2-119748-A-38.wav,TRUE,,,,
+5-212181-A-38.wav,CLOCKS,,clock_tick,ESC-50,ESC-50/audio/5-212181-A-38.wav,TRUE,,,,
+YRsaA3ruInaw.wav,CLOCKS,TICK,Tick,AudioSet,AudioSet/audios/balanced_train_segments/YRsaA3ruInaw.wav,TRUE,,,,
+YvmyKV0rgmLA.wav,CLOCKS,TICK,"Tick-tock,Tick",AudioSet,AudioSet/audios/eval_segments/YvmyKV0rgmLA.wav,TRUE,,,,
+231936.wav,CLOCKS,TICK,"Walk_and_footsteps,Tick,Bird_vocalization_and_bird_call_and_bird_song,Bird,Wild_animals,Animal",FSD50K,FSD50K/FSD50K.eval_audio/231936.wav,TRUE,,"europe,city,netherlands,motorbike,bell,tram,ticking,lights,hague,traffic,den,traffic,the,clicking,haag,binaural,field-recording",DH14_TraffLights2.aif,"Traffic lights ticking in Scheveningen, Den Haag, the Netherlands -  indicating when to cross. Crossing to opposite side of road. (Olympus LS3 and OKM binaural mics)."
+422837.wav,ALARMS,CLOCK,"Tick-tock,Clock,Mechanisms",FSD50K,FSD50K/FSD50K.dev_audio/422837.wav,TRUE,Tick-tock,"tick-tock,tick,time,ticking,clock,tock",g_tick_tock_loop_1.wav,Simple clean tick-tock loop
+78562.wav,ALARMS,CLOCK,"Tick-tock,Alarm,Clock,Mechanisms",FSD50K,FSD50K/FSD50K.eval_audio/78562.wav,TRUE,Alarm_clock,"alarm,antique,bell,classic,clock,fashion,morning,old,ring,ringing,tick,vintage,wake,wake-up,wind-up",alarm_clock_ringing_01.wav,The ringing of an old fashioned mechanical wind-up alarm clock. A couple of seconds of ticking after the ringing winds down. Any part of the middle can be cut out or looped to make it as long or as short as you need it to be.
+YAkWEga9gUIQ.wav,,,"Smoke detector, smoke alarm,Door",AudioSet,AudioSet/audios/balanced_train_segments/YAkWEga9gUIQ.wav,TRUE,,,,
+3-103401-C-33.wav,,,door_wood_creaks,ESC-50,ESC-50/audio/3-103401-C-33.wav,TRUE,,,,
+4-107117-A-33.wav,,,door_wood_creaks,ESC-50,ESC-50/audio/4-107117-A-33.wav,TRUE,,,,
+4-132839-A-33.wav,,,door_wood_creaks,ESC-50,ESC-50/audio/4-132839-A-33.wav,TRUE,,,,
+4-160036-A-33.wav,,,door_wood_creaks,ESC-50,ESC-50/audio/4-160036-A-33.wav,TRUE,,,,
+Y2j4m7JsNtNA.wav,BELLS,DOORBELL,"Doorbell,Music,Ding-dong,Speech",AudioSet,AudioSet/audios/eval_segments/Y2j4m7JsNtNA.wav,TRUE,,,,
+Y9DJVHVONlao.wav,BELLS,DOORBELL,"Doorbell,Speech",AudioSet,AudioSet/audios/eval_segments/Y9DJVHVONlao.wav,TRUE,,,,
+YXJsXMIlnWJo.wav,BELLS,DOORBELL,"Doorbell,Speech",AudioSet,AudioSet/audios/eval_segments/YXJsXMIlnWJo.wav,TRUE,,,,
+118101.wav,BELLS,DOORBELL,"Dog,Doorbell,Domestic_animals_and_pets,Animal,Door,Domestic_sounds_and_home_sounds,Alarm",FSD50K,FSD50K/FSD50K.eval_audio/118101.wav,TRUE,,"barking,chihuahua,chinese,crested,dogs,doorbell,poodle,powderpuff,ringing,three","Doorbell Ringing With Three Dogs Barking -- Poodle, Chihuahua, Chinese Crested Powderpuff.WAV","Doorbell Ringing With Three Dogs Barking -- Poodle, Chihuahua, Chinese Crested Powderpuff
+"
+196379.wav,BELLS,DOORBELL,"Bell,Doorbell,Door,Domestic_sounds_and_home_sounds,Alarm",FSD50K,FSD50K/FSD50K.dev_audio/196379.wav,TRUE,"Bell,Doorbell","pull,doorbell,store,bell",FX_Doorbell Pull without pull Store Bell 02.wav,"Old fashioned doorbell pulled with lever, recorded in old house from 1890"
+YGIyyb98bgno.wav,DOORS,KNOCK,"Door,Knock,Speech",AudioSet,AudioSet/audios/eval_segments/YGIyyb98bgno.wav,TRUE,,,,
+1-103999-A-30.wav,,,door_wood_knock,ESC-50,ESC-50/audio/1-103999-A-30.wav,TRUE,,,,
+164571.wav,DOORS,KNOCK,"Knock,Door,Domestic_sounds_and_home_sounds",FSD50K,FSD50K/FSD50K.dev_audio/164571.wav,TRUE,"Knock,Door","shoulder,impact,hit,charge,bang,door",Door impact 9.wav,Impact against door
+218988.wav,DOORS,KNOCK,"Knock,Wood,Door,Domestic_sounds_and_home_sounds",FSD50K,FSD50K/FSD50K.dev_audio/218988.wav,TRUE,"Knock,Wood","door,knuckles,wood,knocking,mtc500-m002-s14",knocking GOOD A_5.aif,Mono recording of knocking on hard surfaces. No processing; this sound was designed as source material for another project.
+345599.wav,DOORS,KNOCK,"Knock,Splash_and_splatter,Liquid,Door,Domestic_sounds_and_home_sounds",FSD50K,FSD50K/FSD50K.eval_audio/345599.wav,TRUE,,"splash,mug,slam,slosh,liquid",Mug slam and slosh.mp3,"A mug slamming on a table, sloshing and splashing the liquid inside.
+
+Created in Audacity with sounds from Freesound.org users:
+Iwdickens <a href=""http://freesound.org/people/lwdickens/sounds/269008/"" rel=""nofollow"">http://freesound.org/people/lwdickens/sounds/269008/</a>
+Rocky12345 <a href=""http://freesound.org/people/rocky12345/sounds/120925/"" rel=""nofollow"">http://freesound.org/people/rocky12345/sounds/120925/</a>"
+YOoQzhhWFfz4.wav,,,"Sliding door,Outside, urban or manmade",AudioSet,AudioSet/audios/balanced_train_segments/YOoQzhhWFfz4.wav,TRUE,,,,
+YV6YuDO6Mz2s.wav,DOORS,,Sliding door,AudioSet,AudioSet/audios/eval_segments/YV6YuDO6Mz2s.wav,TRUE,,,,
+329620.wav,TRAINS,DOOR,"Sliding_door,Door,Domestic_sounds_and_home_sounds",FSD50K,FSD50K/FSD50K.dev_audio/329620.wav,TRUE,,"pocket,open,household,door","Pocket door open, INT.wav","Pocket door opens. Rode NTG-1, 24 bit 48KHz"
+397339.wav,TRAINS,DOOR,"Sliding_door,Door,Domestic_sounds_and_home_sounds",FSD50K,FSD50K/FSD50K.dev_audio/397339.wav,TRUE,,"elevador,hall,open,inside,door",elevador door.wav,Recorded with ZOOM F4 and AT835b for Deepest fear FILM
+79185.wav,TRAINS,DOOR,"Sliding_door,Door,Domestic_sounds_and_home_sounds",FSD50K,FSD50K/FSD50K.dev_audio/79185.wav,TRUE,Sliding_door,"aip09,door,elevator,floor,mechanical,open,opening,slide,sliding,stop",elevator door opening.wav,"Mechanical elevator door sliding open.  The elevator was approximately 5X8X8' with solid metal walls, floor and ceiling"
+YJocAxXHMaVw.wav,FIRE,,Fire,AudioSet,AudioSet/audios/eval_segments/YJocAxXHMaVw.wav,TRUE,,,,
+2-28314-B-12.wav,FIRE,,crackling_fire,ESC-50,ESC-50/audio/2-28314-B-12.wav,TRUE,,,,
+114393.wav,FIRE,,Fire,FSD50K,FSD50K/FSD50K.dev_audio/114393.wav,TRUE,,"fire,flame,flintstone,gas,lighter,propane",lighter_03.wav,"this is the sound of a (butane gas) lighter, with a crackling noise in the end."
+149012.wav,FIRE,,Fire,FSD50K,FSD50K/FSD50K.dev_audio/149012.wav,TRUE,,"noise,lighter,zippo,burn,flame,butane,metallic,click",Zippo,"Opening, triggering and closing my zippo torch lighter"
+409740.wav,FIRE,,Fire,FSD50K,FSD50K/FSD50K.dev_audio/409740.wav,TRUE,Fire,"ambiente,sound,fire",25. Fuego 3.wav,fuego
+YENr5NQ-Q5aM.wav,FIRE,CRACKLE,Crackle,AudioSet,AudioSet/audios/eval_segments/YENr5NQ-Q5aM.wav,TRUE,,,,
+YGlNCiGVQsd0.wav,FIRE,CRACKLE,"Music,Crackle,Speech",AudioSet,AudioSet/audios/balanced_train_segments/YGlNCiGVQsd0.wav,TRUE,,,,
+196317.wav,FIRE,CRACKLE,Crackle,FSD50K,FSD50K/FSD50K.dev_audio/196317.wav,TRUE,Crackle,"album,noise,surface-noise,crackle,record,turntable,vinyl,lp,vintage,lofi,retro",great surface noise hum2.wav,Snippets of digitized vinyl records recorded via USB. Those with IR in the names are or contain impulse response. Some may need editing or may not if you are experimenting. Some are looped some are not. All are taken from unofficial vintage vinyl at least as old as the early 1980's and beyond.
+324669.wav,FIRE,CRACKLE,Crackle,FSD50K,FSD50K/FSD50K.dev_audio/324669.wav,TRUE,Crackle,"beads,owi,twinkling,crashing-beads,close-perspective,beaded-curtain,clinking,crackling",DoorWithHangingBeads,"Recorded with TASCAM ZOOM H4n with XA capsule set to 90°. Close-perspective with MONO recording. 
+
+Person walking through a beaded (curtain) door. Moving through the beads. "
+354097.wav,FIRE,CRACKLE,"Crack,Crackle,Wood",FSD50K,FSD50K/FSD50K.dev_audio/354097.wav,TRUE,"Crack,Crackle,Splinter","small,crack,wood,snap,high,crackle,bough,short,close-up,break,dry","rip of a rotten bough, close up, H6.wav","We found a big tree with some small dead boughs and recorded this sound. 
+Zoom H6 / 41 khz / 16bit 
+I used the XYH-6 Mic."
+Y4fg5CXvioJg.wav,FIRE,SIZZLE,Sizzle,AudioSet,AudioSet/audios/balanced_train_segments/Y4fg5CXvioJg.wav,TRUE,,,,
+YUQ_ikxReo4Y.wav,FIRE,SIZZLE,"Sink (filling or washing),Bathtub (filling or washing),Sizzle,Water",AudioSet,AudioSet/audios/eval_segments/YUQ_ikxReo4Y.wav,TRUE,,,,
+YUhkjPBuabLc.wav,FIRE,SIZZLE,Sizzle,AudioSet,AudioSet/audios/eval_segments/YUhkjPBuabLc.wav,TRUE,,,,
+YXIOPyIkOhbs.wav,FIRE,SIZZLE,Sizzle,AudioSet,AudioSet/audios/eval_segments/YXIOPyIkOhbs.wav,TRUE,,,,
+YxIwEWbsqIu4.wav,FIRE,SIZZLE,Sizzle,AudioSet,AudioSet/audios/balanced_train_segments/YxIwEWbsqIu4.wav,TRUE,,,,
+Y-cj4S5lJmYE.wav,,,Gargling,AudioSet,AudioSet/audios/eval_segments/Y-cj4S5lJmYE.wav,TRUE,,,,
+Yb12vm6On2Jw.wav,HUMAN,BREATH,Sigh,AudioSet,AudioSet/audios/eval_segments/Yb12vm6On2Jw.wav,TRUE,,,,
+YhFTcS18hSn0.wav,,,Clapping,AudioSet,AudioSet/audios/balanced_train_segments/YhFTcS18hSn0.wav,TRUE,,,,
+5-221567-A-22.wav,,,clapping,ESC-50,ESC-50/audio/5-221567-A-22.wav,TRUE,,,,
+67167.wav,HUMAN,SNIFF,Respiratory_sounds,FSD50K,FSD50K/FSD50K.dev_audio/67167.wav,TRUE,Sniff,sniff,sniff.wav,sniff
+YdLX1w9TIYnI.wav,,,"Beatboxing,Speech,Breathing",AudioSet,AudioSet/audios/balanced_train_segments/YdLX1w9TIYnI.wav,TRUE,,,,
+YwdNqMwBbv-k.wav,HUMAN,BREATH,"Music,Whoop,Speech",AudioSet,AudioSet/audios/balanced_train_segments/YwdNqMwBbv-k.wav,TRUE,,,,
+3-108160-A-23.wav,HUMAN,,breathing,ESC-50,ESC-50/audio/3-108160-A-23.wav,TRUE,,,,
+249320.wav,HUMAN,,"Chewing_and_mastication,Breathing,Respiratory_sounds",FSD50K,FSD50K/FSD50K.eval_audio/249320.wav,TRUE,Chewing_and_mastication,"chewing,bite,eating,apple",eating an apple.wav,"Recorded in my studio Na_Niepo, Microphone: RØDE NT1, Software: Pro Tools
+
+Your comments are greatly appreciated
+Cheers, Piotr Zaczek"
+259976.wav,VEHICLES,DOOR,"Squeak,Rattle,Sliding_door,Slam,Breathing,Respiratory_sounds,Door,Domestic_sounds_and_home_sounds",FSD50K,FSD50K/FSD50K.dev_audio/259976.wav,TRUE,,"pterodactyl,shut,cacophonous,door,jurassic,opening,park,atmosphere,squeaky,screech,slide,rain,screeching,glass,shutting,squeak,close,closing,open,sliding,raptor",Sliding Glass Door-003.wav,"Recorded on a Zoom H4N. Shutting and opening the sliding glass door in my parent's basement. It's very squeaky and creates an out of this world sound that I thought could actually be used for a number of things, far being just a door sound. "
+YAt88LS5okRI.wav,VOICES,HISTORICAL,"Burping, eructation,Speech",AudioSet,AudioSet/audios/balanced_train_segments/YAt88LS5okRI.wav,TRUE,,,,
+YwgT4rbZ5kvc.wav,VOICES,HISTORICAL,"Burping, eructation,Speech",AudioSet,AudioSet/audios/eval_segments/YwgT4rbZ5kvc.wav,TRUE,,,,
+101157.wav,HUMAN,BURP,Burping_and_eructation,FSD50K,FSD50K/FSD50K.dev_audio/101157.wav,TRUE,Burping_and_eructation,"belch,burp",belch7.wav,"A longer wide-mouthed burp.
+
+A studio recording of my friend Cory Cone, the best burper I know. Recorded into Ardour using a Rode NT1 and a Presonus Firepod."
+217671.wav,,,Burping_and_eructation,FSD50K,FSD50K/FSD50K.dev_audio/217671.wav,TRUE,,"belch,burp,human",burp in a bathroom.mp3,me burping in a bathroom.
+399760.wav,HUMAN,BURP,Burping_and_eructation,FSD50K,FSD50K/FSD50K.dev_audio/399760.wav,TRUE,Burping_and_eructation,"gross,burp,loud,disgusting,belch",Burp 2,"A loud, forced burp."
+Y--U7joUcTCo.wav,HUMAN,COUGH,Cough,AudioSet,AudioSet/audios/eval_segments/Y--U7joUcTCo.wav,TRUE,,,,
+3-125418-A-24.wav,HUMAN,COUGH,coughing,ESC-50,ESC-50/audio/3-125418-A-24.wav,TRUE,,,,
+219768.wav,HUMAN,COUGH,"Cough,Respiratory_sounds",FSD50K,FSD50K/FSD50K.dev_audio/219768.wav,TRUE,Cough,"cough,woman,female,ehem,girl,voice,talk",Female Ehem,"Me 'eheming'. Feel free to use without crediting! If you want, you can post a comment with a link of the work using the sound."
+389285.wav,HUMAN,COUGH,"Cough,Respiratory_sounds",FSD50K,FSD50K/FSD50K.dev_audio/389285.wav,TRUE,Cough,"cough,sarcasm,bored",Tos_Sound_FX.wav,A bored cough in an arena
+425777.wav,HUMAN,COUGH,"Breathing,Cough,Respiratory_sounds",FSD50K,FSD50K/FSD50K.eval_audio/425777.wav,TRUE,Cough,"human,cough,girl",Girl Cough.wav,a girl coughing
+YcLpDBj--as0.wav,HUMAN,SNEEZE,Sneeze,AudioSet,AudioSet/audios/eval_segments/YcLpDBj--as0.wav,TRUE,,,,
+YcPgO0qGByu0.wav,HUMAN,SNEEZE,Sneeze,AudioSet,AudioSet/audios/eval_segments/YcPgO0qGByu0.wav,TRUE,,,,
+5-187979-A-21.wav,,,sneezing,ESC-50,ESC-50/audio/5-187979-A-21.wav,TRUE,,,,
+110586.wav,HUMAN,SNEEZE,"Sneeze,Respiratory_sounds",FSD50K,FSD50K/FSD50K.eval_audio/110586.wav,TRUE,Sneeze,"cold,sneeze",sneeze.wav,quick sneeze
+201274.wav,HUMAN,SNEEZE,"Sneeze,Respiratory_sounds",FSD50K,FSD50K/FSD50K.eval_audio/201274.wav,TRUE,Sneeze,"sound,fnd112,distractions,room,sneezing,project,startled,sudden,dorm,bit,audio,loud",Person Sneezing Sound Bit.wav,"This is the sound of me sneezing into the microphone. This sound is in a bigger audio project in the link below. This project was for an experimental audio class.
+
+https://soundcloud.com/cwbrownesounds/dorm-room-distractions-final"
+YLAd46APKqLE.wav,HUMAN,SNORE,Snoring,AudioSet,AudioSet/audios/balanced_train_segments/YLAd46APKqLE.wav,TRUE,,,,
+YWOwlbymVAno.wav,HUMAN,SNORE,"Snoring,Speech",AudioSet,AudioSet/audios/eval_segments/YWOwlbymVAno.wav,TRUE,,,,
+YWQa0kWeelhU.wav,HUMAN,SNORE,"Snoring,Speech",AudioSet,AudioSet/audios/eval_segments/YWQa0kWeelhU.wav,TRUE,,,,
+3-123086-A-28.wav,HUMAN,SNORE,snoring,ESC-50,ESC-50/audio/3-123086-A-28.wav,TRUE,,,,
+5-244459-A-28.wav,HUMAN,SNORE,snoring,ESC-50,ESC-50/audio/5-244459-A-28.wav,TRUE,,,,
+YGGNmXAZvKm8.wav,,,"Pump (liquid),Water",AudioSet,AudioSet/audios/balanced_train_segments/YGGNmXAZvKm8.wav,TRUE,,,,
+Ynrw3rjiWAbo.wav,,,"Pump (liquid),Water",AudioSet,AudioSet/audios/balanced_train_segments/Ynrw3rjiWAbo.wav,TRUE,,,,
+3-145719-A-17.wav,WATER,,pouring_water,ESC-50,ESC-50/audio/3-145719-A-17.wav,TRUE,,,,
+337486.wav,,,"Gurgling,Water",FSD50K,FSD50K/FSD50K.dev_audio/337486.wav,TRUE,Gurgling,"sucking,liquid,blub,bubbling,drip,water,wet,bubbles,bubble,suck,gurgle",blubbels_soft_long_1.wav,various sounds made using a short hose and a plastic box full of h2o.
+420554.wav,,,"Stream,Water",FSD50K,FSD50K/FSD50K.dev_audio/420554.wav,TRUE,Stream,"soundscape,ambience,river,water,field-recording,outdoor",River_01.wav,"River, flowing water recorded using a Zoom H2N and X/Y pickup pattern."
+Y6QfM3BRp-78.wav,WATER,DRIP,"Music,Drip",AudioSet,AudioSet/audios/eval_segments/Y6QfM3BRp-78.wav,TRUE,,,,
+Yezt5nlOxhj4.wav,VOICES,HISTORICAL,"Basketball bounce,Trickle, dribble,Speech",AudioSet,AudioSet/audios/balanced_train_segments/Yezt5nlOxhj4.wav,TRUE,,,,
+207603.wav,WATER,DRIP,"Drip,Water,Liquid",FSD50K,FSD50K/FSD50K.dev_audio/207603.wav,TRUE,"Drip,Water","water,short,drip",Drip25.wav,Individual short drips recorded in my bathroom
+207616.wav,WATER,DRIP,"Drip,Liquid",FSD50K,FSD50K/FSD50K.dev_audio/207616.wav,TRUE,Drip,"water,short,drip",Drip44.wav,Individual short drips recorded in my bathroom
+219373.wav,WATER,DRIP,"Drip,Water_tap_and_faucet,Liquid,Domestic_sounds_and_home_sounds",FSD50K,FSD50K/FSD50K.dev_audio/219373.wav,TRUE,Water_tap_and_faucet,"pipping,faucet,drain,stream,liquid,ambiance,pipes,flow,drip,dripping,water,splash,sink,ambient,crystal-microphone,trickle,dribble,gurgle",water dripping in faucet 1.wav,"Water dripping from faucet and through pipping, more ambient sound then 'water going through pipping'. dull below sink. "
+Y5Fc4wjBLQeM.wav,GORE,BLOOD,"Pump (liquid),Gush",AudioSet,AudioSet/audios/balanced_train_segments/Y5Fc4wjBLQeM.wav,TRUE,,,,
+YhvEDzGTkerU.wav,GORE,BLOOD,"Pump (liquid),Gush",AudioSet,AudioSet/audios/balanced_train_segments/YhvEDzGTkerU.wav,TRUE,,,,
+243558.wav,WATER,POUR,"Trickle_and_dribble,Pour,Liquid",FSD50K,FSD50K/FSD50K.dev_audio/243558.wav,TRUE,,"pouring,liquid,pour,water,glass,splash,trickle",ZOOM0014.flac,"Water poured into a glass. A selection of 4 microphones and 3 different pour rates but labelling has been lost! Microphones were: Beyer MCE86, Samson C03 on super-cardioid, Behringer C2, AKG C1000 on hyper-cardioid. All the same placement (selected for splash, glass ring and bubbles); Behringer UB802 mixer and Zoom H1 recorder. "
+336368.wav,WATER,POUR,"Trickle_and_dribble,Sink_(filling_or_washing),Water_tap_and_faucet,Pour,Liquid,Domestic_sounds_and_home_sounds",FSD50K,FSD50K/FSD50K.eval_audio/336368.wav,TRUE,"Sink_(filling_or_washing),Water_tap_and_faucet","steel,faucet,drain,handy-recorder,stainless,bathroom,zoom,glup,drip,water,running,sink,h4n,recorder,stainless-steel,handy,kitchen",Sink Faucet Running,"A recording of my kitchen sink faucet starting, running, and stopping with a little bit of drainage at the end.
+
+Recorded with Zoom H4n Handy Recorder"
+59104.wav,WATER,POUR,"Trickle_and_dribble,Water,Splash_and_splatter,Liquid,Pour",FSD50K,FSD50K/FSD50K.eval_audio/59104.wav,TRUE,"Water,Splash_and_splatter","pond,rock,splash,water",Splash.wav,"On August 8 we were at the Oregon Coast and one of my goals was to record the sound of a certain pond in the forest at twilight. As a kid I remember being there at that time of the evening and experiencing some fantastic bird songs. However that day was somewhat cloudy, thus I don't think many birds were out. So instead of birdsongs I captured only silence with a few fish jumping. I set up the recorder at the edge of the pond just as it was starting to get dark, then took a walk down the road. I returned 15 minutes later, and decided to pick up a rock and throw it in. This is the splash from that. I decided not to post the recording of the time I was out walking because it is pretty boring."
+YWtmvVWAwNrA.wav,,,"Waves, surf,Wind",AudioSet,AudioSet/audios/eval_segments/YWtmvVWAwNrA.wav,TRUE,,,,
+Ycz6oxIlmw_M.wav,WATER,WAVE,"Waves, surf,Wind,Ocean,Wind noise (microphone)",AudioSet,AudioSet/audios/balanced_train_segments/Ycz6oxIlmw_M.wav,TRUE,,,,
+Yl4Z5jciACfM.wav,WATER,WAVE,"Waves, surf,Wind,Ocean,Wind noise (microphone)",AudioSet,AudioSet/audios/balanced_train_segments/Yl4Z5jciACfM.wav,TRUE,,,,
+YmeYai_zs_3k.wav,WEATHER,HAIL,"Rain,Raindrop,Thunderstorm,Rain on surface",AudioSet,AudioSet/audios/eval_segments/YmeYai_zs_3k.wav,TRUE,,,,
+2-104105-B-19.wav,WEATHER,,thunderstorm,ESC-50,ESC-50/audio/2-104105-B-19.wav,TRUE,,,,
+16783.wav,WEATHER,THUNDER,"Thunder,Chirp_and_tweet,Wind,Rain,Water,Thunderstorm,Bird_vocalization_and_bird_call_and_bird_song,Bird,Wild_animals,Animal",FSD50K,FSD50K/FSD50K.eval_audio/16783.wav,TRUE,Thunder,"field-recording,lightning,storms,stormy,thunder,weather",sw_thunder_02.wav,"Single instance of thunder.  May have picked up a faint voice from a neighbor, as well as dripping rain.    Recorded using built-in mic of Archos AV420."
+195436.wav,WEATHER,THUNDER,"Thunder,Thunderstorm",FSD50K,FSD50K/FSD50K.dev_audio/195436.wav,TRUE,Thunder,"thunder,long,unnatural",long thunder edited.wav,different thunders edited together. made for a show.
+336314.wav,WEATHER,THUNDER,"Thunder,Rain,Water,Thunderstorm",FSD50K,FSD50K/FSD50K.dev_audio/336314.wav,TRUE,,"thunder,thunderstorm,rain,lightning,weather,thunder-and-lightning,positive-lightning",06/10/2014 huge thunder from lightning strike,"A close ""superbolt"" lightning strike that knocked out power on the 6th of october 2014"
+YDKN30Bwf_HQ.wav,WEATHER,THUNDER,"Rain,Thunderstorm,Thunder,Rain on surface",AudioSet,AudioSet/audios/eval_segments/YDKN30Bwf_HQ.wav,TRUE,,,,
+YNoBvw3b6L7I.wav,WEATHER,THUNDER,"Rain,Thunderstorm,Thunder",AudioSet,AudioSet/audios/balanced_train_segments/YNoBvw3b6L7I.wav,TRUE,,,,
+YW8XlZWqklbY.wav,WEATHER,THUNDER,"Rain,Raindrop,Thunderstorm,Thunder",AudioSet,AudioSet/audios/eval_segments/YW8XlZWqklbY.wav,TRUE,,,,
+Ymm3rBzXQI-k.wav,WEATHER,THUNDER,"Rain,Raindrop,Thunderstorm,Thunder",AudioSet,AudioSet/audios/balanced_train_segments/Ymm3rBzXQI-k.wav,TRUE,,,,
+YnNSPgjtWi60.wav,WEATHER,THUNDER,"Thunderstorm,Thunder",AudioSet,AudioSet/audios/balanced_train_segments/YnNSPgjtWi60.wav,TRUE,,,,

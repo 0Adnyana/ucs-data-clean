@@ -1,0 +1,83 @@
+experiment open-weighted-min075
+  taxonomy open, all UCS subcategories
+  min_score 0.75  on_tie blank
+  weights exact_sub=8 exact_syn=2 word=0.25 depth_step=0.5 pp_bonus=2 uploader_tag=0 title_match=0.5 description_match=0
+  splits train, val, test
+  note Same weights as open-weighted, scored on train, val, and test. The cutoff is 0.75, so a three-word overlap such as door wood creaks is kept. One unaided word stays blank. Ties stay blank.
+
+output E:\github\ucs-data-clean\experiments\open-weighted-min075-full
+
+[train] source splits\envsound\envsound_train.csv
+rows 40642
+assigned 29016  category 3595  tie 7422  below 609
+gold category 20285/40642 (49.9%)
+category where subcategory was empty 4284/13728 (31.2%)
+gold subcategory rows 26914
+exact category/subcategory 13126/26914 (48.8%)
+subcategory only 14052/26914 (52.2%)
+  AudioSet: 5754/12274 (46.9%)
+  ESC-50: 392/616 (63.6%)
+  FSD50K: 6980/14024 (49.8%)
+top mismatches (gold -> predicted):
+   813  VOICES/LAUGH -> CROWDS/LAUGHTER
+   439  TRAINS/MISC -> (none)
+   405  WEATHER/STORM -> WEATHER/THUNDER
+   381  ICE/BREAK -> (none)
+   364  CROWDS/MISC -> CROWDS/APPLAUSE
+   361  GUNS/GUNSHOT -> BULLETS/IMPACT
+   331  FOLEY/SQUEAK -> CARTOON/SQUEAK
+   316  FOLEY/COIN -> GAMES/MISC
+   304  DESIGNED/IMPACT -> VEHICLES/DOOR
+   247  AIRCRAFT/INTERIOR -> (none)
+   215  TOOLS/HAND -> TOOLS/POWER
+   213  FOLEY/MISC -> (none)
+
+[val] source splits\envsound\envsound_val.csv
+rows 8707
+assigned 6228  category 762  tie 1610  below 107
+gold category 4376/8707 (50.3%)
+category where subcategory was empty 932/2941 (31.7%)
+gold subcategory rows 5766
+exact category/subcategory 2810/5766 (48.7%)
+subcategory only 3012/5766 (52.2%)
+  AudioSet: 1245/2630 (47.3%)
+  ESC-50: 84/132 (63.6%)
+  FSD50K: 1481/3004 (49.3%)
+top mismatches (gold -> predicted):
+   174  VOICES/LAUGH -> CROWDS/LAUGHTER
+    95  TRAINS/MISC -> (none)
+    84  WEATHER/STORM -> WEATHER/THUNDER
+    82  ICE/BREAK -> (none)
+    79  GUNS/GUNSHOT -> BULLETS/IMPACT
+    77  CROWDS/MISC -> CROWDS/APPLAUSE
+    70  FOLEY/SQUEAK -> CARTOON/SQUEAK
+    68  DESIGNED/IMPACT -> VEHICLES/DOOR
+    65  FOLEY/COIN -> GAMES/MISC
+    57  AIRCRAFT/INTERIOR -> (none)
+    50  FOLEY/MISC -> (none)
+    47  TOOLS/HAND -> TOOLS/POWER
+
+[test] source splits\envsound\envsound_test.csv
+rows 8708
+assigned 6182  category 789  tie 1603  below 134
+gold category 4317/8708 (49.6%)
+category where subcategory was empty 910/2939 (31.0%)
+gold subcategory rows 5769
+exact category/subcategory 2819/5769 (48.9%)
+subcategory only 3019/5769 (52.3%)
+  AudioSet: 1248/2630 (47.5%)
+  ESC-50: 84/132 (63.6%)
+  FSD50K: 1487/3007 (49.5%)
+top mismatches (gold -> predicted):
+   178  VOICES/LAUGH -> CROWDS/LAUGHTER
+    96  TRAINS/MISC -> (none)
+    89  WEATHER/STORM -> WEATHER/THUNDER
+    85  CROWDS/MISC -> CROWDS/APPLAUSE
+    81  GUNS/GUNSHOT -> BULLETS/IMPACT
+    79  ICE/BREAK -> (none)
+    72  FOLEY/SQUEAK -> CARTOON/SQUEAK
+    67  DESIGNED/IMPACT -> VEHICLES/DOOR
+    67  FOLEY/COIN -> GAMES/MISC
+    58  AIRCRAFT/INTERIOR -> (none)
+    47  FOLEY/MISC -> (none)
+    46  TOOLS/HAND -> TOOLS/POWER

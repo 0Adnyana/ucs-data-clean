@@ -1,0 +1,83 @@
+experiment open-weighted
+  taxonomy open, all UCS subcategories
+  min_score 2  on_tie blank
+  weights exact_sub=8 exact_syn=2 word=0.25 depth_step=0.5 pp_bonus=2 uploader_tag=0 title_match=0.5 description_match=0
+  splits train, val, test
+  note Full UCS list, scored on train, val, and test. Exact subcategory names count more than synonyms, ontology depth counts more, and a shared word counts less, because the same synonym and the same word now hit many categories. Description matches are off and uploader tags stay off. The cutoff is 2, so one unaided word stays blank. Ties stay blank.
+
+output E:\github\ucs-data-clean\experiments\open-weighted
+
+[train] source E:\github\ucs-data-clean\manifests\manual\envsound_train.csv
+rows 2019
+assigned 1587  category 211  tie 126  below 95
+gold category 1451/2019 (71.9%)
+category where subcategory was empty 243/484 (50.2%)
+gold subcategory rows 1535
+exact category/subcategory 1071/1535 (69.8%)
+subcategory only 1147/1535 (74.7%)
+  AudioSet: 440/595 (73.9%)
+  ESC-50: 45/85 (52.9%)
+  FSD50K: 586/855 (68.5%)
+top mismatches (gold -> predicted):
+    75  DOORS/DOORBELL -> BELLS/DOORBELL
+    71  WEATHER/STORM -> WEATHER/THUNDER
+    62  DOORS/SLIDING -> TRAINS/DOOR
+    36  CLOCKS/TICK -> ALARMS/CLOCK
+    19  HUMAN/BREATH -> HUMAN/(category only)
+    17  HUMAN/SNEEZE -> (none)
+    15  WATER/SURF -> WATER/WAVE
+    12  HUMAN/BURP -> (none)
+    11  WATER/POUR -> (none)
+    10  WATER/DRIP -> (none)
+     9  DOORS/SLIDING -> VOICES/HISTORICAL
+     7  DOORS/KNOCK -> (none)
+
+[val] source E:\github\ucs-data-clean\manifests\manual\envsound_val.csv
+rows 140
+assigned 96  category 16  tie 17  below 11
+gold category 94/140 (67.1%)
+category where subcategory was empty 13/37 (35.1%)
+gold subcategory rows 103
+exact category/subcategory 69/103 (67.0%)
+subcategory only 73/103 (70.9%)
+  AudioSet: 33/50 (66.0%)
+  ESC-50: 5/10 (50.0%)
+  FSD50K: 31/43 (72.1%)
+top mismatches (gold -> predicted):
+     4  DOORS/DOORBELL -> BELLS/DOORBELL
+     3  DOORS/SLIDING -> TRAINS/DOOR
+     3  WATER/SURF -> WATER/WAVE
+     3  WEATHER/STORM -> WEATHER/THUNDER
+     2  CLOCKS/TICK -> ALARMS/CLOCK
+     2  HUMAN/BREATH -> HUMAN/(category only)
+     2  HUMAN/BURP -> (none)
+     2  WATER/DRIP -> (none)
+     2  WATER/POUR -> (none)
+     1  ANIMALS/CAT DOMESTIC -> BELLS/ANIMAL
+     1  ANIMALS/CAT DOMESTIC -> ANIMALS/(category only)
+     1  ANIMALS/DOG -> (none)
+
+[test] source E:\github\ucs-data-clean\manifests\manual\envsound_test.csv
+rows 140
+assigned 100  category 17  tie 13  below 10
+gold category 92/140 (65.7%)
+category where subcategory was empty 14/37 (37.8%)
+gold subcategory rows 103
+exact category/subcategory 67/103 (65.0%)
+subcategory only 72/103 (69.9%)
+  AudioSet: 33/50 (66.0%)
+  ESC-50: 5/10 (50.0%)
+  FSD50K: 29/43 (67.4%)
+top mismatches (gold -> predicted):
+     5  DOORS/DOORBELL -> BELLS/DOORBELL
+     3  DOORS/SLIDING -> TRAINS/DOOR
+     3  WEATHER/STORM -> WEATHER/THUNDER
+     2  ANIMALS/CAT DOMESTIC -> (none)
+     2  CLOCKS/TICK -> ALARMS/CLOCK
+     2  HUMAN/BREATH -> HUMAN/(category only)
+     2  HUMAN/BURP -> VOICES/HISTORICAL
+     2  WATER/POUR -> GORE/BLOOD
+     2  WATER/SURF -> WATER/WAVE
+     1  ALARMS/BELL -> VEHICLES/BICYCLE
+     1  ANIMALS/CAT DOMESTIC -> ANIMALS/(category only)
+     1  DOORS/KNOCK -> (none)
