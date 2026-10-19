@@ -1,0 +1,78 @@
+source,label,subcategory
+AudioSet,Aircraft,MISC
+AudioSet,Aircraft engine,MISC
+AudioSet,Alarm,MISC
+AudioSet,Animal,MISC
+AudioSet,"Bell",MISC
+AudioSet,Bird,MISC
+AudioSet,"Boat, Water vehicle",MISC
+AudioSet,Car,CAR
+AudioSet,Clock,MISC
+AudioSet,"Domestic animals, pets",MISC
+AudioSet,Door,MISC
+AudioSet,Effects unit,MISC
+AudioSet,Emergency vehicle,EMERGENCY
+AudioSet,Engine,MISC
+AudioSet,Explosion,MISC
+AudioSet,Fire,MISC
+AudioSet,Glass,MISC
+AudioSet,"Gunshot, gunfire",MISC
+AudioSet,Light engine (high frequency),MISC
+AudioSet,Liquid,MISC
+AudioSet,"Livestock, farm animals, working animals",FARM
+AudioSet,Mechanisms,MECHANISM
+AudioSet,Motor vehicle (road),MISC
+AudioSet,Music,SONG & PHRASE
+AudioSet,Musical instrument,INSTRUMENT
+AudioSet,Noise,MISC
+AudioSet,Ocean,SURF
+AudioSet,Power tool,POWER
+AudioSet,Rail transport,MISC
+AudioSet,Rain,GENERAL
+AudioSet,Speech,MISC
+AudioSet,Thunderstorm,STORM
+AudioSet,Tools,MISC
+AudioSet,Train,MISC
+AudioSet,Truck,TRUCK VAN & SUV
+AudioSet,Typing,KEYBOARD & MOUSE
+AudioSet,Vehicle,MISC
+AudioSet,Water,MISC
+AudioSet,Wild animals,WILD
+AudioSet,Wind,GENERAL
+AudioSet,Wood,MISC
+FSD50K,Aircraft,MISC
+FSD50K,Alarm,MISC
+FSD50K,Animal,MISC
+FSD50K,Bell,MISC
+FSD50K,Bird,MISC
+FSD50K,Boat_and_Water_vehicle,MISC
+FSD50K,Car,CAR
+FSD50K,Clock,MISC
+FSD50K,Domestic_animals_and_pets,MISC
+FSD50K,Domestic_sounds_and_home_sounds,MISC
+FSD50K,Door,MISC
+FSD50K,Engine,MISC
+FSD50K,Explosion,MISC
+FSD50K,Fire,MISC
+FSD50K,Glass,MISC
+FSD50K,Human_group_actions,MISC
+FSD50K,Human_voice,MISC
+FSD50K,Liquid,MISC
+FSD50K,Livestock_and_farm_animals_and_working_animals,FARM
+FSD50K,Mechanisms,MECHANISM
+FSD50K,Motor_vehicle_(road),MISC
+FSD50K,Music,SONG & PHRASE
+FSD50K,Musical_instrument,INSTRUMENT
+FSD50K,Ocean,SURF
+FSD50K,Power_tool,POWER
+FSD50K,Rail_transport,MISC
+FSD50K,Rain,GENERAL
+FSD50K,Respiratory_sounds,MISC
+FSD50K,Speech,MISC
+FSD50K,Thunderstorm,STORM
+FSD50K,Tools,MISC
+FSD50K,Typing,KEYBOARD & MOUSE
+FSD50K,Vehicle,MISC
+FSD50K,Water,MISC
+FSD50K,Wild_animals,WILD
+FSD50K,Wood,MISC

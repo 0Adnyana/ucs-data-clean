@@ -1,0 +1,98 @@
+source,label,role,category,subcategory
+AudioSet,Afrobeat,context,MUSICAL,SONG & PHRASE
+AudioSet,Ambient music,context,MUSICAL,SONG & PHRASE
+AudioSet,Angry music,context,MUSICAL,SONG & PHRASE
+AudioSet,Background music,context,MUSICAL,SONG & PHRASE
+AudioSet,Bluegrass,context,MUSICAL,SONG & PHRASE
+AudioSet,Blues,context,MUSICAL,SONG & PHRASE
+AudioSet,Cacophony,context,AMBIENCE,MISC
+AudioSet,Carnatic music,context,MUSICAL,SONG & PHRASE
+AudioSet,Chirp tone,context,DESIGNED,TONAL
+AudioSet,Christian music,context,MUSICAL,CHORAL
+AudioSet,Christmas music,context,MUSICAL,SONG & PHRASE
+AudioSet,Classical music,context,MUSICAL,SONG & PHRASE
+AudioSet,Country,context,MUSICAL,SONG & PHRASE
+AudioSet,Dance music,context,MUSICAL,SONG & PHRASE
+AudioSet,Disco,context,MUSICAL,SONG & PHRASE
+AudioSet,Distortion,context,DESIGNED,DISTORTION
+AudioSet,Drum and bass,context,MUSICAL,SYNTHESIZED
+AudioSet,Dubstep,context,MUSICAL,SYNTHESIZED
+AudioSet,Echo,context,DESIGNED,MISC
+AudioSet,Electronic dance music,context,MUSICAL,SYNTHESIZED
+AudioSet,Electronic music,context,MUSICAL,SYNTHESIZED
+AudioSet,Electronica,context,MUSICAL,SYNTHESIZED
+AudioSet,Environmental noise,context,AMBIENCE,MISC
+AudioSet,Exciting music,context,MUSICAL,SONG & PHRASE
+AudioSet,Field recording,context,AMBIENCE,MISC
+AudioSet,Flamenco,context,MUSICAL,SONG & PHRASE
+AudioSet,Folk music,context,MUSICAL,SONG & PHRASE
+AudioSet,Funk,context,MUSICAL,SONG & PHRASE
+AudioSet,Funny music,context,MUSICAL,SONG & PHRASE
+AudioSet,Gospel music,context,MUSICAL,CHORAL
+AudioSet,Grunge,context,MUSICAL,SONG & PHRASE
+AudioSet,Hands,parent,FOLEY,HANDS
+AudioSet,Happy music,context,MUSICAL,SONG & PHRASE
+AudioSet,Harmonic,context,DESIGNED,TONAL
+AudioSet,Heavy metal,context,MUSICAL,SONG & PHRASE
+AudioSet,Hip hop music,context,MUSICAL,SONG & PHRASE
+AudioSet,House music,context,MUSICAL,SYNTHESIZED
+AudioSet,Independent music,context,MUSICAL,SONG & PHRASE
+AudioSet,"Inside, large room or hall",context,AMBIENCE,ROOM TONE
+AudioSet,"Inside, public space",context,AMBIENCE,PUBLIC PLACE
+AudioSet,"Inside, small room",context,AMBIENCE,ROOM TONE
+AudioSet,Jazz,context,MUSICAL,SONG & PHRASE
+AudioSet,Jingle (music),context,MUSICAL,STINGER
+AudioSet,Lullaby,context,MUSICAL,SONG & PHRASE
+AudioSet,Middle Eastern music,context,MUSICAL,SONG & PHRASE
+AudioSet,Music,context,MUSICAL,
+AudioSet,Music for children,context,MUSICAL,SONG & PHRASE
+AudioSet,Music of Africa,context,MUSICAL,SONG & PHRASE
+AudioSet,Music of Asia,context,MUSICAL,SONG & PHRASE
+AudioSet,Music of Bollywood,context,MUSICAL,SONG & PHRASE
+AudioSet,Music of Latin America,context,MUSICAL,SONG & PHRASE
+AudioSet,New-age music,context,MUSICAL,SONG & PHRASE
+AudioSet,Noise,context,DESIGNED,
+AudioSet,"Outside, rural or natural",context,AMBIENCE,RURAL
+AudioSet,"Outside, urban or manmade",context,AMBIENCE,URBAN
+AudioSet,Pink noise,context,DESIGNED,SYNTHETIC
+AudioSet,Pop music,context,MUSICAL,SONG & PHRASE
+AudioSet,Progressive rock,context,MUSICAL,SONG & PHRASE
+AudioSet,Psychedelic rock,context,MUSICAL,SONG & PHRASE
+AudioSet,Pulse,context,DESIGNED,RHYTHMIC
+AudioSet,Punk rock,context,MUSICAL,SONG & PHRASE
+AudioSet,Reggae,context,MUSICAL,SONG & PHRASE
+AudioSet,Reverberation,context,DESIGNED,MISC
+AudioSet,Rhythm and blues,context,MUSICAL,SONG & PHRASE
+AudioSet,Rock and roll,context,MUSICAL,SONG & PHRASE
+AudioSet,Rock music,context,MUSICAL,SONG & PHRASE
+AudioSet,Sad music,context,MUSICAL,SONG & PHRASE
+AudioSet,Salsa music,context,MUSICAL,SONG & PHRASE
+AudioSet,Scary music,context,MUSICAL,SONG & PHRASE
+AudioSet,Sidetone,context,COMMUNICATIONS,TELEPHONE
+AudioSet,Silence,context,AMBIENCE,ROOM TONE
+AudioSet,Sine wave,context,DESIGNED,TONAL
+AudioSet,Ska,context,MUSICAL,SONG & PHRASE
+AudioSet,Soul music,context,MUSICAL,SONG & PHRASE
+AudioSet,Sound effect,context,DESIGNED,MISC
+AudioSet,Soundtrack music,context,MUSICAL,SONG & PHRASE
+AudioSet,Speech,context,VOICES,
+AudioSet,Swing music,context,MUSICAL,SONG & PHRASE
+AudioSet,Techno,context,MUSICAL,SYNTHESIZED
+AudioSet,Tender music,context,MUSICAL,SONG & PHRASE
+AudioSet,Theme music,context,MUSICAL,SONG & PHRASE
+AudioSet,Throbbing,context,DESIGNED,DRONE
+AudioSet,Traditional music,context,MUSICAL,SONG & PHRASE
+AudioSet,Trance music,context,MUSICAL,SYNTHESIZED
+AudioSet,Typing,parent,COMPUTERS,
+AudioSet,Vehicle,parent,VEHICLES,
+AudioSet,Vibration,context,DESIGNED,RUMBLE
+AudioSet,Video game music,context,MUSICAL,SONG & PHRASE
+AudioSet,Vocal music,context,MUSICAL,CHORAL
+AudioSet,Wedding music,context,MUSICAL,SONG & PHRASE
+AudioSet,White noise,context,DESIGNED,SYNTHETIC
+FSD50K,Domestic_sounds_and_home_sounds,parent,FOLEY,
+FSD50K,Hands,parent,FOLEY,HANDS
+FSD50K,Music,context,MUSICAL,
+FSD50K,Speech,context,VOICES,
+FSD50K,Typing,parent,COMPUTERS,
+FSD50K,Vehicle,parent,VEHICLES,
