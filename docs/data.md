@@ -55,6 +55,10 @@ FoleySet free tags go in `uploader_tags`. The description goes in `description`.
 
 Of 10000 FoleySet clips, 1508 were left out: 1426 shared with FSD50K only, 40 with ESC-50 only, and 42 with both. Rebuild with `python scripts/make_envsound_foleyset.py`.
 
+## test-envsound-no-audioset
+
+`manifests/test-envsound-no-audioset/` is an AudioSet ablation. All four folders use one test file: the original EnvSound test split with AudioSet removed. EnvSound labels stay the original `Category` and `SubCategory`. FoleySet labels come from `scoring/experiments/min075-envsound-foleyset/`. Counts and the size-matching rule are in that folder's README. Rebuild with `python scripts/make_test_envsound_no_audioset.py`.
+
 Wav layout and file counts are in [audio/README.md](../audio/README.md).
 
 ## Closed taxonomy
