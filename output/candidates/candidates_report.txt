@@ -1,0 +1,27 @@
+Candidate sets from the label maps (llm, fallback, parent subcategory).
+Winner rules were not used. Labels were not written.
+clips 96883
+label differences after replay 0
+given_pair_in_candidates
+  AudioSet 35824/35824 (1.000)
+  ESC-50 1370/1370 (1.000)
+  FSD50K 51197/51197 (1.000)
+  FoleySet 8492/8492 (1.000)
+  all 96883/96883 (1.000)
+given_category_in_candidates
+  AudioSet 35824/35824 (1.000)
+  ESC-50 1370/1370 (1.000)
+  FSD50K 51197/51197 (1.000)
+  FoleySet 8492/8492 (1.000)
+given pair missing from candidates 0
+distinct candidate categories per clip
+  AudioSet 0=0 1=19394 2=11892 3+=4538
+  ESC-50 0=0 1=1370 2=0 3+=0
+  FSD50K 0=0 1=34227 2=13548 3+=3422
+  FoleySet 0=0 1=8492 2=0 3+=0
+  all 0=0 1=63483 2=25440 3+=7960
+clips with no candidate 0
+  AudioSet 0
+  ESC-50 0
+  FSD50K 0
+  FoleySet 0

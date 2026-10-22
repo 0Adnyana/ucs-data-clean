@@ -1,0 +1,95 @@
+scored clips 93883
+flagged 23225 (0.247)
+threshold: mean probability of the given label on clips with that label
+a flag's top class is above its own threshold and beats the given label
+bucket_strict ignores generic-only support when the clip has another candidate
+supported_pairs counts bucket_strict = tag_supported, one row per supporting tag
+precision sample 100 clips, seed 0
+bucket summary
+  bucket_all AudioSet cross_category tag_supported 886
+  bucket_all AudioSet cross_category unsupported 5891
+  bucket_all AudioSet within_category tag_supported 510
+  bucket_all AudioSet within_category unsupported 2074
+  bucket_all AudioSet within_category_misc tag_supported 163
+  bucket_all AudioSet within_category_misc unsupported 211
+  bucket_all ESC-50 cross_category tag_supported 0
+  bucket_all ESC-50 cross_category unsupported 158
+  bucket_all ESC-50 within_category tag_supported 0
+  bucket_all ESC-50 within_category unsupported 49
+  bucket_all ESC-50 within_category_misc tag_supported 0
+  bucket_all ESC-50 within_category_misc unsupported 54
+  bucket_all FSD50K cross_category tag_supported 1088
+  bucket_all FSD50K cross_category unsupported 6501
+  bucket_all FSD50K within_category tag_supported 380
+  bucket_all FSD50K within_category unsupported 2252
+  bucket_all FSD50K within_category_misc tag_supported 654
+  bucket_all FSD50K within_category_misc unsupported 217
+  bucket_all FoleySet cross_category tag_supported 0
+  bucket_all FoleySet cross_category unsupported 1812
+  bucket_all FoleySet within_category tag_supported 0
+  bucket_all FoleySet within_category unsupported 299
+  bucket_all FoleySet within_category_misc tag_supported 0
+  bucket_all FoleySet within_category_misc unsupported 26
+  bucket_strict AudioSet cross_category tag_supported 798
+  bucket_strict AudioSet cross_category unsupported 5979
+  bucket_strict AudioSet within_category tag_supported 450
+  bucket_strict AudioSet within_category unsupported 2134
+  bucket_strict AudioSet within_category_misc tag_supported 130
+  bucket_strict AudioSet within_category_misc unsupported 244
+  bucket_strict ESC-50 cross_category tag_supported 0
+  bucket_strict ESC-50 cross_category unsupported 158
+  bucket_strict ESC-50 within_category tag_supported 0
+  bucket_strict ESC-50 within_category unsupported 49
+  bucket_strict ESC-50 within_category_misc tag_supported 0
+  bucket_strict ESC-50 within_category_misc unsupported 54
+  bucket_strict FSD50K cross_category tag_supported 966
+  bucket_strict FSD50K cross_category unsupported 6623
+  bucket_strict FSD50K within_category tag_supported 354
+  bucket_strict FSD50K within_category unsupported 2278
+  bucket_strict FSD50K within_category_misc tag_supported 413
+  bucket_strict FSD50K within_category_misc unsupported 458
+  bucket_strict FoleySet cross_category tag_supported 0
+  bucket_strict FoleySet cross_category unsupported 1812
+  bucket_strict FoleySet within_category tag_supported 0
+  bucket_strict FoleySet within_category unsupported 299
+  bucket_strict FoleySet within_category_misc tag_supported 0
+  bucket_strict FoleySet within_category_misc unsupported 26
+given label OBJECTS||WHEELED 68
+  AudioSet 68
+flagged with given label OBJECTS||WHEELED 16
+suggestion OBJECTS||WHEELED 242
+  tag_supported 14 (a tag on the clip maps to this pair)
+  unsupported 228 (contaminated class; not counted as model error)
+bucket_strict unsupported 20114
+bucket_strict unsupported excluding OBJECTS||WHEELED suggestions 19886
+supported pair rows 1364
+  93 BIRDS||SONGBIRD -> BIRDS||MISC via Bird
+  66 CLOCKS||TICK -> CLOCKS||MISC via Clock
+  55 MUSICAL||PLUCKED -> DESIGNED||MISC via Effects unit
+  49 VOICES||SINGING -> MUSICAL||SONG & PHRASE via Music
+  42 BIRDS||SONGBIRD -> BIRDS||FOWL via Fowl
+  39 EXPLOSIONS||REAL -> EXPLOSIONS||MISC via Explosion
+  34 MUSICAL||PLUCKED -> DESIGNED||MISC via Echo
+  33 COMMUNICATIONS||TELEPHONE -> ALARMS||MISC via Alarm
+  33 GUNS||MISC -> EXPLOSIONS||MISC via Explosion
+  32 MOTORS||COMBUSTION -> MOTORS||MISC via Engine
+  32 MUSICAL||PLUCKED -> MUSICAL||MISC via Electronic tuner
+  31 AIRCRAFT||JET -> AIRCRAFT||MISC via Aircraft
+  29 ANIMALS||DOG -> ANIMALS||MISC via Animal
+  29 MUSICAL||PLUCKED -> DESIGNED||MISC via Chorus effect
+  28 MOTORS||COMBUSTION -> VEHICLES||MISC via Vehicle
+  27 MOTORS||COMBUSTION -> VEHICLES||MISC via Motor_vehicle_(road)
+  27 WATER||POUR -> WATER||PLUMBING via Toilet_flush
+  26 MUSICAL||PLUCKED -> DESIGNED||MISC via Reverberation
+  26 TRAINS||SUBWAY -> TRAINS||MISC via Rail transport
+  26 TRAINS||SUBWAY -> TRAINS||MISC via Train
+  24 ANIMALS||DOG -> ANIMALS||MISC via Domestic_animals_and_pets
+  24 TRAINS||SUBWAY -> TRAINS||MISC via Railroad car, train wagon
+  23 CROWDS||APPLAUSE -> CROWDS||CHEERING via Cheering
+  23 DOORS||CREAK -> DOORS||MISC via Door
+  22 FOOD & DRINK||COOKING -> FIRE||SIZZLE via Sizzle
+  20 CROWDS||WALLA -> CROWDS||CHEERING via Cheering
+  20 MUSICAL||PLUCKED -> MUSICAL||SONG & PHRASE via Music
+  20 VEHICLES||CAR -> VEHICLES||MISC via Motor_vehicle_(road)
+  20 VEHICLES||CAR -> VEHICLES||MISC via Vehicle
+  20 WATER||SURF -> BOATS||SAILBOAT via Sailboat, sailing ship
