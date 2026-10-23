@@ -9,7 +9,7 @@ if it does not, this script stops before writing candidates.
 
 Usage:
   python 5-fold-cross-labeling/scripts/build_candidates.py
-  python 5-fold-cross-labeling/scripts/build_candidates.py --output output/candidates
+  python 5-fold-cross-labeling/scripts/build_candidates.py --output 5-fold-cross-labeling/candidates
 """
 
 from __future__ import annotations
@@ -47,7 +47,7 @@ from make_label_map_base import HIERARCHY  # noqa: E402
 from make_master_manifest import load_label_map, ucs_for_keywords  # noqa: E402
 
 DEFAULT_CLIPS = ROOT / "5-fold-cross-labeling" / "splits" / "original-labeled" / "all.csv"
-DEFAULT_OUTPUT = ROOT / "output" / "candidates"
+DEFAULT_OUTPUT = ROOT / "5-fold-cross-labeling" / "candidates"
 CLIP_COLUMNS = ("source", "filename", "Keywords", "Category", "SubCategory")
 
 

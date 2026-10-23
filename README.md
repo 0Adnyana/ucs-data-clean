@@ -67,3 +67,7 @@ Other files under `scoring/configs/` inherit anything they omit from `default.js
 Each keyword is compared with every eligible subcategory. An exact subcategory name scores 5, an exact synonym scores 3, and each shared word scores 1. AudioSet ontology depth multiplies those points (`depth_step` 0.25, so depth 2 is x1.5). The row stays blank under `min_score` (default 2). When the best subcategories are in different categories, the row stays blank. When they share a category, that category is kept and `SubCategory` stays empty.
 
 The full weights, tie cases, and report lines are in [docs/scoring.md](docs/scoring.md).
+
+## Cross-labelling review
+
+Round-1 flags and the current listen order are in [5-fold-cross-labeling/candidates/README.md](5-fold-cross-labeling/candidates/README.md). How the five piles and the probe were set up is in [5-fold-cross-labeling/README.md](5-fold-cross-labeling/README.md).

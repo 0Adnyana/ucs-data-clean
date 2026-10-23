@@ -1,3 +1,5 @@
+The listen queue from round 1, and the rule that corrections wait in an overrides file instead of on `pile.csv`, is in [candidates/README.md](candidates/README.md).
+
 ### Workflow
 
 #### First time
@@ -24,6 +26,7 @@ A second script builds the next round. It is not the labeling script. It reads t
 ### Folder structure
 
 scripts/ — scripts for this pipeline
+candidates/ — round-1 candidate sets, flags, and the listen queue. See `candidates/README.md`
 splits/original-labeled/all.csv — setup only. Every master row, script labels in `Category` and `SubCategory`. The probe never reads this
 splits/original-labeled/eval-3000.csv — the 3000-clip sample. `eval.csv` is drawn from this. None of these clips are dealt into A–E. The probe does not read this file
 splits/original-labeled/eval.csv — the 700 hand-checked recordings, taken from `eval-3000.csv`. The eval set for every probe and for the final model. Score it against `Category` and `SubCategory`

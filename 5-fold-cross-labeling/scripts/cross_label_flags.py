@@ -14,7 +14,7 @@ That pair was trained on rock clips whose tag Roll was mapped to a rolling objec
 
 Usage:
   python 5-fold-cross-labeling/scripts/cross_label_flags.py \\
-    --round-dir "/path/to/round 1" --candidates output/candidates/candidates.csv
+    --round-dir "/path/to/round 1" --candidates 5-fold-cross-labeling/candidates/candidates.csv
 """
 
 from __future__ import annotations
@@ -40,8 +40,8 @@ from candidates import (  # noqa: E402
     write_csv,
 )
 
-DEFAULT_CANDIDATES = ROOT / "output" / "candidates" / "candidates.csv"
-DEFAULT_OUTPUT = ROOT / "output" / "candidates"
+DEFAULT_CANDIDATES = ROOT / "5-fold-cross-labeling" / "candidates" / "candidates.csv"
+DEFAULT_OUTPUT = ROOT / "5-fold-cross-labeling" / "candidates"
 PILES = ("A", "B", "C", "D", "E")
 FLAG_TYPES = ("cross_category", "within_category", "within_category_misc")
 BUCKETS = ("tag_supported", "unsupported")
